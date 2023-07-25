@@ -1,0 +1,526 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600;1,700;1,800&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap');
+
+@font-face {
+    font-family: 'open_sans';
+    src: url(fonts/OpenSans-Regular.ttf);
+    font-family: 'high_tower';
+    src:url(fonts/high_tower.ttf)
+}
+
+* {
+    padding: 0;
+    margin: 0; 
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    background: #eee url(../img/texture_01.webp) no-repeat;
+    background-size: cover;
+    border-left: 2px solid #fff;
+    border-right: 2px solid #fff;    
+}
+
+h2 {
+    font-family: high_tower, Georgia, 'Times New Roman', Times, serif;
+    font-size: 1.9rem;
+    border-bottom: 2px solid #eee;
+    margin-bottom: .9rem;
+    color: #333;
+}
+
+h3 {
+    text-align: center;
+    margin: 1rem auto;
+    font-size: 2.5rem;
+    font-variant: small-caps;
+    letter-spacing: 2px;
+}
+
+a {    
+    text-decoration: none;
+    color:#7a4d28;
+    display: block
+}
+
+p {
+   line-height: 1.5rem;
+   margin: .5rem 0
+}
+
+ul {
+    list-style-type: none;
+}
+
+li {
+    display: inline-block;
+}
+
+span {
+    display: inline-block;
+    position: relative;
+}
+
+h3, h4, p, article a, form label, input, textarea {
+    font-family: 'open_sans', Arial, Helvetica, sans-serif;
+    color:#222;    
+}
+
+a, .redes_sociales h2 {
+    font-family: Nunito, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 800;
+}
+
+/* --- HEADER Y MENU --- */
+header {
+    background: url(../img/header_bg.jpg) no-repeat center;
+    background-size: cover;
+}
+
+.header_menu {
+    background: #fdf9ee52;
+}
+
+.header_menu img {
+    margin: 1% 1% 0 1%;
+    width: 15%; 
+    opacity:80% 
+}
+
+.header_menu_dre {
+display: inline-block;
+width:82%;
+}
+
+.header_menu_dre h1 {
+    font-family: Crimson-Text, Georgia, 'Times New Roman', Times, serif;
+    letter-spacing: 4px;
+    font-size: 4.2rem;
+    text-align: center;
+    color: #533a25;
+    text-shadow: rgba(255,255,255,.9) 0 2px 5px;
+    font-variant: small-caps;
+    margin-bottom:.5rem
+    }
+
+.header_menu_dre nav {
+    background: rgba(255,255,255,.5);
+}
+
+.header_menu_dre nav ul li {
+    width: 19.2%;
+    text-align: center;
+    }
+
+.header_menu_dre nav ul li a {
+    letter-spacing: 2px;
+    font-size: 1.3rem;
+    padding-top:.6rem
+}
+
+.menu_active {
+    background: rgb(165, 81, 42);
+}
+
+.menu_active a {
+    color: #fcead6
+}
+
+.header_menu_dre nav ul li a:hover {
+color:#fcead6;
+background: #533a25;
+}
+
+
+/* --- MAIN --- */
+main {
+    background:rgba(255,255,255,.5);
+    overflow: auto;
+}
+
+
+/* --- ASIDE --- */
+.redes_sociales {  
+    background: rgba(255,255,255,.8);
+    float: left;    
+    width:16%;
+    margin: 1% 0
+}
+
+.redes_sociales h2 {
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    border:0;
+    padding: .6rem 0;
+    background: #eeeeee;
+    text-align: center;
+}
+
+
+.redes_sociales ul li {
+    display:block;
+    margin: 5px 0
+}
+
+.redes_sociales ul li a {
+    padding: 5px 0
+}
+
+.redes_sociales ul li a span {
+    font-size: 1.2rem;
+    top: -8px;
+}
+
+.redes_sociales ul li a img {
+    width: 18%;
+    margin: 0 10px
+}
+
+.redes_sociales ul li a:hover {
+    background: #7a4d28;
+    color: #fcead6;
+}
+
+
+/* --- FOOTER --- */
+footer {
+    background: #533a25;
+    padding: .5rem
+}
+
+footer p {
+    font-weight: bold;
+    text-align: center;
+    letter-spacing: 1px;
+    margin:0;
+    color:#fcead6
+}
+
+
+/* --- CONTAINER Y SECTION --- */
+.container {
+    margin: 1% 1.8%;
+    width:80%;
+    float:left;
+}
+
+.bloque_unico{
+    padding-bottom: 1rem;
+}
+
+.bloque_unico, .bloque_dos {
+    background: rgba(255,255,255,.9);
+}
+
+.bloque_dos {
+    display: inline-block;
+    width: 49.5%;
+    padding:3% 4%;
+    vertical-align: top;
+    height: 1400px;
+    overflow:auto
+}
+
+.bloque_unico h2 {
+    padding: .5rem;
+    margin-bottom: 2rem;
+    border:0;
+    font-variant: small-caps;
+    text-align: center;
+    letter-spacing: 1px;
+    color:#fcead6;
+    background:#533a25;
+}
+
+
+/* --- INDEX --- */
+.bloque_dos p strong {
+    font-weight: bold;
+    font-style: italic;
+    color: #533a25;
+ }
+
+.firma {
+    text-align: right;
+    font-weight: bold;
+    margin-bottom:0;
+}
+
+.novedades article {
+    border: solid #fcead6 2px;
+    padding:2%;
+    margin-bottom:2rem
+}
+
+.novedades article a h3 {
+    font-size:1.3rem;
+    text-transform: uppercase;
+    letter-spacing:normal;
+    background: antiquewhite;
+    padding: 2rem;
+    margin: 1rem    
+}
+
+.novedades article a p {
+    font-size:1.2rem;
+    margin:1rem;
+    text-align: center;
+}
+
+.info {
+font-size: 1.1rem;
+font-style: italic;
+color: #7a4d28;
+padding: 1rem 2rem;
+}
+
+.novedades article a:hover h3 {
+    color: #f7f7f7;
+    background: #7a4d28;
+}
+
+.novedades article a:hover .info  {
+    background: burlywood;
+    color:#533a25
+}
+
+
+/* --- RECETAS --- */
+.encabezado_receta {
+    background: burlywood;
+    width:90%;
+    padding: .2rem;
+    font-weight: bold;
+}
+
+.categorias {
+    width: 90%;
+    margin: 1% auto;
+}
+
+.categorias li {
+    margin: 0 3.5% 10%;
+    width:25%
+}
+
+.categorias li a img {
+    width: 35%;
+    padding: 2%;
+    background: #fcead6;
+    border: double 5px #7a4d28;
+    border-radius: 15px;
+}
+
+.categorias li a span {
+    font-size: 1.6rem;
+    width: 50%;
+    margin-left: 1rem;
+    top:-1rem
+}
+
+.categorias li a:hover {
+    color: burlywood;
+}
+
+.categorias li a:hover img {
+    background:burlywood;
+    border-color: #fcead6
+}
+
+
+/* --- RECURSOS --- */
+.art_principal, .art_secundario {
+    border: solid 2px transparent;
+    border-radius: 3px;
+    width: 45%;
+    margin: 2.25%;
+    display:inline-block;
+}
+
+.art_principal {
+    border-color: burlywood;
+}
+
+.art_secundario {
+    border-color: #ccc;
+}
+
+.art_principal h3, .art_secundario h3 {
+    font-size:1.5rem;
+    letter-spacing: 1px;
+    padding: 1.2rem 0;
+    margin-top:0;
+}
+
+.art_principal h3 {
+    background: #533a25;
+    color:#fdf3e6;
+}
+
+.art_secundario h3 {
+    background: blanchedalmond;
+    color:#533a25;
+}
+
+.art_principal p, .art_secundario p {
+    font-size:1rem;
+    margin: 1rem;
+    height:9rem;
+    overflow:auto;
+}
+
+.art_principal a, .art_secundario a {
+    width:90%;
+    display:block;
+    margin: 0 auto 1rem;
+    padding: 1rem;
+    text-align: center;
+    color: #533a25;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.art_principal a {
+    background: burlywood;
+}
+
+.art_secundario a {
+   background: #e7e7e7;
+}
+
+.art_principal a:hover, .art_secundario a:hover  {
+    color: #f7f7f7;
+    background: #7a4d28;
+}
+
+
+/* --- TRADICION --- */
+iframe {
+    width:90%;
+    height: 50vw;
+    border: 2px solid #ccc;
+    box-shadow: #333 0px 3px 5px;
+    margin: 1rem auto 4rem;
+    display:block;
+}
+
+h4 {
+    font-size: 1.9em;
+    margin: 2rem 0 1rem 5%;
+    color:#555;
+    font-variant: small-caps;
+}
+
+
+/* --- FORMULARIO --- */
+form {
+    width:90%;
+    margin: auto;
+    padding: 3rem 0
+}
+
+form label, form input, form textarea {
+    display: block;
+    border-radius: 3px;
+}
+
+form input, form textarea {
+    background: #eee;
+    margin-bottom: 2rem;
+    border: solid 2px #ccc;
+    padding: .6rem;
+    width:100%;
+    font-size:1rem;
+}
+
+form label, .form_button {
+    font-size: 1.3rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+form label {
+    margin: 1rem 0;
+}
+
+form textarea {
+    height: 12rem;
+    resize: none;
+}
+
+form input:focus, form textarea:focus, form input:hover, form textarea:hover {
+    background:#fff;
+    border-color: rgb(55, 90, 165);
+    outline: 0;
+}
+
+.form_button {
+    display: inline-block;
+    width:45%;
+    padding:1rem;
+    margin: 0 2.2%;
+}
+
+.reset {
+    border-color:#533a25;
+    color:#533a25;
+}
+
+.reset:hover {
+    background: brown;
+    color: #f7f7f7;
+    border-color:transparent;
+}
+
+.envio {
+    background: rgb(55, 90, 165);
+    color:#f7f7f7;
+    border-color:#222
+}
+
+.envio:hover {
+    box-shadow: rgb(55, 90, 165) 0 3px 5px;
+    color: rgb(55, 90, 165);
+    background: #f7f7f7;
+    letter-spacing: 1px;
+}
+
+
+/* --- EN CONSTRUCCION Y PRUEBA DE FORMULARIO --- */
+.construccion img {
+    width: 30%;
+    display:block;
+    margin: auto;
+    padding: 3rem 1rem 1rem 
+}
+
+.construccion p {
+    font-size:2.5rem;
+    text-align: center;
+    color: #7a4d28;
+    font-weight: bold;
+}
+
+.construccion a {
+    display: block;
+    width:90%;
+    font-size: 3rem;
+    text-align:center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color:#f7f7f7;
+    background: rgb(55, 90, 165);
+    padding: 1rem;
+    margin: 3rem auto;
+    letter-spacing: 2px;
+    border: solid 2px rgb(55, 90, 165);
+}
+
+.construccion a:hover {
+    box-shadow: rgb(55, 90, 165) 0 3px 5px;
+    color: rgb(55, 90, 165);
+    background: #f7f7f7;
+}
