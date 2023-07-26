@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600;1,700;1,800&display=swap');
-
+about:blank#blocked
 @import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap');
 
 @font-face {
@@ -9,14 +9,15 @@
     src:url(fonts/high_tower.ttf)
 }
 
+/* --- RESET --- */
 * {
     padding: 0;
     margin: 0; 
     box-sizing: border-box;
 }
 
+/* --- ESTILO GENERAL --- */
 body {
-    width: 100%;
     max-width: 1100px;
     margin: 0 auto;
     background: #eee url(../img/texture_01.webp) no-repeat;
@@ -44,7 +45,6 @@ h3 {
 a {    
     text-decoration: none;
     color:#7a4d28;
-    display: block
 }
 
 p {
@@ -56,14 +56,17 @@ ul {
     list-style-type: none;
 }
 
+/*
 li {
     display: inline-block;
 }
+
 
 span {
     display: inline-block;
     position: relative;
 }
+*/
 
 h3, h4, p, article a, form label, input, textarea {
     font-family: 'open_sans', Arial, Helvetica, sans-serif;
@@ -83,17 +86,25 @@ header {
 
 .header_menu {
     background: #fdf9ee52;
+    display: grid;
+    grid-template-columns: 1fr 6fr;
+    align-items:end;
 }
 
-.header_menu img {
-    margin: 1% 1% 0 1%;
-    width: 15%; 
-    opacity:80% 
+.header_menu_izq {
+    grid-column: 1/2;
+    display: flex;
+    justify-content: center;
+}
+
+.header_menu_izq img {
+    width:80%;
+    opacity:70%; 
+    margin-bottom:.4rem
 }
 
 .header_menu_dre {
-display: inline-block;
-width:82%;
+    grid-column: 2/2;
 }
 
 .header_menu_dre h1 {
@@ -105,34 +116,38 @@ width:82%;
     text-shadow: rgba(255,255,255,.9) 0 2px 5px;
     font-variant: small-caps;
     margin-bottom:.5rem
-    }
-
-.header_menu_dre nav {
-    background: rgba(255,255,255,.5);
 }
 
-.header_menu_dre nav ul li {
-    width: 19.2%;
-    text-align: center;
+.menu_lista {
+    display:flex;
+    justify-content:space-evenly;
+    margin-bottom: .2rem;
+}
+
+.menu_lista li {
+    width:19%;
+    padding: .5rem 0 .1rem;
     }
 
-.header_menu_dre nav ul li a {
+.menu_lista li a {
+    display: block;
     letter-spacing: 2px;
     font-size: 1.3rem;
-    padding-top:.6rem
+    text-align: center;
+    border-radius: 10px;
+    padding: .3rem;
+    background: linear-gradient(rgba(255,255,255,.3), #fff);
+    color: #533a25;
 }
 
-.menu_active {
+#menu_active {
     background: rgb(165, 81, 42);
-}
-
-.menu_active a {
     color: #fcead6
 }
 
-.header_menu_dre nav ul li a:hover {
-color:#fcead6;
-background: #533a25;
+.menu_lista li a:hover {
+    color:#fcead6;
+    background: #533a25;
 }
 
 
