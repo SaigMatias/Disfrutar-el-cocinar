@@ -21,10 +21,10 @@
          <nav>
            <ul class="menu_lista">
              <li><a href="../index.html">INICIO</a></li>
-             <li><a id="menu_active" href="recetas.html">RECETAS</a></li>
+             <li><a href="recetas.html">RECETAS</a></li>
              <li><a href="recursos.html">RECURSOS</a></li>
              <li><a href="tradicion.html">TRADICION</a></li>
-             <li><a href="contacto.html">CONTACTO</a></li>
+             <li><a id="menu_active" href="contacto.html">CONTACTO</a></li>
            </ul>
          </nav>
        </div>
@@ -51,16 +51,16 @@
           <form action="simulacro_envio.html">
             
             <label for="nombre">NOMBRE Y APELLIDO *</label>
-            <input type="text" name="nombre" id="nombre" placeholder="Jonh Doe" required autofocus>
+            <input class="form_elementos" type="text" name="nombre" id="nombre" placeholder="Jonh Doe" required autofocus>
           
             <label for="telefono">TELÉFONO</label>
-            <input type="tel" name="telefono" id="telefono" placeholder="123456789">
+            <input class="form_elementos" type="tel" name="telefono" id="telefono" placeholder="123456789">
 
             <label for="mail">EMAIL *</label>
-            <input type="email" name="mail" id="mail" placeholder="ejemplo@email.com" required>
+            <input class="form_elementos" type="email" name="mail" id="mail" placeholder="ejemplo@email.com" required>
 
             <label for="consulta">COMENTARIOS Y CONSULTAS *</label>
-            <textarea name="consulta" id="consulta" placeholder="Ej. Me interesaría saber de..." maxlength="500" title="500 caracteres máximo" required></textarea>
+            <textarea class="form_elementos" name="consulta" id="consulta" placeholder="Ej. Me interesaría saber de..." maxlength="500" title="500 caracteres máximo" required></textarea>
             <input class="form_button reset" type="reset" value="LIMPIAR FORMULARIO">
             <input class="form_button envio" type="submit" value="ENVIAR">
 

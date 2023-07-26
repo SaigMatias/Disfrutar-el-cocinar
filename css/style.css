@@ -429,23 +429,24 @@ h4 {
 
 /* --- FORMULARIO --- */
 form {
-    width:90%;
+    width:70%;
     margin: auto;
-    padding: 3rem 0
+    padding: 3rem 0;
+    display:flex;
+    flex-wrap: wrap;
 }
 
-form label, form input, form textarea {
-    display: block;
+form label, .form_elementos {
     border-radius: 3px;
 }
 
-form input, form textarea {
+.form_elementos {
     background: #eee;
     margin-bottom: 2rem;
     border: solid 2px #ccc;
     padding: .6rem;
     width:100%;
-    font-size:1rem;
+    font-size: 1rem;
 }
 
 form label, .form_button {
@@ -463,17 +464,17 @@ form textarea {
     resize: none;
 }
 
-form input:focus, form textarea:focus, form input:hover, form textarea:hover {
+.form_elementos:focus, .form_elementos:hover {
     background:#fff;
     border-color: rgb(55, 90, 165);
     outline: 0;
 }
 
 .form_button {
-    display: inline-block;
     width:45%;
     padding:1rem;
     margin: 0 2.2%;
+    border-style: solid;
 }
 
 .reset {
@@ -490,7 +491,7 @@ form input:focus, form textarea:focus, form input:hover, form textarea:hover {
 .envio {
     background: rgb(55, 90, 165);
     color:#f7f7f7;
-    border-color:#222
+    border-color:#333
 }
 
 .envio:hover {
