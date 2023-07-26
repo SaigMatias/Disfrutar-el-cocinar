@@ -341,66 +341,69 @@ padding: 1rem 2rem;
 
 
 /* --- RECURSOS --- */
-.art_principal, .art_secundario {
-    border: solid 2px transparent;
-    border-radius: 3px;
-    width: 45%;
-    margin: 2.25%;
-    display:inline-block;
+
+.bloque_recursos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
 }
 
-.art_principal {
+.bloque_recursos h2 {
+    flex-grow: 2;
+    margin-bottom: 0;
+}
+
+.art_recursos {
+    border: solid 2px transparent;
+    border-radius: 3px;
+    border-color: #ccc;
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.art_recursos:nth-child(2), .art_recursos:nth-child(3) {
     border-color: burlywood;
 }
 
-.art_secundario {
-    border-color: #ccc;
-}
-
-.art_principal h3, .art_secundario h3 {
+.art_recursos h3 {
     font-size:1.5rem;
     letter-spacing: 1px;
     padding: 1.2rem 0;
     margin-top:0;
+    background: blanchedalmond;
+    color:#533a25;
+    width: 100%
 }
 
-.art_principal h3 {
-    background: #533a25;
+.art_recursos:nth-child(2) h3, .art_recursos:nth-child(3) h3 {
+    background: linear-gradient(to top, #533a25, #7a4d28);
     color:#fdf3e6;
 }
 
-.art_secundario h3 {
-    background: blanchedalmond;
-    color:#533a25;
-}
-
-.art_principal p, .art_secundario p {
-    font-size:1rem;
+.art_recursos p {
+    font-size: 1rem;
     margin: 1rem;
-    height:9rem;
-    overflow:auto;
 }
 
-.art_principal a, .art_secundario a {
+.art_recursos a {
     width:90%;
-    display:block;
     margin: 0 auto 1rem;
     padding: 1rem;
     text-align: center;
     color: #533a25;
     letter-spacing: 1px;
     text-transform: uppercase;
+    background: #e7e7e7;
 }
 
-.art_principal a {
-    background: burlywood;
+.art_recursos:nth-child(2) a, .art_recursos:nth-child(3) a {
+    background:linear-gradient(to top, burlywood, blanchedalmond)
 }
 
-.art_secundario a {
-   background: #e7e7e7;
-}
-
-.art_principal a:hover, .art_secundario a:hover  {
+.art_recursos a:hover  {
     color: #f7f7f7;
     background: #7a4d28;
 }
