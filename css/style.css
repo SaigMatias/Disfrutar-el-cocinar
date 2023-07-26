@@ -1,5 +1,5 @@
+/* --- FUENTES --- */
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600;1,700;1,800&display=swap');
-about:blank#blocked
 @import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap');
 
 @font-face {
@@ -55,18 +55,6 @@ p {
 ul {
     list-style-type: none;
 }
-
-/*
-li {
-    display: inline-block;
-}
-
-
-span {
-    display: inline-block;
-    position: relative;
-}
-*/
 
 h3, h4, p, article a, form label, input, textarea {
     font-family: 'open_sans', Arial, Helvetica, sans-serif;
@@ -154,50 +142,58 @@ header {
 /* --- MAIN --- */
 main {
     background:rgba(255,255,255,.5);
-    overflow: auto;
+    display: grid;
+    grid-template-areas: "redes_sociales container";
+    column-gap: 1%;
+    padding: 1% 0;
 }
 
 
 /* --- ASIDE --- */
-.redes_sociales {  
+.redes_sociales {
+    grid-area: redes_sociales;  
     background: rgba(255,255,255,.8);
-    float: left;    
-    width:16%;
-    margin: 1% 0
+    height:fit-content;
+    position:sticky;
+    top:1rem
 }
 
 .redes_sociales h2 {
     font-size: 1.2rem;
     letter-spacing: 1px;
     border:0;
-    padding: .6rem 0;
+    padding: .6rem;
     background: #eeeeee;
     text-align: center;
 }
 
-
-.redes_sociales ul li {
-    display:block;
-    margin: 5px 0
+.redes_sociales ul {
+    padding-bottom: 1rem;
 }
 
+
 .redes_sociales ul li a {
-    padding: 5px 0
+    display: flex;
+    align-items:center;
+    padding: .6rem .2rem
 }
 
 .redes_sociales ul li a span {
     font-size: 1.2rem;
-    top: -8px;
+    color:#555
 }
 
 .redes_sociales ul li a img {
-    width: 18%;
-    margin: 0 10px
+    width: 20%;
+    margin: 0 .7rem
 }
 
 .redes_sociales ul li a:hover {
-    background: #7a4d28;
-    color: #fcead6;
+    background: rgb(136, 144, 151);
+}
+
+.redes_sociales ul li a:hover span {
+    color: #fff;
 }
 
 
@@ -218,9 +214,7 @@ footer p {
 
 /* --- CONTAINER Y SECTION --- */
 .container {
-    margin: 1% 1.8%;
-    width:80%;
-    float:left;
+    grid-area: container;
 }
 
 .bloque_unico{
