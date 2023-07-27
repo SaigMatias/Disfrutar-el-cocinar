@@ -429,7 +429,7 @@ h4 {
 
 /* --- FORMULARIO --- */
 form {
-    width:70%;
+    width:80%;
     margin: auto;
     padding: 3rem 0;
     display:flex;
@@ -444,7 +444,7 @@ form label, .form_elementos {
     background: #eee;
     margin-bottom: 2rem;
     border: solid 2px #ccc;
-    padding: .6rem;
+    padding: .8rem .6rem;
     width:100%;
     font-size: 1rem;
 }
@@ -473,14 +473,15 @@ form textarea {
 .form_button {
     width:45%;
     padding:1rem;
-    margin: 0 2.2%;
     border-style: solid;
+    margin: 2.25%
 }
 
 .reset {
     border-color:#533a25;
     color:#533a25;
 }
+
 
 .reset:hover {
     background: brown;
@@ -491,7 +492,7 @@ form textarea {
 .envio {
     background: rgb(55, 90, 165);
     color:#f7f7f7;
-    border-color:#333
+    border-color:#333;
 }
 
 .envio:hover {
