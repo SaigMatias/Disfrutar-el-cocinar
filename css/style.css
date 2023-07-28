@@ -17,8 +17,8 @@
 
 /* --- ESTILO GENERAL --- */
 body {
-    max-width: 1200px;
     width:100%;
+    max-width: 1500px;
     margin: 0 auto;
     background: #eee url(../img/texture_01.webp) no-repeat;
     background-size: cover;
@@ -232,8 +232,6 @@ footer p {
     padding: 3% 4%;
 }
 
-
-
 .bloque_dos h2 {
     font-size: 2.2rem;
 }
@@ -317,7 +315,7 @@ footer p {
 }
 
 .card {
-    background: #fcead6;
+    background: #fff6ec;
 }
 
 .card-body {
@@ -355,17 +353,18 @@ color:#533a25;
 
 .art_recursos {
     border: solid 2px transparent;
-    border-radius: 3px;
-    border-color: #ccc;
+    border-radius: 7px;
+    border-color: #aaa;
     width: 45%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    background: #fffcf5;
 }
 
 .art_recursos:nth-child(2),
 .art_recursos:nth-child(3) {
-    border-color: burlywood;
+    border-color: #7a4d28;
 }
 
 .art_recursos h3 {
@@ -373,9 +372,10 @@ color:#533a25;
     letter-spacing: 1px;
     padding: 1.2rem 0;
     margin-top: 0;
-    background: blanchedalmond;
+    background: #eee;
     color: #533a25;
-    width: 100%
+    width: 100%;
+    border-radius: 4px 4px 0 0
 }
 
 .art_recursos:nth-child(2) h3,
@@ -397,8 +397,9 @@ color:#533a25;
     color: #533a25;
     letter-spacing: 1px;
     text-transform: uppercase;
-    background: #e7e7e7;
+    background: blanchedalmond;
     font-weight: bold;
+    border-radius: 7px;
 }
 
 .art_recursos:nth-child(2) a,
@@ -413,20 +414,30 @@ color:#533a25;
 
 
 /* --- TRADICION --- */
-iframe {
+.bloque_tradicion iframe {
     width: 90%;
-    height: 50vw;
+    height: 40vw;
     border: 2px solid #ccc;
     box-shadow: #333 0px 3px 5px;
     margin: 1rem auto 4rem;
     display: block;
 }
 
-h4 {
-    font-size: 1.9em;
-    margin: 2rem 0 1rem 5%;
+.bloque_tradicion h3 {
+    font-size: 5rem;
+    width:100%;
+    text-decoration: underline solid #555 5px;
+    text-shadow: #533a25 2px 3px 7px;
+}
+
+.bloque_tradicion h4 {
+    font-size: 3em;
+    margin-top: 1.5rem;
     color: #555;
     font-variant: small-caps;
+    border-bottom: solid 2px #ccc;
+    width: 90%;
+    text-indent: 1rem;
 }
 
 

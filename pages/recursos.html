@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="../css/style.css">
 </head>
 
-<body>
+<body class="grid">
   <header>
 
     <div class="header_menu">
@@ -56,21 +56,21 @@
           <p>Consejos útiles y técnicas básicas que ayudarán a los principiantes a sentirse más seguros en la cocina,
             como cómo cortar ingredientes correctamente, cómo elegir los utensilios adecuados y cómo dominar las
             técnicas de cocción básicas</p>
-          <a href="construccion.html">Ver más...</a>
+          <a data-bs-toggle="modal" data-bs-target="#myModal" href="#">Ver más...</a>
         </article>
 
         <article class="art_recursos">
           <h3>Organización en la cocina</h3>
           <p>Ideas y consejos para mantener la cocina ordenada y eficiente, desde la planificación de comidas hasta el
             almacenamiento adecuado de alimentos y utensilios de cocina.</p>
-          <a href="construccion.html">Ver más...</a>
+          <a data-bs-toggle="modal" data-bs-target="#myModal" href="#">Ver más...</a>
         </article>
 
         <article class="art_recursos">
           <h3>Planificación de menús</h3>
           <p>Como planificar menús semanales, teniendo en cuenta la variedad, los gustos individuales y las necesidades
             dietéticas, así como la eficiencia en la compra de ingredientes.</p>
-          <a href="construccion.html">Ver más...</a>
+          <a data-bs-toggle="modal" data-bs-target="#myModal" href="#">Ver más...</a>
         </article>
 
         <article class="art_recursos">
@@ -78,7 +78,7 @@
           <p>Sugerencias y recetas rápidas para aquellos que tienen poco tiempo pero aún desean disfrutar de comidas
             deliciosas y caseras. Incluye técnicas de preparación anticipada, recetas de cocción rápida y consejos para
             ahorrar tiempo en la cocina.</p>
-          <a href="construccion.html">Ver más...</a>
+          <a data-bs-toggle="modal" data-bs-target="#myModal" href="#">Ver más...</a>
         </article>
 
         <article class="art_recursos">
@@ -86,15 +86,29 @@
           <p>Ideas y técnicas para presentar platos de forma atractiva, desde la decoración con ingredientes hasta el
             uso de vajillas y utensilios especiales. Incluye consejos de emplatado para resaltar los sabores y crear una
             experiencia visualmente agradable.</p>
-          <a href="construccion.html">Ver más...</a>
+          <a data-bs-toggle="modal" data-bs-target="#myModal" href="#">Ver más...</a>
         </article>
 
         <article class="art_recursos">
           <h3>Presupuesto económico</h3>
           <p>Ideas y consejos para cocinar deliciosas comidas mientras se ajusta al presupuesto, como aprovechar
             ingredientes económicos, planificar compras de manera inteligente y maximizar el uso de los alimentos.</p>
-          <a href="construccion.html">Ver más...</a>
+          <a data-bs-toggle="modal" data-bs-target="#myModal" href="#">Ver más...</a>
         </article>
+
+        <div class="modal fade" id="myModal">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content text-center bg-dark">
+
+              <div class="modal-body d-flex flex-wrap justify-content-center row-gap-3 text-secondary fs-5">
+                <h4 class="modal-title w-100 m-0 text-light fs-1 text-center">Sitio en construcción...</h4>
+                <img class="w-75" src="../img/construccion_2.png" alt="cocinando">Estamos haciendo nuestro mejor esfuerzo en agregar contenido de calidad
+                <button type="button" class="btn w-50 text-uppercase fst-italic fw-bold"
+                  data-bs-dismiss="modal">cerrar</button>
+              </div>
+            </div>
+          </div>
+        </div> <!-- fin modal -->
 
       </section>
     </div>
