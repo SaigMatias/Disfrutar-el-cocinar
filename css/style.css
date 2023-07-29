@@ -412,6 +412,14 @@ color:#533a25;
     background: #7a4d28;
 }
 
+.modal_item li a {
+    color: blanchedalmond
+}
+
+.modal_item li a:hover {
+    color:#7a4d28
+}
+
 
 /* --- TRADICION --- */
 .bloque_tradicion iframe {
@@ -516,6 +524,11 @@ form textarea {
     color: rgb(55, 90, 165);
     background: #f7f7f7;
     letter-spacing: 1px;
+}
+
+.simulacro_envio:hover {
+box-shadow: #222 0 1px 30px inset;
+letter-spacing: 1px;
 }
 
 
