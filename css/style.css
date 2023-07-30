@@ -17,7 +17,7 @@
 
 /* --- ESTILO GENERAL --- */
 body {
-    width:100%;
+    width: 100%;
     margin: 0 auto;
     background: #eee url(../img/texture_01.webp) no-repeat;
     background-size: cover;
@@ -55,7 +55,9 @@ ul {
     list-style-type: none;
 }
 
-.btn-collapse, nav ul li a,.redes_sociales h2 {
+.btn-collapse,
+nav ul li a,
+.redes_sociales h2 {
     font-family: 'Nunito', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-weight: 800;
 }
@@ -63,17 +65,17 @@ ul {
 /* --- HEADER Y MENU --- */
 header {
     background: url(../img/header_bg.jpg) no-repeat center;
-    background-size:cover;
+    background-size: cover;
 }
 
 .header_menu {
     background: #fdf9ee52;
-     display: flex;
-   flex-direction: column; 
+    display: flex;
+    flex-direction: column;
 }
 
 .header_menu_izq {
-    width:30%;
+    width: 30%;
     margin: 1rem auto 0;
 }
 
@@ -95,30 +97,30 @@ header {
 }
 
 .btn-collapse {
-width: 100%;
-background: rgba(83, 58, 37, 0.75);
-border:0;
-padding: .1rem 0;
-display: flex;
-justify-content:center;
-align-items: center;
-gap: 3%;
+    width: 100%;
+    background: rgba(83, 58, 37, 0.75);
+    border: 0;
+    padding: .1rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3%;
 }
 
 .btn-collapse span {
     font-size: 1.5rem;
-    letter-spacing: 1px;   
-color: #eee; 
-font-weight: 600;
+    letter-spacing: 1px;
+    color: #eee;
+    font-weight: 600;
 }
 
 .btn-collapse img {
     width: 24px;
-    opacity: 60%;
+    opacity: .6;
 }
 
 .collapse {
-    background:rgba(253, 249, 238, 0.322);
+    background: rgba(253, 249, 238, 0.322);
     padding-bottom: 2%;
     border-bottom: 2px solid #eee;
 }
@@ -131,7 +133,7 @@ font-weight: 600;
 }
 
 .menu_lista li {
-    margin:1% 0
+    margin: 1% 0
 }
 
 .menu_lista li a {
@@ -148,17 +150,17 @@ font-weight: 600;
 #menu_active {
     background: rgb(165, 81, 42);
     color: #fcead6;
-    border-color:transparent
+    border-color: transparent
 }
 
 .menu_lista li a:hover {
     color: #fcead6;
     background: #533a25;
-    border-color:transparent
+    border-color: transparent
 }
 
-.menu_lista_2  {
-    display:none
+.menu_lista_2 {
+    display: none
 }
 
 .redes_sociales {
@@ -167,18 +169,19 @@ font-weight: 600;
 }
 
 .redes_sociales {
-    padding:0;
-    display: flex; 
-    justify-content: space-evenly;  
+    padding: 0;
+    display: flex;
+    justify-content: space-evenly;
 }
 
 .redes_sociales li {
-width: 15%;
+    width: 15%;
 }
 
 .redes_sociales li a span {
-    display:none
+    display: none
 }
+
 .redes_sociales li a img {
     width: 100%;
 }
@@ -225,7 +228,7 @@ footer p {
 
 .bloque_dos {
     grid-column: span;
-    padding: 6% 4%;
+    padding: 15% 4%;
     margin: 0;
     border-bottom: 5px solid #eee
 }
@@ -259,14 +262,14 @@ footer p {
     background: antiquewhite;
     padding: 2rem;
     margin: 1rem;
-    color:#333
+    color: #333
 }
 
 .novedades article a p {
     font-size: 1.2rem;
     margin: 1rem;
     text-align: center;
-    color:#555;
+    color: #555;
     font-weight: 500;
 }
 
@@ -310,13 +313,14 @@ footer p {
     background: #533a25;
     font-size: 1.5rem;
     line-height: 1.5rem;
-    width:100%;
+    width: 100%;
 }
 
 .row {
-    margin:0 auto;
-display: flex;
-flex-direction: column;}
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
 
 .card {
     background: #fff6ec;
@@ -328,11 +332,11 @@ flex-direction: column;}
 }
 
 .card-title {
-color:#533a25;
+    color: #533a25;
 }
 
 .btn {
-    background: #533a25 ;
+    background: #533a25;
     color: blanchedalmond;
 }
 
@@ -342,11 +346,11 @@ color:#533a25;
 }
 
 .modal_item li {
-    margin:1rem 0;
+    margin: 1rem 0;
     border-bottom: #555 solid 1px;
 }
 
-.modal_item li a{
+.modal_item li a {
     font-size: 1.1rem;
 }
 
@@ -423,21 +427,23 @@ color:#533a25;
 }
 
 .modal_item li a:hover {
-    color:#7a4d28
+    color: #7a4d28
 }
 
 
 /* --- TRADICION --- */
 .bloque_tradicion h3 {
+    color:#333;
     font-size: 4rem;
     text-decoration: underline solid #555 5px;
-    text-shadow: #533a25 2px 3px 7px;
 }
 
 .tradicion_proximo {
-    font-size:2rem;
-    color:#555;
+    font-size: 2rem;
+    color: #aaa;
     text-transform: uppercase;
+    text-align: center;
+    width: 100%;
 }
 
 .bloque_tradicion h4 {
@@ -491,7 +497,7 @@ form label,
 
 form label {
     margin: 1rem 0;
-    width:100%;
+    width: 100%;
     font-size: 1.3rem
 }
 
@@ -511,8 +517,8 @@ form textarea {
     width: 100%;
     padding: 1rem;
     border-style: solid;
-font-size: 1.2rem;   
-margin-bottom: 1rem
+    font-size: 1.2rem;
+    margin-bottom: 1rem
 }
 
 .reset {
@@ -542,28 +548,95 @@ margin-bottom: 1rem
 }
 
 .simulacro_envio:hover {
-box-shadow: #222 0 1px 30px inset;
-letter-spacing: 1px;
+    box-shadow: #222 0 1px 30px inset;
+    letter-spacing: 1px;
 }
 
 
 /* RESPONSIVE */
 
+@media screen and (min-width: 375px) {
 
-// X-Small devices (portrait phones, less than 576px)
-// No media query for `xs` since this is the default in Bootstrap
+    .btn span {
+        margin-left: .3rem;
+    }
 
-// Small devices (landscape phones, 576px and up)
-@media (min-width: 576px) { ... }
+}
 
-// Medium devices (tablets, 768px and up)
-@media (min-width: 768px) { ... }
+@media screen and (min-width:576px) {
+    
+    .header_menu_dre h1 {
+        margin-bottom: 1.5rem;
+        font-size: 4rem;
+        line-height: 3rem;
+    }
 
+    .redes_sociales li {
+        width: 10%;
+    }
+
+    .btn-collapse {
+        padding: .5rem 0;
+        background: rgba(83, 58, 37, 0.85);
+    }
+
+    .btn-collapse span {
+        text-transform: uppercase;
+    }
+
+    .btn-collapse img {
+        opacity: .7;
+    }
+
+    .bloque_dos {
+        padding: 10%
+    }
+
+    .bloque_unico h2 {
+        font-size: 2.3rem;
+        line-height: 2rem;
+        padding:1rem
+    }
+
+    .art_recursos {
+        width:75%;
+        margin-bottom:1.5rem;
+        border-bottom: solid 3px #eee;
+        box-shadow: #ddd 0 3px 7px
+    }
+
+    .art_recursos h3 {
+        margin-bottom:1rem
+    }
+
+    .art_recursos p {
+        margin-bottom: 2rem;
+    }
+
+    .art_recursos a {
+        width:75%
+    }
+
+    .bloque_tradicion h3 {
+margin-bottom: 1rem;
+    }
+
+}
+
+@media screen and (min-width:768) {
+    
+}
 // Large devices (desktops, 992px and up)
-@media (min-width: 992px) { ... }
+@media (min-width: 992px) {
+    ...
+}
 
 // X-Large devices (large desktops, 1200px and up)
-@media (min-width: 1200px) { ... }
+@media (min-width: 1200px) {
+    ...
+}
 
 // XX-Large devices (larger desktops, 1400px and up)
-@media (min-width: 1400px) { ... }
+@media (min-width: 1400px) {
+    ...
+}
