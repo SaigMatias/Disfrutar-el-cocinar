@@ -20,10 +20,33 @@
       </div>
 
       <div class="header_menu_dre">
-        <h1>Disfrutar el cocinar</h1>
+        <h1>Disfrutar<br /> el cocinar</h1>
         <nav>
-          <ul class="menu_lista">
-            <li><a href="../index.html">INICIO</a></li>
+
+          <button class="btn-collapse" type="button" data-bs-toggle="collapse" data-bs-target="#menu_collapse"
+            aria-expanded="false" aria-controls="collapseExample">
+            <img src="../img/menu.png" alt="menu imagen"><span>Menu</span>
+          </button>
+
+          <div class="collapse" id="menu_collapse">
+            <ul class="menu_lista ps-0">
+              <li><a href="../index.html">INICIO</a></li>
+              <li><a id="menu_active" href="recetas.html">RECETAS</a></li>
+              <li><a href="recursos.html">RECURSOS</a></li>
+              <li><a href="tradicion.html">TRADICION</a></li>
+              <li><a href="contacto.html">CONTACTO</a></li>
+            </ul>
+            <ul class="redes_sociales">
+              <li><a href="#"><img src="../img/rs_facebook.png" alt="Facebook"><span>Facebook</span></a></li>
+              <li><a href="#"><img src="../img/rs_instagram.png" alt="Instagram"><span>Instagram</span></a></li>
+              <li><a href="#"><img src="../img/rs_tik-tok.png" alt="TikTok"><span>TikTok</span></a></li>
+              <li><a href="#"><img src="../img/rs_tweeter.png" alt="Tweeter"><span>Tweeter</span></a></li>
+              <li><a href="#"><img src="../img/rs_youtube.png" alt="YouTube"><span>YouTube</span></a></li>
+            </ul>
+          </div>
+
+          <ul class="menu_lista_2">
+            <li><a href="#">INICIO</a></li>
             <li><a id="menu_active" href="recetas.html">RECETAS</a></li>
             <li><a href="recursos.html">RECURSOS</a></li>
             <li><a href="tradicion.html">TRADICION</a></li>
@@ -37,7 +60,7 @@
 
   <main>
 
-    <aside class="redes_sociales">
+    <aside class="redes_sociales_2">
       <h2>REDES SOCIALES</h2>
       <ul>
         <li><a href="#"><img src="../img/rs_facebook.png" alt="Facebook"><span>Facebook</span></a></li>
@@ -48,12 +71,12 @@
       </ul>
     </aside>
 
-    <div class="container">
+    <div class="container-fluid">
       <section class="bloque_unico">
         <h2>Categorias</h2>
 
-        <div class="container-fluid">
-          <div class="row mb-3 p-4">
+        <div class="container">
+          <div class="row">
 
             <div class="col">
               <div class="card d-flex">
@@ -62,7 +85,7 @@
                   <h4 class="card-title m-0 fs-2 text-center text-uppercase fw-bold">Carnes</h4>
                   <button type="button" class="btn fst-italic w-50 fs-6" data-bs-toggle="modal"
                     data-bs-target="#recetas_carne">
-                    Ver recetas<span class="badge bg-success fs-6 fw-bold pt-1 ms-2">4</span>
+                    Ver recetas<span class="badge bg-success fs-6 fw-bold pt-1">4</span>
                   </button>
                 </div>
               </div>
@@ -75,7 +98,7 @@
                   <h4 class="card-title m-0 fs-2 text-center text-uppercase fw-bold">Aves</h4>
                   <button type="button" class="btn fst-italic w-50 fs-6" data-bs-toggle="modal"
                     data-bs-target="#myModal">
-                    Ver recetas<span class="badge bg-dark text-light opacity-50 fs-6 fw-bold pt-1 ms-2">0</span>
+                    Ver recetas<span class="badge bg-dark text-light opacity-50 fs-6 fw-bold pt-1">0</span>
                   </button>
                 </div>
               </div>
@@ -88,14 +111,14 @@
                   <h4 class="card-title m-0 fs-2 text-center text-uppercase fw-bold">Pescado</h4>
                   <button type="button" class="btn fst-italic w-50 fs-6" data-bs-toggle="modal"
                     data-bs-target="#myModal">
-                    Ver recetas<span class="badge bg-dark text-light opacity-50 fs-6 fw-bold pt-1 ms-2">0</span>
+                    Ver recetas<span class="badge bg-dark text-light opacity-50 fs-6 fw-bold pt-1">0</span>
                   </button>
                 </div>
               </div>
             </div>
           </div> <!-- fin row -->
 
-          <div class="row mb-3 p-4">
+          <div class="row">
 
             <div class="col">
               <div class="card d-flex">
@@ -104,7 +127,7 @@
                   <h4 class="card-title m-0 fs-2 text-center text-uppercase fw-bold">Pastas</h4>
                   <button type="button" class="btn fst-italic w-50 fs-6" data-bs-toggle="modal"
                     data-bs-target="#myModal">
-                    Ver recetas<span class="badge bg-dark text-light opacity-50 fs-6 fw-bold pt-1 ms-2">0</span>
+                    Ver recetas<span class="badge bg-dark text-light opacity-50 fs-6 fw-bold pt-1">0</span>
                   </button>
                 </div>
               </div>
@@ -117,7 +140,7 @@
                   <h4 class="card-title m-0 fs-2 text-center text-uppercase fw-bold">Pizzas</h4>
                   <button type="button" class="btn fst-italic w-50 fs-6" data-bs-toggle="modal"
                     data-bs-target="#myModal">
-                    Ver recetas<span class="badge bg-dark text-light opacity-50 fs-6 fw-bold pt-1 ms-2">0</span>
+                    Ver recetas<span class="badge bg-dark text-light opacity-50 fs-6 fw-bold pt-1">0</span>
                   </button>
                 </div>
               </div>
@@ -130,7 +153,7 @@
                   <h4 class="card-title m-0 fs-2 text-center text-uppercase fw-bold">Sandwich</h4>
                   <button type="button" class="btn fst-italic w-50 fs-6" data-bs-toggle="modal"
                     data-bs-target="#myModal">
-                    Ver recetas<span class="badge bg-dark text-light opacity-50 fs-6 fw-bold pt-1 ms-2">0</span>
+                    Ver recetas<span class="badge bg-dark text-light opacity-50 fs-6 fw-bold pt-1">0</span>
                   </button>
                 </div>
               </div>
@@ -138,7 +161,7 @@
 
           </div> <!-- fin row -->
 
-          <div class="row  p-4">
+          <div class="row">
 
             <div class="col">
               <div class="card d-flex">
@@ -147,7 +170,7 @@
                   <h4 class="card-title m-0 fs-2 text-center text-uppercase fw-bold">Vegetariano</h4>
                   <button type="button" class="btn fst-italic w-50 fs-6" data-bs-toggle="modal"
                     data-bs-target="myModal">
-                    Ver recetas<span class="badge bg-dark text-light opacity-50 fs-6 fw-bold pt-1 ms-2">0</span>
+                    Ver recetas<span class="badge bg-dark text-light opacity-50 fs-6 fw-bold pt-1">0</span>
                   </button>
                 </div>
               </div>
@@ -160,7 +183,7 @@
                   <h4 class="card-title m-0 fs-2 text-center text-uppercase fw-bold">Postres</h4>
                   <button type="button" class="btn fst-italic w-50 fs-6" data-bs-toggle="modal"
                     data-bs-target="#myModal">
-                    Ver recetas<span class="badge bg-dark text-light opacity-50 fs-6 fw-bold pt-1 ms-2">0</span>
+                    Ver recetas<span class="badge bg-dark text-light opacity-50 fs-6 fw-bold pt-1">0</span>
                   </button>
                 </div>
               </div>
@@ -173,7 +196,7 @@
                   <h4 class="card-title m-0 fs-2 text-center text-uppercase fw-bold">Bebidas</h4>
                   <button type="button" class="btn fst-italic w-50 fs-6" data-bs-toggle="modal"
                     data-bs-target="#myModal">
-                    Ver recetas<span class="badge bg-dark text-light opacity-50 fs-6 fw-bold pt-1 ms-2">0</span>
+                    Ver recetas<span class="badge bg-dark text-light opacity-50 fs-6 fw-bold pt-1">0</span>
                   </button>
                 </div>
               </div>
@@ -181,21 +204,22 @@
 
           </div> <!-- fin row -->
         </div>
-        
+
         <!-- modal -->
-        
-        <div class="modal fade" id="myModal"> 
+
+        <div class="modal fade" id="myModal">
           <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content text-center bg-dark">
               <div class="modal-body d-flex flex-wrap justify-content-center row-gap-3 text-secondary fs-5">
                 <h4 class="modal-title w-100 m-0 text-light fs-2 text-center">Estamos cocinando...</h4>
                 <img class="w-50" src="../img/cocinero-2.png" alt="cocinando">
                 En breve agregaremos más recetas
-                <button type="button" class="btn w-50 text-uppercase fst-italic fw-bold" data-bs-dismiss="modal">cerrar</button>
+                <button type="button" class="btn w-50 text-uppercase fst-italic fw-bold"
+                  data-bs-dismiss="modal">cerrar</button>
               </div>
             </div>
           </div>
-        </div> 
+        </div>
 
         <!-- modal recetas_carne -->
 
@@ -208,7 +232,7 @@
                   class="modal-title w-100 m-0 text-dark bg-light opacity-75 rounded fs-2 text-center fw-bold text-uppercase">
                   Carnes</h4>
 
-                <ul class="modal_item lh-lg fs-4 p-0">
+                <ul class="modal_item p-0">
                   <li>
                     <a href="#">Filete de ternera a la parrilla con patatas asadas</a>
                   </li>
@@ -222,9 +246,10 @@
                     <a href="#">Chuletas de cordero con puré de patatas y vegetales asados</a>
                   </li>
                 </ul>
-                <p class="text-info fs-4 fst-italic">- Lista de muestra, páginas en construcción -</p>
+                <p class="text-info fs-4 fst-italic text-center">- Lista de muestra, páginas en construcción -</p>
 
-                <button type="button" class="btn w-50 text-uppercase fst-italic fw-bold" data-bs-dismiss="modal">cerrar</button>
+                <button type="button" class="btn w-50 text-uppercase fst-italic fw-bold"
+                  data-bs-dismiss="modal">cerrar</button>
               </div>
             </div>
           </div>

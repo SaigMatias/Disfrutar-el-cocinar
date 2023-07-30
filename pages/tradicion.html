@@ -5,7 +5,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Disfrutar el cocinar</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
   <link rel="stylesheet" href="../css/style.css">
 </head>
 
@@ -19,10 +20,33 @@
       </div>
 
       <div class="header_menu_dre">
-        <h1>Disfrutar el cocinar</h1>
+        <h1>Disfrutar<br /> el cocinar</h1>
         <nav>
-          <ul class="menu_lista">
-            <li><a href="../index.html">INICIO</a></li>
+
+          <button class="btn-collapse" type="button" data-bs-toggle="collapse" data-bs-target="#menu_collapse"
+            aria-expanded="false" aria-controls="collapseExample">
+            <img src="../img/menu.png" alt="menu imagen"><span>Menu</span>
+          </button>
+
+          <div class="collapse" id="menu_collapse">
+            <ul class="menu_lista ps-0">
+              <li><a href="../index.html">INICIO</a></li>
+              <li><a href="recetas.html">RECETAS</a></li>
+              <li><a href="recursos.html">RECURSOS</a></li>
+              <li><a id="menu_active" href="tradicion.html">TRADICION</a></li>
+              <li><a href="contacto.html">CONTACTO</a></li>
+            </ul>
+            <ul class="redes_sociales">
+              <li><a href="#"><img src="../img/rs_facebook.png" alt="Facebook"><span>Facebook</span></a></li>
+              <li><a href="#"><img src="../img/rs_instagram.png" alt="Instagram"><span>Instagram</span></a></li>
+              <li><a href="#"><img src="../img/rs_tik-tok.png" alt="TikTok"><span>TikTok</span></a></li>
+              <li><a href="#"><img src="../img/rs_tweeter.png" alt="Tweeter"><span>Tweeter</span></a></li>
+              <li><a href="#"><img src="../img/rs_youtube.png" alt="YouTube"><span>YouTube</span></a></li>
+            </ul>
+          </div>
+
+          <ul class="menu_lista_2">
+            <li><a href="#">INICIO</a></li>
             <li><a href="recetas.html">RECETAS</a></li>
             <li><a href="recursos.html">RECURSOS</a></li>
             <li><a id="menu_active" href="tradicion.html">TRADICION</a></li>
@@ -36,7 +60,7 @@
 
   <main>
 
-    <aside class="redes_sociales">
+    <aside class="redes_sociales_2">
       <h2>REDES SOCIALES</h2>
       <ul>
         <li><a href="#"><img src="../img/rs_facebook.png" alt="Facebook"><span>Facebook</span></a></li>
@@ -47,7 +71,7 @@
       </ul>
     </aside>
 
-    <div class="container">
+    <div class="container-fluid">
 
       <section class="bloque_unico bloque_tradicion">
         <h2>Cocina y Cultura</h2>
@@ -63,7 +87,8 @@
 
         <h4>Wikipedia</h4>
         <iframe src="https://es.wikipedia.org/wiki/Gastronom%C3%ADa_de_Jap%C3%B3n"></iframe>
-        <h3>Próximamente Italia</h3>
+        <h3>Italia</h3>
+        <p class="tradicion_proximo">Próximamente</p>
       </section>
 
     </div>
@@ -73,6 +98,9 @@
   <footer>
     <p>© Creado por Leandro Matias Saig</p>
   </footer>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+    crossorigin="anonymous"></script>
 </body>
+
 </html>
