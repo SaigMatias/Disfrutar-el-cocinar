@@ -18,9 +18,12 @@
 /* --- ESTILO GENERAL --- */
 body {
     width:100%;
+    max-width: 1500px;
     margin: 0 auto;
     background: #eee url(../img/texture_01.webp) no-repeat;
     background-size: cover;
+    border-left: 2px solid #fff;
+    border-right: 2px solid #fff;
     font-family: 'Open Sans', Arial, Helvetica, sans-serif;
     color: #222;
 }
@@ -55,7 +58,7 @@ ul {
     list-style-type: none;
 }
 
-.btn-collapse, nav ul li a,.redes_sociales h2 {
+nav ul li a,.redes_sociales h2 {
     font-family: 'Nunito', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-weight: 800;
 }
@@ -63,86 +66,64 @@ ul {
 /* --- HEADER Y MENU --- */
 header {
     background: url(../img/header_bg.jpg) no-repeat center;
-    background-size:cover;
+    background-size: cover;
 }
 
 .header_menu {
     background: #fdf9ee52;
-     display: flex;
-   flex-direction: column; 
+    display: grid;
+    grid-template-columns: 1fr 6fr;
+    align-items: end;
 }
 
 .header_menu_izq {
-    width:30%;
-    margin: 1rem auto 0;
+    grid-column: 1/2;
+    display: flex;
+    justify-content: center;
 }
 
 .header_menu_izq img {
-    width: 100%;
+    width: 80%;
     opacity: 70%;
+    margin-bottom: .4rem
+}
+
+.header_menu_dre {
+    grid-column: 2/2;
 }
 
 .header_menu_dre h1 {
     font-family: 'Crimson-Text', Georgia, 'Times New Roman', Times, serif;
-    letter-spacing: 1px;
-    font-size: 3rem;
-    line-height: 2rem;
+    letter-spacing: 4px;
+    font-size: 4.2rem;
     text-align: center;
     color: #533a25;
     text-shadow: rgba(255, 255, 255, .9) 0 2px 5px;
     font-variant: small-caps;
-    margin-bottom: 1rem;
-}
-
-.btn-collapse {
-width: 100%;
-background: rgba(83, 58, 37, 0.75);
-border:0;
-padding: .1rem 0;
-display: flex;
-justify-content:center;
-align-items: center;
-gap: 3%;
-}
-
-.btn-collapse span {
-    font-size: 1.5rem;
-    letter-spacing: 1px;   
-color: #eee; 
-font-weight: 600;
-}
-
-.btn-collapse img {
-    width: 8%;
-    opacity: 60%;
-}
-
-.collapse {
-    background:rgba(253, 249, 238, 0.322);
-    padding-bottom: 2%;
-    border-bottom: 2px solid #eee;
+    margin-bottom: .5rem;
 }
 
 .menu_lista {
     display: flex;
-    flex-flow: column wrap;
-    justify-content: space-between;
+    justify-content: space-evenly;
     margin-bottom: .2rem;
 }
 
 .menu_lista li {
-    margin:1% 0
+    width: 19%;
+    padding: .5rem 0 .1rem;
 }
 
 .menu_lista li a {
     display: block;
-    padding: .5rem 0;
     letter-spacing: 2px;
     font-size: 1.3rem;
     text-align: center;
-    background: #ffffffa6;
+    border-radius: 10px;
+    padding: .3rem;
+    background: linear-gradient(rgba(255, 255, 255, .3), #fff);
     color: #533a25;
-    border-top: solid 2px #eee;
+    border-top: solid 1px #eee;
 }
 
 #menu_active {
@@ -157,46 +138,75 @@ font-weight: 600;
     border-color:transparent
 }
 
-.menu_lista_2  {
-    display:none
-}
-
-.redes_sociales {
-    background: rgba(255, 255, 255, .1);
-    margin-top: 5%;
-}
-
-.redes_sociales {
-    padding:0;
-    display: flex; 
-    justify-content: space-evenly;  
-}
-
-.redes_sociales li {
-width: 15%;
-}
-
-.redes_sociales li a span {
-    display:none
-}
-.redes_sociales li a img {
-    width: 100%;
-}
-
-.redes_sociales_2 {
-    display: none;
-}
-
 
 /* --- MAIN --- */
 main {
     background: rgba(255, 255, 255, .5);
+    display: grid;
+    grid-template-areas: "redes_sociales container";
+    justify-content: start;
+    column-gap: 1%;
     padding: 1% 1% 1% 0;
+}
+
+.container {
+    grid-area: container;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 .3rem;
+    justify-content: space-evenly;
 }
 
 .bloque_unico,
 .bloque_dos {
     background: rgba(255, 255, 255, .9);
+}
+
+/* --- ASIDE --- */
+.redes_sociales {
+    grid-area: redes_sociales;
+    background: rgba(255, 255, 255, .8);
+    height: fit-content;
+    position: sticky;
+    top: 1rem;
+    padding-bottom: .1rem;
+}
+
+.redes_sociales h2 {
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    border: 0;
+    padding: .6rem;
+    background: #eeeeee;
+    text-align: center;
+}
+
+.redes_sociales ul {
+    padding:0    
+}
+
+.redes_sociales ul li a {
+    display: flex;
+    align-items: center;
+    padding: .6rem .2rem;
+}
+
+.redes_sociales ul li a span {
+    font-size: 1.2rem;
+    color:#555
+}
+
+.redes_sociales ul li a img {
+    width: 20%;
+    margin: 0 .7rem
+}
+
+.redes_sociales ul li a:hover {
+    background: rgb(136, 144, 151);
+}
+
+.redes_sociales ul li a:hover span {
+    color: #fff;
 }
 
 
