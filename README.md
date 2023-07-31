@@ -1,7 +1,8 @@
 # Disfrutar-el-cocinar
 Sitio web creado con Html, CSS y Bootstrap
 
-Bootstrap:
+
+# Bootstrap:
 
 Página Recetas:
 
@@ -33,7 +34,7 @@ Estructura base:
     
     · Menu collapse
 
-CSS responsive media query:
+# CSS responsive media query:
 
     · 375px
     
