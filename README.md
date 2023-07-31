@@ -24,7 +24,7 @@ Menú para movil:
 
     · collapse
 
-Estructura base:
+# Estructura base:
  
     · Mobile first
     
