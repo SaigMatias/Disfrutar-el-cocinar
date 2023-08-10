@@ -1,5 +1,4 @@
 /* fuentes */
-
 @import url('https://fonts.googleapis.com/css2?family=nunito:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600;1,700;1,800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=crimson+text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=open+sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
@@ -11,29 +10,84 @@
 
 
 /* variables */
+$color_light: #eee;
+$color_mid: #ccc;
+$color_base: #aaa;
+$color_font_base: #222;
+$color_font_mid: #333;
+$color_font_light: #555;
+$color_highlight_base: #533a25;
+$color_highlight_mid: #7a4d28;
+$color_highlight_light: #fcead6;
+$color_sp_base: burlywood;
+$color_sp_mid: blanchedalmond;
+$color_sp_light: #f7f7f7;
+$color_button: rgb(55, 90, 165);
 
+$color_gradient_base: linear-gradient(to top, $color_highlight_base, $color_highlight_mid);
+$color_gradient_light: linear-gradient(to top, $color_sp_base, $color_sp_mid);
+
+$bg_page: rgba(255, 255, 255, .9);
+$bg_header: rgba(253, 249, 238, 0.322);
+
+$bg_menu_mobile: rgba(83, 58, 37, 0.75);
+$bg_submenu_mobile: rgba(255, 255, 255, .6);
+$bg_menu_active: #a5512a;
+$bg_redes_sociales: rgba(255, 255, 255, .1);
+
+$ft_sans: 'open sans', arial, helvetica, sans-serif;
+$ft_sans_2: 'nunito', 'gill sans', 'gill sans mt', 'trebuchet ms', sans-serif;
+$ft_serif: 'crimson-text', georgia, 'times new roman', times, serif;
+$ft_serif_2: 'high_tower', georgia, 'times new roman', times, serif;
+
+$border_light: 2px solid $color_light;
+$border_mid: 2px solid $color_mid;
+
+
+/* mixin */
+@mixin mix_bg-col($mix_bg, $mix_color) {
+    background-color: $mix_bg;
+    color: $mix_color;
+}
 
 
 /* extends */
-/* EXTEND PLACEHOLDER % */
+%flex_column {
+    display: flex;
+    flex-flow: column wrap;
+}
 
-.btn-collapse,
-nav ul li a,
-.redes_sociales h2 {
-    font-family: 'nunito', 'gill sans', 'gill sans mt', calibri, 'trebuchet ms', sans-serif;
+%flex_row {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+%flex_row_center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+%flex_row_wrap_evenly {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+}
+
+%title_ft_sp {
+    font-family: $ft_sans_2;
     font-weight: 800;
 }
 
-
-h2 {
-    font-family: 'high_tower', georgia, 'times new roman', times, serif;
-    border-bottom: 2px solid #eee;
+%title_h2 {
+    font-family: $ft_serif_2;
+    border-bottom: $border_light;
     margin-bottom: .9rem;
-    color: #333;
+    color: $color_font_mid;
     font-weight: 500;
 }
 
-h3 {
+%title_h3 {
     text-align: center;
     margin: 1rem auto;
     font-size: 2.5rem;
@@ -42,5 +96,13 @@ h3 {
     font-weight: bold;
 }
 
-
-/* mixin background, color */
+%menu_lista_link {
+    @extend %title_ft_sp;
+    @include mix_bg-col($bg_submenu_mobile, $color_highlight_base);
+    display: block;
+    padding: .5rem 0;
+    letter-spacing: 2px;
+    font-size: 1.3rem;
+    text-align: center;
+    border-top: $border_light;
+}

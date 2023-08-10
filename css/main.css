@@ -8,16 +8,36 @@
   src: url(fonts/high_tower.ttf);
 }
 /* variables */
+/* mixin */
 /* extends */
-/* EXTEND PLACEHOLDER % */
-.btn-collapse,
-nav ul li a,
-.redes_sociales h2 {
-  font-family: "nunito", "gill sans", "gill sans mt", calibri, "trebuchet ms", sans-serif;
+article, .bloque_recursos, .bloque_recetas .row, .collapse .menu_lista, header .header_menu {
+  display: flex;
+  flex-flow: column wrap;
+}
+
+.bloque_contacto → form {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.btn-collapse {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.collapse .redes_sociales, .container-fluid .bloque_unico {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+}
+
+.btn-collapse, .menu_lista_2 li a, .collapse .menu_lista li a {
+  font-family: "nunito", "gill sans", "gill sans mt", "trebuchet ms", sans-serif;
   font-weight: 800;
 }
 
-h2 {
+.bloque_recursos h2, .bloque_recetas h2, .index_about h2 {
   font-family: "high_tower", georgia, "times new roman", times, serif;
   border-bottom: 2px solid #eee;
   margin-bottom: 0.9rem;
@@ -25,7 +45,7 @@ h2 {
   font-weight: 500;
 }
 
-h3 {
+article h3, .index_novedades article a h3 {
   text-align: center;
   margin: 1rem auto;
   font-size: 2.5rem;
@@ -34,7 +54,17 @@ h3 {
   font-weight: bold;
 }
 
-/* mixin background, color */
+.menu_lista_2 li a, .collapse .menu_lista li a {
+  background-color: rgba(255, 255, 255, 0.6);
+  color: #533a25;
+  display: block;
+  padding: 0.5rem 0;
+  letter-spacing: 2px;
+  font-size: 1.3rem;
+  text-align: center;
+  border-top: 2px solid #eee;
+}
+
 /* reset */
 * {
   padding: 0;
@@ -55,36 +85,29 @@ ul {
   list-style-type: none;
 }
 
+body {
+  width: 100%;
+  margin: 0 auto;
+  background: url(../img/texture_01.webp) no-repeat;
+  background-size: cover;
+  font-family: "open sans", arial, helvetica, sans-serif;
+  background-color: #eee;
+  color: #222;
+}
+
 .container-fluid {
   margin: 0;
   padding: 0;
 }
-
-body {
-  width: 100%;
-  margin: 0 auto;
-  background: #eee url(../img/texture_01.webp) no-repeat;
-  background-size: cover;
-  font-family: "open sans", arial, helvetica, sans-serif;
-  color: #222;
-}
-
-.bloque_unico,
-.bloque_doble {
+.container-fluid .bloque_unico {
+  padding-bottom: 1rem;
   background: rgba(255, 255, 255, 0.9);
 }
-
-.bloque_unico {
-  padding-bottom: 1rem;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-}
-
-.bloque_doble {
+.container-fluid .bloque_doble {
   padding: 15% 4%;
   margin: 0;
-  border-bottom: 5px solid #eee;
+  border-bottom: 2px solid #eee;
+  background: rgba(255, 255, 255, 0.9);
 }
 
 /* header */
@@ -92,24 +115,18 @@ header {
   background: url(../img/header_bg.jpg) no-repeat center;
   background-size: cover;
 }
-
-.header_menu {
-  background: rgba(253, 249, 238, 0.3215686275);
-  display: flex;
-  flex-direction: column;
+header .header_menu {
+  background: rgba(253, 249, 238, 0.322);
 }
-
-.header_menu_izq {
+header .header_menu .header_menu_izq {
   width: 30%;
   margin: 1rem auto 0;
 }
-
-.header_menu_izq img {
+header .header_menu .header_menu_izq img {
   width: 100%;
   opacity: 70%;
 }
-
-.header_menu_dre h1 {
+header .header_menu .header_menu_dre h1 {
   font-family: "crimson-text", georgia, "times new roman", times, serif;
   letter-spacing: 1px;
   font-size: 3rem;
@@ -127,19 +144,14 @@ header {
   background: rgba(83, 58, 37, 0.75);
   border: 0;
   padding: 0.1rem 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   gap: 3%;
 }
-
 .btn-collapse span {
   font-size: 1.5rem;
   letter-spacing: 1px;
   color: #eee;
   font-weight: 600;
 }
-
 .btn-collapse img {
   width: 24px;
   opacity: 0.6;
@@ -150,68 +162,43 @@ header {
   padding-bottom: 2%;
   border-bottom: 2px solid #eee;
 }
-
-.menu_lista {
-  display: flex;
-  flex-flow: column wrap;
+.collapse .menu_lista {
   justify-content: space-between;
   margin-bottom: 0.2rem;
 }
-
-.menu_lista li {
+.collapse .menu_lista li {
   margin: 1% 0;
 }
-
-.menu_lista li a, .menu_lista_2 li a {
-  display: block;
-  padding: 0.5rem 0;
-  letter-spacing: 2px;
-  font-size: 1.3rem;
-  text-align: center;
-  background: rgba(255, 255, 255, 0.6509803922);
-  color: #533a25;
-  border-top: solid 2px #eee;
+.collapse .menu_lista li a .menu_lista li a:hover,
+.collapse .menu_lista li a .menu_lista_2 li a.hover {
+  border-color: transparent;
+  background-color: #533a25;
+  color: #fcead6;
+}
+.collapse .redes_sociales {
+  background: rgba(255, 255, 255, 0.1);
+  margin-top: 5%;
+  padding: 0;
+}
+.collapse .redes_sociales li {
+  width: 15%;
+}
+.collapse .redes_sociales li a img {
+  width: 100%;
+}
+.collapse .redes_sociales li a img:hover {
+  opacity: 70%;
 }
 
 #menu_active {
-  background: rgb(165, 81, 42);
-  color: #fcead6;
   border-color: transparent;
-}
-
-.menu_lista li a:hover, .menu_lista_2 li a.hover {
+  background-color: #a5512a;
   color: #fcead6;
-  background: #533a25;
-  border-color: transparent;
 }
 
 .menu_lista_2 {
   display: none;
 }
-
-.redes_sociales {
-  background: rgba(255, 255, 255, 0.1);
-  margin-top: 5%;
-}
-
-.redes_sociales {
-  padding: 0;
-  display: flex;
-  justify-content: space-evenly;
-}
-
-.redes_sociales li {
-  width: 15%;
-}
-
-.redes_sociales li a img {
-  width: 100%;
-}
-
-.redes_sociales li a img:hover {
-  opacity: 70%;
-}
-
 /* ASIDE */
 .redes_sociales_2 {
   display: none;
@@ -221,13 +208,11 @@ header {
 .index_about h2 {
   font-size: 2.2rem;
 }
-
 .index_about p strong {
   font-weight: bold;
   font-style: italic;
   color: #533a25;
 }
-
 .index_about .firma {
   text-align: right;
   font-weight: bold;
@@ -239,17 +224,15 @@ header {
   padding: 2%;
   margin-bottom: 2rem;
 }
-
 .index_novedades article a h3 {
+  background-color: antiquewhite;
+  color: #333;
   font-size: 1.3rem;
   text-transform: uppercase;
   letter-spacing: 1px;
-  background: antiquewhite;
   padding: 2rem;
   margin: 1rem;
-  color: #333;
 }
-
 .index_novedades article a p {
   font-size: 1.2rem;
   margin: 1rem;
@@ -257,7 +240,6 @@ header {
   color: #555;
   font-weight: 500;
 }
-
 .index_novedades article a p.info {
   font-size: 1.1rem;
   font-style: italic;
@@ -266,67 +248,54 @@ header {
   -webkit-text-decoration: underline solid 2px burlywood;
           text-decoration: underline solid 2px burlywood;
 }
-
 .index_novedades article a:hover h3 {
+  background-color: #7a4d28;
   color: #f7f7f7;
-  background: #7a4d28;
 }
-
 .index_novedades article a:hover .info {
-  background: burlywood;
+  background-color: burlywood;
   color: #533a25;
 }
 
 /* recetas */
-/* recetas - row - col - card - .card-body - .card-title .btn */
 .bloque_recetas h2 {
+  background-color: #533a25;
+  color: #fcead6;
   padding: 0.5rem;
   margin-bottom: 2rem;
   border: 0;
   font-variant: small-caps;
   text-align: center;
   letter-spacing: 1px;
-  color: #fcead6;
-  background: #533a25;
   font-size: 1.5rem;
   line-height: 1.5rem;
   width: 100%;
 }
-
-.row {
+.bloque_recetas .row {
   margin: 0 auto;
-  display: flex;
-  flex-direction: column;
 }
-
-.card {
-  background: #fff6ec;
+.bloque_recetas .row .card {
+  background: #f7f7f7;
   margin-bottom: 2rem;
 }
-
-.card-body {
+.bloque_recetas .row .card .card-body {
   background: burlywood;
 }
-
-.card-title {
+.bloque_recetas .row .card .card-body .card-title {
   color: #533a25;
   font-size: 2rem;
 }
-
-.btn {
-  background: #533a25;
+.bloque_recetas .row .card .card-body .btn {
+  background-color: #533a25;
   color: blanchedalmond;
 }
-
-.btn:hover {
-  background: blanchedalmond;
+.bloque_recetas .row .card .card-body .btn:hover {
+  background-color: blanchedalmond;
   color: #533a25;
 }
 
 /* recursos */
 .bloque_recursos {
-  display: flex;
-  flex-direction: column;
   gap: 2rem;
   align-items: center;
 }
@@ -338,55 +307,49 @@ header {
 
 article {
   width: 99%;
-  display: flex;
-  flex-direction: column;
   justify-content: space-between;
-  background: #fffcf5;
+  background: #fff;
+  border-bottom: 2px solid #eee;
 }
-
 article h3 {
+  background-color: #533a25;
+  color: #fff;
   font-size: 1.7rem;
   letter-spacing: 1px;
   padding: 1rem 0;
   margin: 0 auto;
-  background: #7a4d28;
-  color: #fff;
   width: 100%;
   border-radius: 4px;
+}
+article p {
+  font-size: 0.9rem;
+  margin: 0.5rem 1rem;
+}
+article a {
+  background-color: blanchedalmond;
+  color: #533a25;
+  width: 90%;
+  margin: 0 auto 1rem;
+  padding: 1rem;
+  text-align: center;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-weight: bold;
+  border-radius: 7px;
+}
+article a:hover {
+  background-color: #7a4d28;
+  color: #f7f7f7;
 }
 
 article:nth-child(2) h3,
 article:nth-child(3) h3 {
   background: linear-gradient(to top, #533a25, #7a4d28);
-  color: #fdf3e6;
-}
-
-article p {
-  font-size: 0.9rem;
-  margin: 0.5rem 1rem;
-}
-
-article a {
-  width: 90%;
-  margin: 0 auto 1rem;
-  padding: 1rem;
-  text-align: center;
-  color: #533a25;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  background: blanchedalmond;
-  font-weight: bold;
-  border-radius: 7px;
 }
 
 article:nth-child(2) a,
 article:nth-child(3) a {
   background: linear-gradient(to top, burlywood, blanchedalmond);
-}
-
-article a:hover {
-  color: #f7f7f7;
-  background: #7a4d28;
 }
 
 /* tradición */
@@ -410,7 +373,7 @@ article a:hover {
   margin-top: 0.5rem;
   color: #555;
   font-variant: small-caps;
-  border-bottom: solid 2px #ccc;
+  border-bottom: 2px solid #ccc;
   width: 90%;
   text-indent: 1rem;
 }
@@ -429,8 +392,6 @@ article a:hover {
   width: 80%;
   margin: auto;
   padding: 3rem 0;
-  display: flex;
-  flex-wrap: wrap;
 }
 
 form label,
@@ -441,7 +402,7 @@ form label,
 .form_elementos {
   background: #eee;
   margin-bottom: 2rem;
-  border: solid 2px #ccc;
+  border: 2px solid #ccc;
   padding: 0.8rem 0.6rem;
   width: 100%;
   font-size: 1rem;
@@ -486,22 +447,22 @@ form textarea {
 }
 
 .reset:hover {
-  background: brown;
+  background-color: brown;
   color: #f7f7f7;
   border-color: transparent;
   opacity: 100;
 }
 
 .envio {
-  background: rgb(55, 90, 165);
+  background-color: rgb(55, 90, 165);
   color: #f7f7f7;
   border-color: #333;
 }
 
 .envio:hover {
   box-shadow: rgb(55, 90, 165) 0 3px 5px;
+  background-color: #f7f7f7;
   color: rgb(55, 90, 165);
-  background: #f7f7f7;
   letter-spacing: 1px;
 }
 
@@ -516,12 +477,10 @@ form textarea {
   margin: 1rem 0;
   border-bottom: #555 solid 1px;
 }
-
 .modal_item li a {
   font-size: 1.1rem;
   color: blanchedalmond;
 }
-
 .modal_item li a:hover {
   color: #7a4d28;
 }
@@ -531,7 +490,6 @@ footer {
   background: #533a25;
   padding: 0.5rem;
 }
-
 footer p {
   font-weight: bold;
   text-align: center;

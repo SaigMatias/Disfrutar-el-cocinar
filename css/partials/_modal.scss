@@ -2,14 +2,16 @@
 
 .modal_item li {
     margin: 1rem 0;
-    border-bottom: #555 solid 1px;
-}
+    border-bottom: $color_font_light solid 1px;
 
-.modal_item li a {
-    font-size: 1.1rem;
-    color: blanchedalmond
-}
+    a {
+        font-size: 1.1rem;
+        color: $color_sp_mid;
 
-.modal_item li a:hover {
-    color: #7a4d28
+        &:hover {
+            color: $color_highlight_mid
+        }
+
+    }
+
 }
