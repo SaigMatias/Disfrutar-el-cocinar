@@ -1,0 +1,328 @@
+/* responsive */
+
+@media screen and (min-width: 375px) {
+
+    .btn span {
+        margin-left: .3rem;
+    }
+
+}
+
+@media screen and (min-width:576px) {
+    
+    .header_menu_dre h1 {
+        margin-bottom: 1.5rem;
+        font-size: 4rem;
+        line-height: 3rem;
+    }
+
+    .redes_sociales li {
+        width: 10%;
+    }
+
+    .btn-collapse {
+        padding: .5rem 0;
+        background: rgba(83, 58, 37, 0.85);
+    }
+
+    .btn-collapse span {
+        text-transform: uppercase;
+    }
+
+    .btn-collapse img {
+        opacity: .7;
+    }
+
+    .bloque_dos {
+        padding: 10%
+    }
+
+    .bloque_unico h2 {
+        font-size: 2.3rem;
+        line-height: 2rem;
+        padding:1rem
+    }
+
+    .art_recursos {
+        width:75%;
+        margin-bottom:1.5rem;
+        border-bottom: solid 3px #eee;
+        box-shadow: #ddd 0 3px 7px
+    }
+
+    .art_recursos h3 {
+        margin-bottom:1rem
+    }
+
+    .art_recursos p {
+        margin-bottom: 2rem;
+    }
+
+    .art_recursos a {
+        width:75%
+    }
+
+    .bloque_tradicion h3 {
+margin-bottom: 1rem;
+    }
+
+}
+
+@media screen and (min-width:768px) {
+
+    .header_menu_izq {
+        width: 20%;
+    }
+    
+    .btn-collapse {
+        display: none;
+    }
+
+    .menu_lista_2 {
+        display: flex;
+        justify-content: space-evenly;
+        margin-bottom: 0;
+        padding-left: 0;
+    }
+
+    .menu_lista_2 li {
+        width:100%;
+    }
+
+    #menu_active {
+        border-color: blanchedalmond
+    }
+
+
+    /* bloques */
+    main {
+        background: rgba(255, 255, 255, .5);
+        display: grid;
+        grid-template-areas: "redes_sociales bloque_mayor";
+        justify-content: center;
+        column-gap: 1%;
+        padding: 1% 1% 1% 0;
+    }
+    
+    .bloque_mayor {
+        grid-area: bloque_mayor;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: .3rem;
+        justify-content: space-evenly;
+    }
+
+    .bloque_unico {
+        padding-bottom: 1rem;
+        grid-column: 1/3;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;}
+
+    .bloque_dos {
+        grid-column: span;
+        padding: 3% 4%;
+border-bottom: 0;    
+    }
+    
+    footer p {
+        font-size:.9rem
+    }
+    
+
+    /* --- aside --- */
+.redes_sociales_2 {
+    display: block;
+grid-area: redes_sociales;
+height: fit-content;
+    position: sticky;
+    top: 5%;
+    padding: 1rem 0;
+    background: blanchedalmond;
+    border-radius: 0 5px 5px 0;
+    }
+
+.redes_sociales_2 ul {
+    padding:0; margin:0;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+    align-items: center;
+}
+
+.redes_sociales_2 ul li {
+   width: 70%;
+}
+
+.redes_sociales_2 h2, .redes_sociales_2 ul li a span {
+    display: none;
+}
+
+.redes_sociales_2 ul li a img {
+    width: 100%;
+}
+
+.redes_sociales_2 ul li a:hover {
+    background: rgb(136, 144, 151);
+}
+
+.redes_sociales ul li a:hover span {
+    color: #fff;
+}
+
+/* recetas */
+.row {
+    flex-direction: row;
+}
+
+.card-title {
+    font-size:1.5rem
+}
+
+
+/* recursos */
+.bloque_recursos {
+    flex-direction: row;
+    gap:1rem
+}
+
+.bloque_recursos h2 {
+   font-size: 2rem;
+}
+.art_recursos {
+    width: 45%
+}
+
+.art_recursos h3 {
+    min-height: 2rem;
+}
+
+.art_recursos p {
+    min-height: 10.5rem;
+    margin-top:0
+}
+
+/* tradición */
+.bloque_tradicion iframe {
+    height:70vh
+}
+
+
+/* formulario */
+.form_button {
+    width:45%;
+    margin: auto
+}
+
+}
+
+@media screen and (min-width:992px) {
+    /* header y menu */
+    header {
+        background-position: bottom;
+    }
+
+    .header_menu {
+        background: #fdf9ee52;
+        display: grid;
+        grid-template-columns: 1fr 6fr;
+        align-items: end;
+        padding:1rem;
+    }
+    
+    .header_menu_izq {
+        grid-column: 1/2;
+        display: flex;
+        justify-content: center;
+        width: auto; 
+        margin: .5rem}
+    
+    .header_menu_izq img {
+        width: 100%;
+    }
+    
+    .header_menu_dre {
+        grid-column: 2/2;
+      
+    }
+    
+    .header_menu_dre h1 {
+        letter-spacing: 4px;
+        font-size: 5rem;
+        margin-bottom: .75rem;
+    }
+
+    .header_menu_dre h1 br {
+display:none
+    }
+    
+    .menu_lista_2 {
+        display: flex;
+        justify-content: space-evenly;
+        margin-bottom: .2rem;
+    }
+    
+    .menu_lista_2 li {
+        width: 19%;
+        padding: .5rem 0 .1rem;
+    }
+    
+    .menu_lista_2 li a {
+        border-radius: 10px;
+        padding: .3rem;
+        background: linear-gradient(rgba(255, 255, 255, .3), #fff);
+        color: #533a25;
+        border-top: solid 1px #eee;
+    }
+
+    #menu_active {
+        border-color: transparent;
+    }
+    /* bloques */
+.bloque_unico h2 {
+    font-size: 2.5rem;
+}
+        /* recetas */
+.card-title {
+    font-size: 2rem;
+}
+
+    /* recursos */
+    .art_recursos p {
+        font-size: 1rem
+    }
+
+        /* formulario */
+
+        form label {
+            font-size: 1.5rem;
+            letter-spacing: 1px;
+        }
+
+}
+
+@media screen and (min-width: 1200px) {
+        /* header y menu */
+
+    .header_menu {
+        grid-template-columns: 1fr 7fr;
+    }
+
+    .header_menu_izq {
+        width: 80%;
+    }
+
+    .header_menu_dre h1 {
+        font-size: 6rem;
+        margin-bottom:1.5rem
+    }
+
+
+}
+
+@media screen and (min-width: 1400px) {
+    body {
+        max-width: 1500px;
+
+    }
+}

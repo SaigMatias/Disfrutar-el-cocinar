@@ -1,0 +1,27 @@
+body {
+    width: 100%;
+    margin: 0 auto;
+    background: #eee url(../img/texture_01.webp) no-repeat;
+    background-size: cover;
+    font-family: 'open sans', arial, helvetica, sans-serif;
+    color: #222;
+}
+
+.bloque_unico,
+.bloque_doble {
+    background: rgba(255, 255, 255, .9);
+}
+
+.bloque_unico {
+    padding-bottom: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.bloque_doble {
+    padding: 15% 4%;
+    margin: 0;
+    border-bottom: 5px solid #eee
+}
+

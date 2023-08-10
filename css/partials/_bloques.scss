@@ -1,0 +1,300 @@
+/* inicio */
+
+.index_about h2 {
+    font-size: 2.2rem;
+}
+
+.index_about p strong {
+    font-weight: bold;
+    font-style: italic;
+    color: #533a25;
+}
+
+.index_about .firma {
+    text-align: right;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+
+.index_novedades article {
+    border: solid #fcead6 2px;
+    padding: 2%;
+    margin-bottom: 2rem
+}
+
+.index_novedades article a h3 {
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    background: antiquewhite;
+    padding: 2rem;
+    margin: 1rem;
+    color: #333
+}
+
+.index_novedades article a p {
+    font-size: 1.2rem;
+    margin: 1rem;
+    text-align: center;
+    color: #555;
+    font-weight: 500;
+}
+
+.index_novedades article a p.info {
+    font-size: 1.1rem;
+    font-style: italic;
+    color: #7a4d28;
+    padding: 1rem 2rem;
+    text-decoration: underline solid 2px burlywood;
+}
+
+.index_novedades article a:hover h3 {
+    color: #f7f7f7;
+    background: #7a4d28;
+}
+
+.index_novedades article a:hover .info {
+    background: burlywood;
+    color: #533a25
+}
+
+/* recetas */
+
+/* recetas - row - col - card - .card-body - .card-title .btn */
+
+.bloque_recetas h2 {
+    padding: .5rem;
+    margin-bottom: 2rem;
+    border: 0;
+    font-variant: small-caps;
+    text-align: center;
+    letter-spacing: 1px;
+    color: #fcead6;
+    background: #533a25;
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+    width: 100%;
+}
+
+.row {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.card {
+    background: #fff6ec;
+    margin-bottom: 2rem;
+}
+
+.card-body {
+    background: burlywood;
+}
+
+.card-title {
+    color: #533a25;
+    font-size:2rem
+}
+
+.btn {
+    background: #533a25;
+    color: blanchedalmond;
+}
+
+.btn:hover {
+    background: blanchedalmond;
+    color: #533a25;
+}
+
+/* recursos */
+
+.bloque_recursos {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+}
+
+.bloque_recursos h2 {
+    flex-grow: 2;
+    margin-bottom: 0;
+}
+
+article {
+    width: 99%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: #fffcf5;
+}
+
+article h3 {
+    font-size: 1.7rem;
+    letter-spacing: 1px;
+    padding: 1rem 0;
+    margin: 0 auto;
+    background: #7a4d28;
+    color: #fff;
+    width: 100%;
+    border-radius: 4px
+}
+
+article:nth-child(2) h3,
+article:nth-child(3) h3 {
+    background: linear-gradient(to top, #533a25, #7a4d28);
+    color: #fdf3e6;
+}
+
+article p {
+    font-size: .9rem;
+    margin: .5rem 1rem;
+}
+
+article a {
+    width: 90%;
+    margin: 0 auto 1rem;
+    padding: 1rem;
+    text-align: center;
+    color: #533a25;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    background: blanchedalmond;
+    font-weight: bold;
+    border-radius: 7px;
+}
+
+article:nth-child(2) a,
+article:nth-child(3) a {
+    background: linear-gradient(to top, burlywood, blanchedalmond)
+}
+
+article a:hover {
+    color: #f7f7f7;
+    background: #7a4d28;
+}
+
+/* tradición */
+
+.bloque_tradicion h3 {
+    color:#333;
+    font-size: 4rem;
+    text-decoration: underline solid #555 5px;
+}
+
+.tradicion_proximo {
+    font-size: 2rem;
+    color: #aaa;
+    text-transform: uppercase;
+    text-align: center;
+    width: 100%;
+}
+
+.bloque_tradicion h4 {
+    font-size: 2em;
+    margin-top: .5rem;
+    color: #555;
+    font-variant: small-caps;
+    border-bottom: solid 2px #ccc;
+    width: 90%;
+    text-indent: 1rem;
+}
+
+.bloque_tradicion iframe {
+    width: 90%;
+    height: 50vh;
+    border: 2px solid #ccc;
+    box-shadow: #333 0px 3px 5px;
+    margin: 1rem auto 4rem;
+    display: block;
+}
+
+
+/* contacto */
+
+.bloque_contacto →
+form {
+    width: 80%;
+    margin: auto;
+    padding: 3rem 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+form label,
+.form_elementos {
+    border-radius: 3px;
+}
+
+.form_elementos {
+    background: #eee;
+    margin-bottom: 2rem;
+    border: solid 2px #ccc;
+    padding: .8rem .6rem;
+    width: 100%;
+    font-size: 1rem;
+}
+
+form label,
+.form_button {
+    font-weight: bold;
+    text-align: center;
+}
+
+form label {
+    margin: 1rem 0;
+    width: 100%;
+    font-size: 1.3rem
+}
+
+form textarea {
+    height: 12rem;
+    resize: none;
+}
+
+.form_elementos:focus,
+.form_elementos:hover {
+    background: #fff;
+    border-color: rgb(55, 90, 165);
+    outline: 0;
+}
+
+.form_button {
+    width: 100%;
+    padding: 1rem;
+    border-style: solid;
+    font-size: 1.2rem;
+    margin-bottom: 1rem
+}
+
+.reset {
+    opacity: .75;
+    border-color: #533a25;
+    color: #533a25;
+}
+
+.reset:hover {
+    background: brown;
+    color: #f7f7f7;
+    border-color: transparent;
+    opacity: 100;
+}
+
+.envio {
+    background: rgb(55, 90, 165);
+    color: #f7f7f7;
+    border-color: #333;
+}
+
+.envio:hover {
+    box-shadow: rgb(55, 90, 165) 0 3px 5px;
+    color: rgb(55, 90, 165);
+    background: #f7f7f7;
+    letter-spacing: 1px;
+}
+
+
+/* simulacro de envio */
+.bloque_simulacro_envio a:hover {
+    box-shadow: #222 0 1px 30px inset;
+    letter-spacing: 1px;
+}
