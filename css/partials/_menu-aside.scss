@@ -1,106 +1,103 @@
 /* menu */
-.btn-collapse {
-    @extend %flex_row_center;
-    @extend %title_ft_sp;
-    width: 100%;
-    background: $bg_menu_mobile;
-    border: 0;
-    padding: .1rem 0;
-    gap: 3%;
+nav {
 
-    span {
-        font-size: 1.5rem;
-        letter-spacing: 1px;
-        color: $color_light;
-        font-weight: 600;
+    .menu_lista_2 {
+        display: none
     }
 
-    img {
-        width: 24px;
-        opacity: .6;
+    .btn-collapse {
+        @extend %flex_row_center;
+        @extend %title_ft_sp;
+        width: 100%;
+        background: $bg_menu_mobile;
+        border: 0;
+        padding: .1rem 0;
+        gap: 3%;
+
+        img {
+            width: 24px;
+            opacity: .6;
+        }
+
+        span {
+            font-size: 1.5rem;
+            letter-spacing: 1px;
+            color: $color_light;
+            font-weight: 600;
+            margin-bottom: .7rem
+        }
+
     }
 
-}
+    .collapsing {
+        transition: .01s;
+        display: none
+    }
 
+    .collapse {
+        background: $bg_header;
+        padding-bottom: 2%;
+        margin-bottom: 2rem;
+        border-bottom: $border_light;
 
-.collapse {
-    background: $bg_header;
-    padding-bottom: 2%;
-    border-bottom: $border_light;
+        .menu_lista {
+            @extend %flex_column;
+            justify-content: space-between;
+            margin-bottom: .2rem;
 
+            li {
+                margin: 1% 0;
 
-    .menu_lista {
-        @extend %flex_column;
-        justify-content: space-between;
-        margin-bottom: .2rem;
+                a {
+                    @extend %title_ft_sp;
+                    @include mix_bg-col($bg_submenu_mobile, $color_highlight_base);
+                    display: block;
+                    padding: .5rem 0;
+                    letter-spacing: 2px;
+                    font-size: 1.3rem;
+                    text-align: center;
+                    border-top: $border_light;
 
-        li {
-            margin: 1% 0;
+                    &:hover {
+                        border-color: transparent;
+                        @include mix_bg-col($color_highlight_base, $color_highlight_light)
+                    }
 
-            a {
-                @extend %menu_lista_link;
+                }
 
-                .menu_lista li a:hover,
-                .menu_lista_2 li a.hover {
+                .menu_active {
+                    @include mix_bg-col($bg_menu_active, $color_highlight_light);
                     border-color: transparent;
-                    @include mix_bg-col($color_highlight_base, $color_highlight_light)
                 }
 
             }
+
+        }
+
+        .redes_sociales {
+            @extend %flex_row_wrap_evenly;
+
+            li {
+                width: 15%;
+
+                a img {
+                    width: 100%;
+
+                    &:hover {
+                        opacity: 70%;
+                    }
+
+                }
+
+            }
+
         }
 
     }
 
-
-    .redes_sociales {
-        @extend %flex_row_wrap_evenly;
-        background: $bg_redes_sociales;
-        margin-top: 5%;
-        padding: 0;
-
-
-        li {
-            width: 15%;
-
-            a img {
-                width: 100%;
-
-                &:hover {
-                    opacity: 70%;
-                }
-
-            }
-        }
-
-
-    }
 }
 
-
-
-
-
-
-#menu_active {
-    border-color: transparent;
-    @include mix_bg-col($bg_menu_active, $color_highlight_light)
-}
-
-
-.menu_lista_2 {
-    display: none;
-
-    li a {
-        @extend %menu_lista_link
-    }
-}
-
-
-
-
-
-
-/* ASIDE */
+/* aside */
 .redes_sociales_2 {
     display: none;
 }

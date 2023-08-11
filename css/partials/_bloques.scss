@@ -1,5 +1,4 @@
 /* inicio */
-
 .index_about {
 
     h2 {
@@ -21,14 +20,13 @@
 
 }
 
-
-
 .index_novedades article {
     border: solid $color_highlight_light 2px;
     padding: 2%;
     margin-bottom: 2rem;
 
     a {
+
         h3 {
             @extend %title_h3;
             @include mix_bg-col(antiquewhite, $color_font_mid);
@@ -64,36 +62,24 @@
         }
 
     }
+
 }
 
 
 /* recetas */
 .bloque_recetas {
 
-
     h2 {
-        @include mix_bg-col($color_highlight_base, $color_highlight_light);
-        @extend %title_h2;
-        padding: .5rem;
-        margin-bottom: 2rem;
-        border: 0;
-        font-variant: small-caps;
-        text-align: center;
-        letter-spacing: 1px;
-        font-size: 1.5rem;
-        line-height: 1.5rem;
-        width: 100%;
+        @extend %title_h2_fill;
     }
 
     .row {
         margin: 0 auto;
         @extend %flex_column;
 
-
         .card {
             background: $color_sp_light;
             margin-bottom: 2rem;
-
 
             .card-body {
                 background: $color_sp_base;
@@ -109,90 +95,90 @@
                     &:hover {
                         @include mix_bg-col($color_sp_mid, $color_highlight_base)
                     }
+
                 }
+
             }
 
         }
 
     }
+
 }
 
 
-
-
-
 /* recursos */
-
 .bloque_recursos {
     @extend %flex_column;
     gap: 2rem;
     align-items: center;
-}
 
-.bloque_recursos h2 {
-    @extend %title_h2;
-    flex-grow: 2;
-    margin-bottom: 0;
-}
-
-article {
-    @extend %flex_column;
-    width: 99%;
-    justify-content: space-between;
-    background: #fff;
-    border-bottom: $border_light;
-
-    h3 {
-        @extend %title_h3;
-        @include mix_bg-col($color_highlight_base, #fff);
-        font-size: 1.7rem;
-        letter-spacing: 1px;
-        padding: 1rem 0;
-        margin: 0 auto;
-        width: 100%;
-        border-radius: 4px
+    h2 {
+        @extend %title_h2_fill;
+        flex-grow: 2;
+        margin-bottom: 0;
     }
 
-    p {
-        font-size: .9rem;
-        margin: .5rem 1rem;
-    }
+    article {
+        @extend %flex_column;
+        width: 99%;
+        justify-content: space-between;
+        background: #fff;
+        border-bottom: $border_light;
 
-    a {
-        @include mix_bg-col($color_sp_mid, $color_highlight_base);
-        width: 90%;
-        margin: 0 auto 1rem;
-        padding: 1rem;
-        text-align: center;
-        letter-spacing: 1px;
-        text-transform: uppercase;
-        font-weight: bold;
-        border-radius: 7px;
-
-        &:hover {
-            @include mix_bg-col($color_highlight_mid, $color_sp_light)
+        h3 {
+            @extend %title_h3;
+            @include mix_bg-col($color_highlight_base, #fff);
+            font-size: 1.7rem;
+            letter-spacing: 1px;
+            padding: 1rem 0;
+            margin: 0 auto;
+            width: 100%;
+            border-radius: 4px
         }
-    }
 
+        p {
+            font-size: .9rem;
+            margin: .5rem 1rem;
+        }
 
-    &:nth-child(2) h3,
-    &:nth-child(3) h3 {
-        background: $color_gradient_base;
-    }
+        a {
+            @include mix_bg-col($color_sp_mid, $color_highlight_base);
+            width: 90%;
+            margin: 0 auto 1rem;
+            padding: 1rem;
+            text-align: center;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            font-weight: bold;
+            border-radius: 7px;
 
+            &:hover {
+                @include mix_bg-col($color_highlight_mid, $color_sp_light)
+            }
+        }
 
-    &:nth-child(2) a,
-    &:nth-child(3) a {
-        background: $color_gradient_light
+        &:nth-child(2) h3,
+        &:nth-child(3) h3 {
+            background: $color_gradient_base;
+        }
+
+        &:nth-child(2) a,
+        &:nth-child(3) a {
+            background: $color_gradient_light
+        }
+
     }
 
 }
-
-
 
 
 /* tradición */
 .bloque_tradicion {
+
+    h2 {
+        @extend %title_h2_fill;
+    }
 
     h3 {
         @extend %title_h3;
@@ -200,7 +186,6 @@ article {
         font-size: 4rem;
         text-decoration: underline solid $color_font_light 5px;
     }
-
 
     h4 {
         font-size: 2em;
@@ -229,12 +214,10 @@ article {
         width: 100%;
     }
 
-
 }
 
 
 /* contacto */
-
 .bloque_contacto {
 
     form {
@@ -270,7 +253,6 @@ article {
 
         }
 
-
         textarea {
             height: 12rem;
             resize: none;
@@ -286,9 +268,6 @@ article {
             margin-bottom: 1rem
         }
 
-
-
-
         .reset {
             opacity: .75;
             border-color: $color_highlight_base;
@@ -301,7 +280,6 @@ article {
             }
         }
 
-
         .envio {
             @include mix_bg-col($color_button, $color_sp_light);
             border-color: $color_font_mid;
@@ -313,8 +291,8 @@ article {
             }
 
         }
-    }
 
+    }
 
 }
 

@@ -10,59 +10,61 @@
 /* variables */
 /* mixin */
 /* extends */
-article, .bloque_recursos, .bloque_recetas .row, .collapse .menu_lista, header .header_menu {
+.bloque_recursos article, .bloque_recursos, .bloque_recetas .row, nav .collapse .menu_lista, header .header_menu {
   display: flex;
   flex-flow: column wrap;
 }
 
-.bloque_contacto → form {
+.bloque_contacto form {
   display: flex;
   flex-flow: row wrap;
 }
 
-.btn-collapse {
+nav .btn-collapse {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.collapse .redes_sociales, .container-fluid .bloque_unico {
+nav .collapse .redes_sociales, .container-fluid .bloque_unico {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-evenly;
 }
 
-.btn-collapse, .menu_lista_2 li a, .collapse .menu_lista li a {
+nav .collapse .menu_lista li a, nav .btn-collapse {
   font-family: "nunito", "gill sans", "gill sans mt", "trebuchet ms", sans-serif;
   font-weight: 800;
 }
 
-.bloque_recursos h2, .bloque_recetas h2, .index_about h2 {
+.index_about h2, .bloque_tradicion h2, .bloque_recursos h2, .bloque_recetas h2 {
   font-family: "high_tower", georgia, "times new roman", times, serif;
   border-bottom: 2px solid #eee;
   margin-bottom: 0.9rem;
-  color: #333;
   font-weight: 500;
 }
 
-article h3, .index_novedades article a h3 {
+.bloque_tradicion h2, .bloque_recursos h2, .bloque_recetas h2 {
+  background-color: #533a25;
+  color: #fcead6;
+  padding: 0.5rem;
+  margin-bottom: 2rem;
+  border: 0;
+  font-variant: small-caps;
+  text-align: center;
+  letter-spacing: 1px;
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+  width: 100%;
+}
+
+.bloque_tradicion h3, .bloque_recursos article h3, .index_novedades article a h3 {
   text-align: center;
   margin: 1rem auto;
   font-size: 2.5rem;
   font-variant: small-caps;
   letter-spacing: 2px;
   font-weight: bold;
-}
-
-.menu_lista_2 li a, .collapse .menu_lista li a {
-  background-color: rgba(255, 255, 255, 0.6);
-  color: #533a25;
-  display: block;
-  padding: 0.5rem 0;
-  letter-spacing: 2px;
-  font-size: 1.3rem;
-  text-align: center;
-  border-top: 2px solid #eee;
 }
 
 /* reset */
@@ -85,6 +87,7 @@ ul {
   list-style-type: none;
 }
 
+/* contenedores */
 body {
   width: 100%;
   margin: 0 auto;
@@ -139,67 +142,75 @@ header .header_menu .header_menu_dre h1 {
 }
 
 /* menu */
-.btn-collapse {
+nav .menu_lista_2 {
+  display: none;
+}
+nav .btn-collapse {
   width: 100%;
   background: rgba(83, 58, 37, 0.75);
   border: 0;
   padding: 0.1rem 0;
   gap: 3%;
 }
-.btn-collapse span {
+nav .btn-collapse img {
+  width: 24px;
+  opacity: 0.6;
+}
+nav .btn-collapse span {
   font-size: 1.5rem;
   letter-spacing: 1px;
   color: #eee;
   font-weight: 600;
+  margin-bottom: 0.7rem;
 }
-.btn-collapse img {
-  width: 24px;
-  opacity: 0.6;
+nav .collapsing {
+  transition: 0.01s;
+  display: none;
 }
-
-.collapse {
+nav .collapse {
   background: rgba(253, 249, 238, 0.322);
   padding-bottom: 2%;
+  margin-bottom: 2rem;
   border-bottom: 2px solid #eee;
 }
-.collapse .menu_lista {
+nav .collapse .menu_lista {
   justify-content: space-between;
   margin-bottom: 0.2rem;
 }
-.collapse .menu_lista li {
+nav .collapse .menu_lista li {
   margin: 1% 0;
 }
-.collapse .menu_lista li a .menu_lista li a:hover,
-.collapse .menu_lista li a .menu_lista_2 li a.hover {
+nav .collapse .menu_lista li a {
+  background-color: rgba(255, 255, 255, 0.6);
+  color: #533a25;
+  display: block;
+  padding: 0.5rem 0;
+  letter-spacing: 2px;
+  font-size: 1.3rem;
+  text-align: center;
+  border-top: 2px solid #eee;
+}
+nav .collapse .menu_lista li a:hover {
   border-color: transparent;
   background-color: #533a25;
   color: #fcead6;
 }
-.collapse .redes_sociales {
-  background: rgba(255, 255, 255, 0.1);
-  margin-top: 5%;
-  padding: 0;
+nav .collapse .menu_lista li .menu_active {
+  background-color: #a5512a;
+  color: #fcead6;
+  border-color: transparent;
 }
-.collapse .redes_sociales li {
+nav .collapse .redes_sociales li {
   width: 15%;
 }
-.collapse .redes_sociales li a img {
+nav .collapse .redes_sociales li a img {
   width: 100%;
 }
-.collapse .redes_sociales li a img:hover {
+nav .collapse .redes_sociales li a img:hover {
   opacity: 70%;
 }
 
-#menu_active {
-  border-color: transparent;
-  background-color: #a5512a;
-  color: #fcead6;
-}
-
-.menu_lista_2 {
-  display: none;
-}
-/* ASIDE */
+/* aside */
 .redes_sociales_2 {
   display: none;
 }
@@ -258,19 +269,6 @@ header .header_menu .header_menu_dre h1 {
 }
 
 /* recetas */
-.bloque_recetas h2 {
-  background-color: #533a25;
-  color: #fcead6;
-  padding: 0.5rem;
-  margin-bottom: 2rem;
-  border: 0;
-  font-variant: small-caps;
-  text-align: center;
-  letter-spacing: 1px;
-  font-size: 1.5rem;
-  line-height: 1.5rem;
-  width: 100%;
-}
 .bloque_recetas .row {
   margin: 0 auto;
 }
@@ -299,19 +297,17 @@ header .header_menu .header_menu_dre h1 {
   gap: 2rem;
   align-items: center;
 }
-
 .bloque_recursos h2 {
   flex-grow: 2;
   margin-bottom: 0;
 }
-
-article {
+.bloque_recursos article {
   width: 99%;
   justify-content: space-between;
   background: #fff;
   border-bottom: 2px solid #eee;
 }
-article h3 {
+.bloque_recursos article h3 {
   background-color: #533a25;
   color: #fff;
   font-size: 1.7rem;
@@ -321,11 +317,11 @@ article h3 {
   width: 100%;
   border-radius: 4px;
 }
-article p {
+.bloque_recursos article p {
   font-size: 0.9rem;
   margin: 0.5rem 1rem;
 }
-article a {
+.bloque_recursos article a {
   background-color: blanchedalmond;
   color: #533a25;
   width: 90%;
@@ -337,18 +333,14 @@ article a {
   font-weight: bold;
   border-radius: 7px;
 }
-article a:hover {
+.bloque_recursos article a:hover {
   background-color: #7a4d28;
   color: #f7f7f7;
 }
-
-article:nth-child(2) h3,
-article:nth-child(3) h3 {
+.bloque_recursos article:nth-child(2) h3, .bloque_recursos article:nth-child(3) h3 {
   background: linear-gradient(to top, #533a25, #7a4d28);
 }
-
-article:nth-child(2) a,
-article:nth-child(3) a {
+.bloque_recursos article:nth-child(2) a, .bloque_recursos article:nth-child(3) a {
   background: linear-gradient(to top, burlywood, blanchedalmond);
 }
 
@@ -359,15 +351,6 @@ article:nth-child(3) a {
   -webkit-text-decoration: underline solid #555 5px;
           text-decoration: underline solid #555 5px;
 }
-
-.tradicion_proximo {
-  font-size: 2rem;
-  color: #aaa;
-  text-transform: uppercase;
-  text-align: center;
-  width: 100%;
-}
-
 .bloque_tradicion h4 {
   font-size: 2em;
   margin-top: 0.5rem;
@@ -377,7 +360,6 @@ article:nth-child(3) a {
   width: 90%;
   text-indent: 1rem;
 }
-
 .bloque_tradicion iframe {
   width: 90%;
   height: 50vh;
@@ -386,20 +368,30 @@ article:nth-child(3) a {
   margin: 1rem auto 4rem;
   display: block;
 }
+.bloque_tradicion .tradicion_proximo {
+  font-size: 2rem;
+  color: #aaa;
+  text-transform: uppercase;
+  text-align: center;
+  width: 100%;
+}
 
 /* contacto */
-.bloque_contacto → form {
+.bloque_contacto form {
   width: 80%;
   margin: auto;
   padding: 3rem 0;
 }
-
-form label,
-.form_elementos {
+.bloque_contacto form label {
   border-radius: 3px;
+  font-weight: bold;
+  text-align: center;
+  margin: 1rem 0;
+  width: 100%;
+  font-size: 1.3rem;
 }
-
-.form_elementos {
+.bloque_contacto form .form_elementos {
+  border-radius: 3px;
   background: #eee;
   margin-bottom: 2rem;
   border: 2px solid #ccc;
@@ -407,59 +399,41 @@ form label,
   width: 100%;
   font-size: 1rem;
 }
-
-form label,
-.form_button {
-  font-weight: bold;
-  text-align: center;
-}
-
-form label {
-  margin: 1rem 0;
-  width: 100%;
-  font-size: 1.3rem;
-}
-
-form textarea {
-  height: 12rem;
-  resize: none;
-}
-
-.form_elementos:focus,
-.form_elementos:hover {
+.bloque_contacto form .form_elementos:focus, .bloque_contacto form .form_elementos:hover {
   background: #fff;
   border-color: rgb(55, 90, 165);
   outline: 0;
 }
-
-.form_button {
+.bloque_contacto form textarea {
+  height: 12rem;
+  resize: none;
+}
+.bloque_contacto form .form_button {
+  font-weight: bold;
+  text-align: center;
   width: 100%;
   padding: 1rem;
   border-style: solid;
   font-size: 1.2rem;
   margin-bottom: 1rem;
 }
-
-.reset {
+.bloque_contacto form .reset {
   opacity: 0.75;
   border-color: #533a25;
   color: #533a25;
 }
-
-.reset:hover {
+.bloque_contacto form .reset:hover {
   background-color: brown;
   color: #f7f7f7;
   border-color: transparent;
   opacity: 100;
 }
-
-.envio {
+.bloque_contacto form .envio {
   background-color: rgb(55, 90, 165);
   color: #f7f7f7;
   border-color: #333;
 }
-
-.envio:hover {
+.bloque_contacto form .envio:hover {
   box-shadow: rgb(55, 90, 165) 0 3px 5px;
   background-color: #f7f7f7;
   color: rgb(55, 90, 165);
@@ -501,50 +475,52 @@ footer p {
 
 /* for recetas y recursos */ /* responsive */
 @media screen and (min-width: 375px) {
+  nav .collapse .redes_sociales {
+    margin: 2.5% auto;
+  }
+  nav .collapse .redes_sociales li {
+    width: 10%;
+  }
   .btn span {
-    margin-left: 0.3rem;
+    margin-left: 0.5rem;
   }
 }
 @media screen and (min-width: 576px) {
-  .header_menu_dre h1 {
+  header .header_menu .header_menu_dre h1 {
     margin-bottom: 1.5rem;
     font-size: 4rem;
     line-height: 3rem;
   }
-  .redes_sociales li {
-    width: 10%;
-  }
-  .btn-collapse {
+  nav .btn-collapse {
     padding: 0.5rem 0;
-    background: rgba(83, 58, 37, 0.85);
   }
-  .btn-collapse span {
+  nav .btn-collapse span {
     text-transform: uppercase;
   }
-  .btn-collapse img {
+  nav .btn-collapse img {
     opacity: 0.7;
   }
-  .bloque_dos {
+  .container-fluid .bloque_doble {
     padding: 10%;
   }
-  .bloque_unico h2 {
+  .container-fluid .bloque_unico h2 {
     font-size: 2.3rem;
     line-height: 2rem;
     padding: 1rem;
   }
-  .art_recursos {
+  .bloque_recursos article {
     width: 75%;
     margin-bottom: 1.5rem;
     border-bottom: solid 3px #eee;
-    box-shadow: #ddd 0 3px 7px;
+    box-shadow: #ccc 0 3px 7px;
   }
-  .art_recursos h3 {
+  .bloque_recursos article h3 {
     margin-bottom: 1rem;
   }
-  .art_recursos p {
+  .bloque_recursos article p {
     margin-bottom: 2rem;
   }
-  .art_recursos a {
+  .bloque_recursos article a {
     width: 75%;
   }
   .bloque_tradicion h3 {
@@ -552,27 +528,47 @@ footer p {
   }
 }
 @media screen and (min-width: 768px) {
-  .header_menu_izq {
+  header .header_menu .header_menu_izq {
     width: 20%;
   }
-  .btn-collapse {
+  /* menu */
+  nav .btn-collapse {
     display: none;
   }
-  .menu_lista_2 {
+  nav .menu_lista_2 {
     display: flex;
     justify-content: space-evenly;
     margin-bottom: 0;
     padding-left: 0;
   }
-  .menu_lista_2 li {
+  nav .menu_lista_2 li {
     width: 100%;
   }
-  #menu_active {
+  nav .menu_lista_2 li a {
+    font-family: "nunito", "gill sans", "gill sans mt", "trebuchet ms", sans-serif;
+    font-weight: 800;
+    background-color: rgba(255, 255, 255, 0.6);
+    color: #533a25;
+    display: block;
+    padding: 0.5rem 0;
+    letter-spacing: 2px;
+    font-size: 1.3rem;
+    text-align: center;
+    border-top: 2px solid #eee;
+  }
+  nav .menu_lista_2 li a:hover {
+    border-color: transparent;
+    background-color: #533a25;
+    color: #fcead6;
+  }
+  nav .menu_lista_2 li .menu_active {
+    background-color: #a5512a;
+    color: #fcead6;
     border-color: blanchedalmond;
   }
   /* bloques */
   main {
-    background: rgba(255, 255, 255, 0.5);
+    background: rgba(255, 255, 255, 0.6);
     display: grid;
     grid-template-areas: "redes_sociales bloque_mayor";
     justify-content: center;
@@ -587,14 +583,14 @@ footer p {
     gap: 0.3rem;
     justify-content: space-evenly;
   }
-  .bloque_unico {
+  .bloque_mayor .bloque_unico {
     padding-bottom: 1rem;
     grid-column: 1/3;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
   }
-  .bloque_dos {
+  .bloque_mayor .bloque_doble {
     grid-column: span;
     padding: 3% 4%;
     border-bottom: 0;
@@ -602,7 +598,7 @@ footer p {
   footer p {
     font-size: 0.9rem;
   }
-  /* --- aside --- */
+  /* aside */
   .redes_sociales_2 {
     display: block;
     grid-area: redes_sociales;
@@ -625,23 +621,17 @@ footer p {
   .redes_sociales_2 ul li {
     width: 70%;
   }
-  .redes_sociales_2 h2, .redes_sociales_2 ul li a span {
-    display: none;
-  }
   .redes_sociales_2 ul li a img {
     width: 100%;
   }
   .redes_sociales_2 ul li a:hover {
-    background: rgb(136, 144, 151);
-  }
-  .redes_sociales ul li a:hover span {
-    color: #fff;
+    opacity: 0.5;
   }
   /* recetas */
-  .row {
+  .bloque_recetas .row {
     flex-direction: row;
   }
-  .card-title {
+  .bloque_recetas .row .card .card-body .card-title {
     font-size: 1.5rem;
   }
   /* recursos */
@@ -652,105 +642,110 @@ footer p {
   .bloque_recursos h2 {
     font-size: 2rem;
   }
-  .art_recursos {
+  .bloque_recursos article {
     width: 45%;
   }
-  .art_recursos h3 {
+  .bloque_recursos article h3 {
     min-height: 2rem;
   }
-  .art_recursos p {
+  .bloque_recursos article p {
     min-height: 10.5rem;
-    margin-top: 0;
   }
   /* tradición */
   .bloque_tradicion iframe {
     height: 70vh;
   }
   /* formulario */
-  .form_button {
+  .bloque_contacto form .form_button {
     width: 45%;
     margin: auto;
   }
 }
 @media screen and (min-width: 992px) {
-  /* header y menu */
+  /* header */
   header {
     background-position: bottom;
   }
-  .header_menu {
-    background: rgba(253, 249, 238, 0.3215686275);
+  header .header_menu {
+    background: rgba(253, 249, 238, 0.322);
     display: grid;
     grid-template-columns: 1fr 6fr;
     align-items: end;
     padding: 1rem;
   }
-  .header_menu_izq {
+  header .header_menu .header_menu_izq {
     grid-column: 1/2;
     display: flex;
     justify-content: center;
     width: auto;
     margin: 0.5rem;
   }
-  .header_menu_izq img {
+  header .header_menu .header_menu_izq img {
     width: 100%;
   }
-  .header_menu_dre {
+  header .header_menu .header_menu_dre {
     grid-column: 2/2;
   }
-  .header_menu_dre h1 {
+  header .header_menu .header_menu_dre h1 {
     letter-spacing: 4px;
     font-size: 5rem;
     margin-bottom: 0.75rem;
   }
-  .header_menu_dre h1 br {
+  header .header_menu .header_menu_dre h1 br {
     display: none;
   }
-  .menu_lista_2 {
+  /* menu */
+  nav .menu_lista_2 {
     display: flex;
     justify-content: space-evenly;
     margin-bottom: 0.2rem;
   }
-  .menu_lista_2 li {
+  nav .menu_lista_2 li {
     width: 19%;
-    padding: 0.5rem 0 0.1rem;
+    padding: 0.5rem 0;
   }
-  .menu_lista_2 li a {
+  nav .menu_lista_2 li a {
     border-radius: 10px;
-    padding: 0.3rem;
+    padding: 0 0 0.6rem;
     background: linear-gradient(rgba(255, 255, 255, 0.3), #fff);
     color: #533a25;
     border-top: solid 1px #eee;
   }
-  #menu_active {
+  nav .menu_lista_2 li a:hover {
+    background: unset;
+    background-color: #533a25;
+    color: #fcead6;
+  }
+  nav .menu_lista_2 li .menu_active {
     border-color: transparent;
+    background: #533a25;
   }
   /* bloques */
-  .bloque_unico h2 {
+  .bloque_mayor .bloque_unico h2 {
     font-size: 2.5rem;
   }
   /* recetas */
-  .card-title {
+  .bloque_recetas .row .card .card-body .card-title {
     font-size: 2rem;
   }
   /* recursos */
-  .art_recursos p {
+  .bloque_recursos article p {
     font-size: 1rem;
   }
   /* formulario */
-  form label {
+  .bloque_contacto form label {
     font-size: 1.5rem;
     letter-spacing: 1px;
   }
 }
 @media screen and (min-width: 1200px) {
-  /* header y menu */
-  .header_menu {
+  header .header_menu {
     grid-template-columns: 1fr 7fr;
   }
-  .header_menu_izq {
+  header .header_menu .header_menu_izq {
     width: 80%;
   }
-  .header_menu_dre h1 {
+  header .header_menu .header_menu_dre h1 {
     font-size: 6rem;
     margin-bottom: 1.5rem;
   }

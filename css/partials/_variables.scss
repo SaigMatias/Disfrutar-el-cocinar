@@ -83,8 +83,21 @@ $border_mid: 2px solid $color_mid;
     font-family: $ft_serif_2;
     border-bottom: $border_light;
     margin-bottom: .9rem;
-    color: $color_font_mid;
     font-weight: 500;
+}
+
+%title_h2_fill {
+    @extend %title_h2;
+    @include mix_bg-col($color_highlight_base, $color_highlight_light);
+    padding: .5rem;
+    margin-bottom: 2rem;
+    border: 0;
+    font-variant: small-caps;
+    text-align: center;
+    letter-spacing: 1px;
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+    width: 100%;
 }
 
 %title_h3 {
@@ -94,15 +107,4 @@ $border_mid: 2px solid $color_mid;
     font-variant: small-caps;
     letter-spacing: 2px;
     font-weight: bold;
-}
-
-%menu_lista_link {
-    @extend %title_ft_sp;
-    @include mix_bg-col($bg_submenu_mobile, $color_highlight_base);
-    display: block;
-    padding: .5rem 0;
-    letter-spacing: 2px;
-    font-size: 1.3rem;
-    text-align: center;
-    border-top: $border_light;
 }
