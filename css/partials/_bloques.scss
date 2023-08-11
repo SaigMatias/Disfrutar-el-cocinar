@@ -6,10 +6,14 @@
         @extend %title_h2;
     }
 
-    p strong {
-        font-weight: bold;
-        font-style: italic;
-        color: $color_highlight_base;
+    p {
+
+        strong {
+            font-weight: bold;
+            font-style: italic;
+            color: $color_highlight_base;
+        }
+
     }
 
     .firma {
@@ -20,45 +24,49 @@
 
 }
 
-.index_novedades article {
-    border: solid $color_highlight_light 2px;
-    padding: 2%;
-    margin-bottom: 2rem;
+.index_novedades {
 
-    a {
+    article {
+        border: solid $color_highlight_light 2px;
+        padding: 2%;
+        margin-bottom: 2rem;
 
-        h3 {
-            @extend %title_h3;
-            @include mix_bg-col(antiquewhite, $color_font_mid);
-            font-size: 1.3rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            padding: 2rem;
-            margin: 1rem;
-        }
+        a {
 
-        p {
-            font-size: 1.2rem;
-            margin: 1rem;
-            text-align: center;
-            color: $color_font_light;
-            font-weight: 500;
-        }
+            h3 {
+                @extend %title_h3;
+                @include mix_bg-col(antiquewhite, $color_font_mid);
+                font-size: 1.3rem;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+                padding: 2rem;
+                margin: 1rem;
+            }
 
-        p.info {
-            font-size: 1.1rem;
-            font-style: italic;
-            color: $color_highlight_mid;
-            padding: 1rem 2rem;
-            text-decoration: underline solid 2px $color_sp_base;
-        }
+            p {
+                font-size: 1.2rem;
+                margin: 1rem;
+                text-align: center;
+                color: $color_font_light;
+                font-weight: 500;
+            }
 
-        &:hover h3 {
-            @include mix_bg-col($color_highlight_mid, $color_sp_light)
-        }
+            p.info {
+                font-size: 1.1rem;
+                font-style: italic;
+                color: $color_highlight_mid;
+                padding: 1rem 2rem;
+                text-decoration: underline solid 2px $color_sp_base;
+            }
 
-        &:hover .info {
-            @include mix_bg-col($color_sp_base, $color_highlight_base)
+            &:hover h3 {
+                @include mix_bg-col($color_highlight_mid, $color_sp_light)
+            }
+
+            &:hover .info {
+                @include mix_bg-col($color_sp_base, $color_highlight_base)
+            }
+
         }
 
     }
@@ -298,7 +306,11 @@
 
 
 /* simulacro de envio */
-.bloque_simulacro_envio a:hover {
-    box-shadow: $color_font_base 0 1px 30px inset;
-    letter-spacing: 1px;
+.bloque_simulacro_envio {
+
+    a:hover {
+        box-shadow: $color_font_base 0 1px 30px inset;
+        letter-spacing: 1px;
+    }
+
 }

@@ -1,14 +1,18 @@
 /* modal */
-.modal_item li {
-    margin: 1rem 0;
-    border-bottom: $color_font_light solid 1px;
+.modal_item {
 
-    a {
-        font-size: 1.1rem;
-        color: $color_sp_mid;
+    li {
+        margin: 1rem 0;
+        border-bottom: $color_font_light solid 1px;
 
-        &:hover {
-            color: $color_highlight_mid
+        a {
+            font-size: 1.1rem;
+            color: $color_sp_mid;
+
+            &:hover {
+                color: $color_highlight_mid
+            }
+
         }
 
     }
