@@ -33,3 +33,21 @@ Sitio web creado con Html, CSS y Bootstrap
     css/partials/footer
     css/partials/animaciones
     css/partials/responsive
+    
+    
+
+## TRANSICIONES
+
+    · Definidas en variables "$transition_start" para inicio de hover, y "$transition_end" al retirar el cursor
+    · Aplicado a estos elementos: 
+        (Página: elementos superior → elemento aplicado)
+        Inicio: .index_novedades article a → h3 y p.info
+        Recursos: .bloque_recursos article → a
+        Contacto: .bloque_contacto form → .form_elementos (input y textarea), y .form_button (buttons)
+        Todas (<768px): header nav collapse .menu_lista li → a
+        Todas (<768px): header nav collapse .redes_sociales li a → img
+        Todas (>768px): header nav .menu_lista_2 li → a
+        Todas (>768px): main .redes_sociales_2 ul li → a
+
+
+    

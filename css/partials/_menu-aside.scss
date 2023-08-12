@@ -57,8 +57,10 @@ nav {
                     font-size: 1.3rem;
                     text-align: center;
                     border-top: $border_light;
+                    transition: $transition_end;
 
                     &:hover {
+                        transition: $transition_start;
                         border-color: transparent;
                         @include mix_bg-col($color_highlight_base, $color_highlight_light)
                     }
@@ -80,13 +82,20 @@ nav {
             li {
                 width: 15%;
 
-                a img {
-                    width: 100%;
+                a {
 
-                    &:hover {
-                        opacity: 70%;
+                    img {
+                        transition: $transition_end;
+                        width: 100%;
+                        filter: drop-shadow(-1px 3px 3px $color_base);
+
+                        &:hover {
+                            transition: $transition_start;
+                            opacity: 50%;
+                        }
+
                     }
-
+ 
                 }
 
             }

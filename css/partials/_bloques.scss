@@ -41,6 +41,7 @@
                 letter-spacing: 1px;
                 padding: 2rem;
                 margin: 1rem;
+                transition: $transition_end;
             }
 
             p {
@@ -57,13 +58,16 @@
                 color: $color_highlight_mid;
                 padding: 1rem 2rem;
                 text-decoration: underline solid 2px $color_sp_base;
+                transition: $transition_end;
             }
 
             &:hover h3 {
+                transition: $transition_start;
                 @include mix_bg-col($color_highlight_mid, $color_sp_light)
             }
 
             &:hover .info {
+                transition: $transition_start;
                 @include mix_bg-col($color_sp_base, $color_highlight_base)
             }
 
@@ -160,8 +164,10 @@
             text-transform: uppercase;
             font-weight: bold;
             border-radius: 7px;
+            transition: $transition_end;
 
             &:hover {
+                transition: $transition_start;
                 @include mix_bg-col($color_highlight_mid, $color_sp_light)
             }
         }
@@ -173,7 +179,13 @@
 
         &:nth-child(2) a,
         &:nth-child(3) a {
-            background: $color_gradient_light
+            transition: $transition_end;
+            background: $color_gradient_light;
+
+            &:hover {
+                transition: $transition_start;
+                background: $color_gradient_base;
+            }
         }
 
     }
@@ -251,9 +263,11 @@
             padding: .8rem .6rem;
             width: 100%;
             font-size: 1rem;
+            transition: $transition_end;
 
             &:focus,
             &:hover {
+                transition: $transition_start;
                 background: #fff;
                 border-color: $color_button;
                 outline: 0;
@@ -273,7 +287,13 @@
             padding: 1rem;
             border-style: solid;
             font-size: 1.2rem;
-            margin-bottom: 1rem
+            margin-bottom: 1rem;
+            border-radius:5px;
+            transition: $transition_end;
+
+            &:hover {
+                transition: $transition_start;
+            }
         }
 
         .reset {
@@ -284,18 +304,20 @@
             &:hover {
                 @include mix_bg-col(brown, $color_sp_light);
                 border-color: transparent;
-                opacity: 100;
+                opacity: 100%;
+                letter-spacing: 2px;
             }
         }
 
         .envio {
             @include mix_bg-col($color_button, $color_sp_light);
             border-color: $color_font_mid;
+            box-shadow: transparent 0 0 1px inset;
 
             &:hover {
-                box-shadow: $color_button 0 3px 5px;
+                box-shadow: $color_button 0 0 5px inset;
                 @include mix_bg-col($color_sp_light, $color_button);
-                letter-spacing: 1px;
+                letter-spacing: 3px;
             }
 
         }
@@ -308,9 +330,14 @@
 /* simulacro de envio */
 .bloque_simulacro_envio {
 
-    a:hover {
+    a {
+        transition: $transition_end;
+    
+    &:hover {
+        transition: $transition_start;
         box-shadow: $color_font_base 0 1px 30px inset;
         letter-spacing: 1px;
     }
+}
 
 }

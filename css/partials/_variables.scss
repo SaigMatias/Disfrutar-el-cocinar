@@ -43,6 +43,8 @@ $ft_serif_2: 'high_tower', georgia, 'times new roman', times, serif;
 $border_light: 2px solid $color_light;
 $border_mid: 2px solid $color_mid;
 
+$transition_start: all .15s ease-out;
+$transition_end: all .15s ease-in;
 
 /* mixin */
 @mixin mix_bg-col($mix_bg, $mix_color) {
