@@ -1,0 +1,343 @@
+/* inicio */
+.index_about {
+
+    h2 {
+        font-size: 2.2rem;
+        @extend %title_h2;
+    }
+
+    p {
+
+        strong {
+            font-weight: bold;
+            font-style: italic;
+            color: $color_highlight_base;
+        }
+
+    }
+
+    .firma {
+        text-align: right;
+        font-weight: bold;
+        margin-bottom: 0;
+    }
+
+}
+
+.index_novedades {
+
+    article {
+        border: solid $color_highlight_light 2px;
+        padding: 2%;
+        margin-bottom: 2rem;
+
+        a {
+
+            h3 {
+                @extend %title_h3;
+                @include mix_bg-col(antiquewhite, $color_font_mid);
+                font-size: 1.3rem;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+                padding: 2rem;
+                margin: 1rem;
+                transition: $transition_end;
+            }
+
+            p {
+                font-size: 1.2rem;
+                margin: 1rem;
+                text-align: center;
+                color: $color_font_light;
+                font-weight: 500;
+            }
+
+            p.info {
+                font-size: 1.1rem;
+                font-style: italic;
+                color: $color_highlight_mid;
+                padding: 1rem 2rem;
+                text-decoration: underline solid 2px $color_sp_base;
+                transition: $transition_end;
+            }
+
+            &:hover h3 {
+                transition: $transition_start;
+                @include mix_bg-col($color_highlight_mid, $color_sp_light)
+            }
+
+            &:hover .info {
+                transition: $transition_start;
+                @include mix_bg-col($color_sp_base, $color_highlight_base)
+            }
+
+        }
+
+    }
+
+}
+
+
+/* recetas */
+.bloque_recetas {
+
+    h2 {
+        @extend %title_h2_fill;
+    }
+
+    .row {
+        margin: 0 auto;
+        @extend %flex_column;
+
+        .card {
+            background: $color_sp_light;
+            margin-bottom: 2rem;
+
+            .card-body {
+                background: $color_sp_base;
+
+                .card-title {
+                    color: $color_highlight_base;
+                    font-size: 2rem
+                }
+
+                .btn {
+                    @include mix_bg-col($color_highlight_base, $color_sp_mid);
+
+                    &:hover {
+                        @include mix_bg-col($color_sp_mid, $color_highlight_base)
+                    }
+
+                }
+
+            }
+
+        }
+
+    }
+
+}
+
+
+/* recursos */
+.bloque_recursos {
+    @extend %flex_column;
+    gap: 2rem;
+    align-items: center;
+
+    h2 {
+        @extend %title_h2_fill;
+        flex-grow: 2;
+        margin-bottom: 0;
+    }
+
+    article {
+        @extend %flex_column;
+        width: 99%;
+        justify-content: space-between;
+        background: #fff;
+        border-bottom: $border_light;
+
+        h3 {
+            @extend %title_h3;
+            @include mix_bg-col($color_highlight_base, #fff);
+            font-size: 1.7rem;
+            letter-spacing: 1px;
+            padding: 1rem 0;
+            margin: 0 auto;
+            width: 100%;
+            border-radius: 4px
+        }
+
+        p {
+            font-size: .9rem;
+            margin: .5rem 1rem;
+        }
+
+        a {
+            @include mix_bg-col($color_sp_mid, $color_highlight_base);
+            width: 90%;
+            margin: 0 auto 1rem;
+            padding: 1rem;
+            text-align: center;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            font-weight: bold;
+            border-radius: 7px;
+            transition: $transition_end;
+
+            &:hover {
+                transition: $transition_start;
+                @include mix_bg-col($color_highlight_mid, $color_sp_light)
+            }
+        }
+
+        &:nth-child(2) h3,
+        &:nth-child(3) h3 {
+            background: $color_gradient_base;
+        }
+
+        &:nth-child(2) a,
+        &:nth-child(3) a {
+            transition: $transition_end;
+            background: $color_gradient_light;
+
+            &:hover {
+                transition: $transition_start;
+                background: $color_gradient_base;
+            }
+        }
+
+    }
+
+}
+
+
+/* tradición */
+.bloque_tradicion {
+
+    h2 {
+        @extend %title_h2_fill;
+    }
+
+    h3 {
+        @extend %title_h3;
+        color: $color_font_mid;
+        font-size: 4rem;
+        text-decoration: underline solid $color_font_light 5px;
+    }
+
+    h4 {
+        font-size: 2em;
+        margin-top: .5rem;
+        color: $color_font_light;
+        font-variant: small-caps;
+        border-bottom: $border_mid;
+        width: 90%;
+        text-indent: 1rem;
+    }
+
+    iframe {
+        width: 90%;
+        height: 50vh;
+        border: $border_mid;
+        box-shadow: $color_font_mid 0px 3px 5px;
+        margin: 1rem auto 4rem;
+        display: block;
+    }
+
+    .tradicion_proximo {
+        font-size: 2rem;
+        color: $color_base;
+        text-transform: uppercase;
+        text-align: center;
+        width: 100%;
+    }
+
+}
+
+
+/* contacto */
+.bloque_contacto {
+
+    form {
+        @extend %flex_row;
+        width: 80%;
+        margin: auto;
+        padding: 3rem 0;
+
+        label {
+            border-radius: 3px;
+            font-weight: bold;
+            text-align: center;
+            margin: 1rem 0;
+            width: 100%;
+            font-size: 1.3rem
+        }
+
+        .form_elementos {
+            border-radius: 3px;
+            background: $color_light;
+            margin-bottom: 2rem;
+            border: $border_mid;
+            padding: .8rem .6rem;
+            width: 100%;
+            font-size: 1rem;
+            transition: $transition_end;
+
+            &:focus,
+            &:hover {
+                transition: $transition_start;
+                background: #fff;
+                border-color: $color_button;
+                outline: 0;
+            }
+
+        }
+
+        textarea {
+            height: 12rem;
+            resize: none;
+        }
+
+        .form_button {
+            font-weight: bold;
+            text-align: center;
+            width: 100%;
+            padding: 1rem;
+            border-style: solid;
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            border-radius:5px;
+            transition: $transition_end;
+
+            &:hover {
+                transition: $transition_start;
+            }
+        }
+
+        .reset {
+            opacity: .75;
+            border-color: $color_highlight_base;
+            color: $color_highlight_base;
+
+            &:hover {
+                @include mix_bg-col(brown, $color_sp_light);
+                border-color: transparent;
+                opacity: 100%;
+                letter-spacing: 2px;
+            }
+        }
+
+        .envio {
+            @include mix_bg-col($color_button, $color_sp_light);
+            border-color: $color_font_mid;
+            box-shadow: transparent 0 0 1px inset;
+
+            &:hover {
+                box-shadow: $color_button 0 0 5px inset;
+                @include mix_bg-col($color_sp_light, $color_button);
+                letter-spacing: 3px;
+            }
+
+        }
+
+    }
+
+}
+
+
+/* simulacro de envio */
+.bloque_simulacro_envio {
+
+    a {
+        transition: $transition_end;
+    
+    &:hover {
+        transition: $transition_start;
+        box-shadow: $color_font_base 0 1px 30px inset;
+        letter-spacing: 1px;
+    }
+}
+
+}
