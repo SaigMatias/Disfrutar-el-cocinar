@@ -43,13 +43,21 @@ $ft_serif_2: 'high_tower', georgia, 'times new roman', times, serif;
 $border_light: 2px solid $color_light;
 $border_mid: 2px solid $color_mid;
 
-$transition_start: all .15s ease-out;
-$transition_end: all .15s ease-in;
+$transition_start: all .2s ease-out;
+$transition_end: all .2s ease-in;
 
 /* mixin */
 @mixin mix_bg-col($mix_bg, $mix_color) {
     background-color: $mix_bg;
     color: $mix_color;
+}
+
+@mixin mix_anima($name, $dur, $delay) {
+    animation-name: $name;
+    animation-duration: $dur;
+    animation-delay: $delay;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: backwards;
 }
 
 

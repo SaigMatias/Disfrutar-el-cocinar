@@ -19,35 +19,35 @@
 
     }
 
-/* recetas */
-.bloque_recetas {
+    /* recetas */
+    .bloque_recetas {
 
-    .row {
-      width:80%;
+        .row {
+            width: 80%;
 
-      .card{
+            .card {
 
-        .card-body {
+                .card-body {
 
-            .btn {
+                    .btn {
 
-                span {
-                    margin-left: .5rem;
+                        span {
+                            margin-left: .5rem;
+                        }
+
+                    }
+
                 }
-        
+
             }
 
         }
-
-      }
 
     }
 
 }
 
-}
-
-@media screen and (min-width:576px) {
+@media screen and (min-width:575px) {
 
     header {
 
@@ -82,6 +82,14 @@
 
         }
 
+        .collapse {
+
+            .redes_sociales {
+                margin-bottom: 6.5%;
+            }
+
+        }
+
     }
 
     .container-fluid {
@@ -104,7 +112,7 @@
     .bloque_recetas {
 
         .row {
-          width:70%;
+            width: 70%;
         }
 
     }
@@ -169,7 +177,7 @@
             justify-content: space-evenly;
             margin-bottom: 0;
             padding-left: 0;
-            
+
             li {
                 width: 100%;
 
@@ -187,8 +195,9 @@
 
                     &:hover {
                         transition: $transition_start;
-                        border-color: transparent;
-                        @include mix_bg-col($color_highlight_base, $color_highlight_light)
+                        border-color: $color_sp_mid;
+                        @include mix_bg-col($color_highlight_base, $color_highlight_light);
+
                     }
 
                 }
@@ -196,6 +205,12 @@
                 .menu_active {
                     @include mix_bg-col($bg_menu_active, $color_highlight_light);
                     border-color: $color_sp_mid;
+
+                    &:hover {
+                        @include mix_bg-col($color_font_mid, $color_light);
+                        border-color: $color_base;
+                    }
+
                 }
 
             }
@@ -272,12 +287,14 @@
                     img {
                         width: 100%;
                         transition: $transition_end;
+
+                        &:hover {
+                            transition: $transition_start;
+                            transform: scale(1.25, 1.25) translateX(10px) rotate(3deg);
+                        }
                     }
 
-                    &:hover {
-                        transition: $transition_start;
-                        opacity: 0.5;
-                    }
+
 
                 }
 
@@ -292,7 +309,7 @@
 
         .row {
             flex-direction: row;
-            width:90%;
+            width: 90%;
 
             .card {
 
@@ -353,7 +370,7 @@
                 width: 45%;
                 margin: auto
             }
-            
+
         }
 
     }
@@ -429,7 +446,9 @@
 
                     &:hover {
                         background: unset;
-                        @include mix_bg-col($color_highlight_base, $color_highlight_light)
+                        border: transparent;
+                        @include mix_bg-col($color_highlight_base, $color_highlight_light);
+                        transform: scale(1.025);
                     }
 
                 }
@@ -437,6 +456,11 @@
                 .menu_active {
                     border-color: transparent;
                     background: $color_highlight_base;
+
+                    &:hover {
+                        transform: scale(0.975);
+                        @include mix_bg-col($color_font_mid, $color_light);
+                    }
                 }
 
             }

@@ -190,10 +190,10 @@ nav .collapse .menu_lista li a {
   font-size: 1.3rem;
   text-align: center;
   border-top: 2px solid #eee;
-  transition: all 0.15s ease-in;
+  transition: all 0.2s ease-in;
 }
 nav .collapse .menu_lista li a:hover {
-  transition: all 0.15s ease-out;
+  transition: all 0.2s ease-out;
   border-color: transparent;
   background-color: #533a25;
   color: #fcead6;
@@ -207,12 +207,12 @@ nav .collapse .redes_sociales li {
   width: 15%;
 }
 nav .collapse .redes_sociales li a img {
-  transition: all 0.15s ease-in;
+  transition: all 0.2s ease-in;
   width: 100%;
   filter: drop-shadow(-1px 3px 3px #aaa);
 }
 nav .collapse .redes_sociales li a img:hover {
-  transition: all 0.15s ease-out;
+  transition: all 0.2s ease-out;
   opacity: 50%;
 }
 
@@ -249,7 +249,7 @@ nav .collapse .redes_sociales li a img:hover {
   letter-spacing: 1px;
   padding: 2rem;
   margin: 1rem;
-  transition: all 0.15s ease-in;
+  transition: all 0.2s ease-in;
 }
 .index_novedades article a p {
   font-size: 1.2rem;
@@ -265,15 +265,15 @@ nav .collapse .redes_sociales li a img:hover {
   padding: 1rem 2rem;
   -webkit-text-decoration: underline solid 2px burlywood;
           text-decoration: underline solid 2px burlywood;
-  transition: all 0.15s ease-in;
+  transition: all 0.2s ease-in;
 }
 .index_novedades article a:hover h3 {
-  transition: all 0.15s ease-out;
+  transition: all 0.2s ease-out;
   background-color: #7a4d28;
   color: #f7f7f7;
 }
 .index_novedades article a:hover .info {
-  transition: all 0.15s ease-out;
+  transition: all 0.2s ease-out;
   background-color: burlywood;
   color: #533a25;
 }
@@ -342,10 +342,10 @@ nav .collapse .redes_sociales li a img:hover {
   text-transform: uppercase;
   font-weight: bold;
   border-radius: 7px;
-  transition: all 0.15s ease-in;
+  transition: all 0.2s ease-in;
 }
 .bloque_recursos article a:hover {
-  transition: all 0.15s ease-out;
+  transition: all 0.2s ease-out;
   background-color: #7a4d28;
   color: #f7f7f7;
 }
@@ -353,11 +353,11 @@ nav .collapse .redes_sociales li a img:hover {
   background: linear-gradient(to top, #533a25, #7a4d28);
 }
 .bloque_recursos article:nth-child(2) a, .bloque_recursos article:nth-child(3) a {
-  transition: all 0.15s ease-in;
+  transition: all 0.2s ease-in;
   background: linear-gradient(to top, burlywood, blanchedalmond);
 }
 .bloque_recursos article:nth-child(2) a:hover, .bloque_recursos article:nth-child(3) a:hover {
-  transition: all 0.15s ease-out;
+  transition: all 0.2s ease-out;
   background: linear-gradient(to top, #533a25, #7a4d28);
 }
 
@@ -415,10 +415,10 @@ nav .collapse .redes_sociales li a img:hover {
   padding: 0.8rem 0.6rem;
   width: 100%;
   font-size: 1rem;
-  transition: all 0.15s ease-in;
+  transition: all 0.2s ease-in;
 }
 .bloque_contacto form .form_elementos:focus, .bloque_contacto form .form_elementos:hover {
-  transition: all 0.15s ease-out;
+  transition: all 0.2s ease-out;
   background: #fff;
   border-color: rgb(55, 90, 165);
   outline: 0;
@@ -436,10 +436,10 @@ nav .collapse .redes_sociales li a img:hover {
   font-size: 1.2rem;
   margin-bottom: 1rem;
   border-radius: 5px;
-  transition: all 0.15s ease-in;
+  transition: all 0.2s ease-in;
 }
 .bloque_contacto form .form_button:hover {
-  transition: all 0.15s ease-out;
+  transition: all 0.2s ease-out;
 }
 .bloque_contacto form .reset {
   opacity: 0.75;
@@ -468,10 +468,10 @@ nav .collapse .redes_sociales li a img:hover {
 
 /* simulacro de envio */
 .bloque_simulacro_envio a {
-  transition: all 0.15s ease-in;
+  transition: all 0.2s ease-in;
 }
 .bloque_simulacro_envio a:hover {
-  transition: all 0.15s ease-out;
+  transition: all 0.2s ease-out;
   box-shadow: #222 0 1px 30px inset;
   letter-spacing: 1px;
 }
@@ -503,7 +503,141 @@ footer p {
   font-size: 0.8rem;
 }
 
-/* for recetas y recursos */ /* responsive */
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+@keyframes fade_scale {
+  0% {
+    transform-origin: top;
+    opacity: 0;
+    transform: scaleY(0.5);
+  }
+  100% {
+    opacity: 100%;
+    transform: scaleY(1);
+  }
+}
+main .bloque_mayor .bloque_doble h2 {
+  animation-name: fade;
+  animation-duration: 1s;
+  animation-delay: 0;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: backwards;
+}
+main .bloque_mayor .bloque_doble p {
+  animation-name: fade;
+  animation-duration: 1s;
+  animation-delay: 0.3s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: backwards;
+}
+main .bloque_mayor .bloque_doble article {
+  animation-name: fade;
+  animation-duration: 1s;
+  animation-delay: 1s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: backwards;
+}
+
+.bloque_recetas .row .anima_1 {
+  animation-name: fade_scale;
+  animation-duration: 0.6s;
+  animation-delay: 0.1s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: backwards;
+}
+.bloque_recetas .row .anima_2 {
+  animation-name: fade_scale;
+  animation-duration: 0.6s;
+  animation-delay: 0.2s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: backwards;
+}
+.bloque_recetas .row .anima_3 {
+  animation-name: fade_scale;
+  animation-duration: 0.6s;
+  animation-delay: 0.3s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: backwards;
+}
+.bloque_recetas .row .anima_4 {
+  animation-name: fade_scale;
+  animation-duration: 0.6s;
+  animation-delay: 0.4s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: backwards;
+}
+.bloque_recetas .row .anima_5 {
+  animation-name: fade_scale;
+  animation-duration: 0.6s;
+  animation-delay: 0.5s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: backwards;
+}
+.bloque_recetas .row .anima_6 {
+  animation-name: fade_scale;
+  animation-duration: 0.6s;
+  animation-delay: 0.6s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: backwards;
+}
+.bloque_recetas .row .anima_7 {
+  animation-name: fade_scale;
+  animation-duration: 0.6s;
+  animation-delay: 0.7s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: backwards;
+}
+.bloque_recetas .row .anima_8 {
+  animation-name: fade_scale;
+  animation-duration: 0.6s;
+  animation-delay: 0.8s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: backwards;
+}
+.bloque_recetas .row .anima_9 {
+  animation-name: fade_scale;
+  animation-duration: 0.6s;
+  animation-delay: 0.9s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: backwards;
+}
+
+/* ----------------------------------------------
+ * Generated by Animista on 2023-8-14 2:35:29
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info. 
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+/**
+ * ----------------------------------------
+ * animation fade-in-bottom
+ * ----------------------------------------
+ */
+@keyframes fade-in-bottom {
+  0% {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.fade-in-bottom {
+  animation: fade-in-bottom 0.6s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+}
+
+.fade-in-bottom {
+  animation: fade-in-bottom 0.6s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+}
+
+/* responsive */
 @media screen and (min-width: 375px) {
   nav .collapse .redes_sociales {
     margin: 2.5% auto;
@@ -519,7 +653,7 @@ footer p {
     margin-left: 0.5rem;
   }
 }
-@media screen and (min-width: 576px) {
+@media screen and (min-width: 575px) {
   header .header_menu .header_menu_dre h1 {
     margin-bottom: 1.5rem;
     font-size: 4rem;
@@ -533,6 +667,9 @@ footer p {
   }
   nav .btn-collapse img {
     opacity: 0.7;
+  }
+  nav .collapse .redes_sociales {
+    margin-bottom: 6.5%;
   }
   .container-fluid .bloque_doble {
     padding: 10%;
@@ -592,11 +729,11 @@ footer p {
     font-size: 1.3rem;
     text-align: center;
     border-top: 2px solid #eee;
-    transition: all 0.15s ease-in;
+    transition: all 0.2s ease-in;
   }
   nav .menu_lista_2 li a:hover {
-    transition: all 0.15s ease-out;
-    border-color: transparent;
+    transition: all 0.2s ease-out;
+    border-color: blanchedalmond;
     background-color: #533a25;
     color: #fcead6;
   }
@@ -604,6 +741,11 @@ footer p {
     background-color: #a5512a;
     color: #fcead6;
     border-color: blanchedalmond;
+  }
+  nav .menu_lista_2 li .menu_active:hover {
+    background-color: #333;
+    color: #eee;
+    border-color: #aaa;
   }
   /* bloques */
   main {
@@ -662,11 +804,11 @@ footer p {
   }
   .redes_sociales_2 ul li a img {
     width: 100%;
-    transition: all 0.15s ease-in;
+    transition: all 0.2s ease-in;
   }
-  .redes_sociales_2 ul li a:hover {
-    transition: all 0.15s ease-out;
-    opacity: 0.5;
+  .redes_sociales_2 ul li a img:hover {
+    transition: all 0.2s ease-out;
+    transform: scale(1.25, 1.25) translateX(10px) rotate(3deg);
   }
   /* recetas */
   .bloque_recetas .row {
@@ -756,12 +898,19 @@ footer p {
   }
   nav .menu_lista_2 li a:hover {
     background: unset;
+    border: transparent;
     background-color: #533a25;
     color: #fcead6;
+    transform: scale(1.025);
   }
   nav .menu_lista_2 li .menu_active {
     border-color: transparent;
     background: #533a25;
+  }
+  nav .menu_lista_2 li .menu_active:hover {
+    transform: scale(0.975);
+    background-color: #333;
+    color: #eee;
   }
   /* bloques */
   .bloque_mayor .bloque_unico h2 {

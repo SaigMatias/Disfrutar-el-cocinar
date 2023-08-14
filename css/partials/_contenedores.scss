@@ -11,7 +11,7 @@ body {
 .container-fluid {
     margin: 0;
     padding: 0;
-
+    
     .bloque_unico {
         @extend %flex_row_wrap_evenly;
         padding-bottom: 1rem;
