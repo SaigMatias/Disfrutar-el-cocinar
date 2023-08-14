@@ -20,20 +20,9 @@ Sitio web creado con Html, CSS y Bootstrap
     css/partials/_variables.scss
 
 
-### Orden de importación
-
-
-    css/partials/variables
-    css/partials/reset
-    css/partials/contenedores
-    css/partials/header
-    css/partials/menu-aside
-    css/partials/bloques
-    css/partials/modal
-    css/partials/footer
-    css/partials/animaciones
-    css/partials/responsive
-
+### MIXIN, EXTEND Y VARIABLES
+    
+    Definidos en archivo css/partials/_variables.scss
 
 ### FOR
         (Archivo: Página: elementos superiores → elemento aplicado)
@@ -43,7 +32,7 @@ Sitio web creado con Html, CSS y Bootstrap
 ## TRANSICIONES
 
     · Definidas en variables "$transition_start" para inicio de hover, y "$transition_end" al retirar el cursor
-    · Aplicado a estos elementos: 
+
         (Archivo: Página: elementos superiores → elemento aplicado)
         _bloques.scss: Inicio: .index_novedades article a → h3 y p.info
         _bloques.scss: Recursos: .bloque_recursos article → a
