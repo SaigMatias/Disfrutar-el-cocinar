@@ -35,16 +35,21 @@ $bg_submenu_mobile: rgba(255, 255, 255, .6);
 $bg_menu_active: #a5512a;
 $bg_redes_sociales: rgba(255, 255, 255, .1);
 
-$ft_sans: 'open sans', arial, helvetica, sans-serif;
-$ft_sans_2: 'nunito', 'gill sans', 'gill sans mt', 'trebuchet ms', sans-serif;
-$ft_serif: 'crimson-text', georgia, 'times new roman', times, serif;
-$ft_serif_2: 'high_tower', georgia, 'times new roman', times, serif;
-
 $border_light: 2px solid $color_light;
 $border_mid: 2px solid $color_mid;
 
 $transition_start: all .2s ease-out;
 $transition_end: all .2s ease-in;
+
+
+/* map */
+$family: (
+    base: ('open sans', arial, helvetica, sans-serif),
+    sp: ('nunito', 'gill sans', 'gill sans mt', 'trebuchet ms', sans-serif),
+    title_1: ('crimson-text', georgia, 'times new roman', times, serif),
+    title_2: ('high_tower', georgia, 'times new roman', times, serif),
+);
+
 
 /* mixin */
 @mixin mix_bg-col($mix_bg, $mix_color) {
@@ -85,12 +90,12 @@ $transition_end: all .2s ease-in;
 }
 
 %title_ft_sp {
-    font-family: $ft_sans_2;
+    font-family: map-get($family, sp);
     font-weight: 800;
 }
 
 %title_h2 {
-    font-family: $ft_serif_2;
+    font-family:map-get($family, title_2);
     border-bottom: $border_light;
     margin-bottom: .9rem;
     font-weight: 500;

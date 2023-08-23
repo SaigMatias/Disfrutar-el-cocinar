@@ -182,7 +182,7 @@
                 width: 100%;
 
                 a {
-                    font-family: $ft_sans_2;
+                    font-family: map-get($family, sp);
                     font-weight: 800;
                     @include mix_bg-col($bg_submenu_mobile, $color_highlight_base);
                     display: block;

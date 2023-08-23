@@ -22,7 +22,7 @@ header {
         .header_menu_dre {
 
             h1 {
-                font-family: $ft_serif;
+                font-family: map-get($family, title_1);
                 letter-spacing: 1px;
                 font-size: 3rem;
                 line-height: 2rem;
