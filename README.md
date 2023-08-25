@@ -1,9 +1,43 @@
-# Disfrutar-el-cocinar
+# DISFRUTAR EL COCINAR
 
 ## RESUMEN
-Sitio web creado con Html, CSS y Bootstrap
+Sitio web creado con Html, SCSS y Bootstrap
+
+El diseño de este sitio web es responsive, se construyo desde mobile first, y se adapta tanto a pantalla mobile como a desktop. 
+Las páginas comparten una estructura principal, además de tener variaciones individuales que las diferencias de las demás. 
 
 
+### ESTRUCTURA PRINCIPAL 
+
+· Encabezado (header) con logo y menú, que se adaptan y cambian según el ancho de pantalla.
+· Contenedor principal para el contenido.
+· Pie de pággina (footer).
+· Panel lateral (aside) para redes sociales, con tooltips, que solo es visible en pantallas mayores a 768px.
+
+
+### VARIANTES POR PAGINA
+
+    INICIO
+        · Animación de bienvenida
+        · Distribución de contenido en dos bloques
+        
+    RECETAS
+        · Categorias y listado de recetas hechos en bootstrap y animación en css
+        · Modal de bootstrap para contenido en costrucción
+        
+    RECURSOS
+        · Animación con libreria AOS al hacer scroll
+        · Modal de bootstrap para contenido en costrucción
+    
+    TRADICION
+    
+    CONTACTO
+        · Animación de aparición de formulario basada en animista.net
+        · Efectos de hover y focus implementados con css
+        · Validación del formulario mediante html
+        · Envío del formulario a una página de "simulacro de envío" (construida principalmente con Bootstrap).
+        
+    
 
 
 
@@ -100,12 +134,17 @@ Sitio web creado con Html, CSS y Bootstrap
         Importadas en archivo css/partials/_variables.scss
         google fonts: crimson text, nunito, open sans,
         font-face: hight tower
+        
+        
+#### MEDIA QUERY
+        First mobile: base de 320px
+        Puntos de corte: 375px, 575px, 768px, 992px, 1200px, 1400px 
 
 
 ### BOOTSTRAP
 
         (Página: → elemento principal usado)
         Todas → container-fluid
-        Recetas → cards, modal x 2 (recetas y construcción), button
+        Recetas → cards, button, badge, modal x 2 (recetas y construcción)
         Recursos → modal
-        Simulacro_envio → button
+        Simulacro_envio → elemento <a> con estilo de button
