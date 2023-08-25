@@ -1,4 +1,52 @@
 /* inicio */
+
+.index_welcome {
+
+    background: url(../img/index_cocina.webp) center;
+    background-size: cover;
+    filter: grayscale(50%);
+
+    img {
+        width: 45%;
+        margin-top: 1rem;
+        filter: drop-shadow(-1px 2px 5px $color_font_mid);
+    }
+
+    .talkbubble {
+
+        @include mix_bg-col($color_font_mid, $color_sp_light);
+        position: relative;
+        border-radius: 10px;
+        padding: .5rem;
+        width: 40%;
+        height: min-content;
+        margin-top: 2rem;
+        filter: drop-shadow(-1px 2px 5px $color_font_light);
+
+        p {
+            text-align: center;
+            font-weight: bold;
+            letter-spacing: .5px;
+            font-size: 1rem;
+            font-style: italic;
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            right: 99%;
+            top: 40%;
+            width: 0;
+            height: 0;
+            border-top: 13px solid transparent;
+            border-right: 26px solid $color_font_mid;
+            border-bottom: 13px solid transparent;
+        }
+
+    }
+
+}
+
 .index_about {
 
     h2 {
@@ -288,7 +336,7 @@
             border-style: solid;
             font-size: 1.2rem;
             margin-bottom: 1rem;
-            border-radius:5px;
+            border-radius: 5px;
             transition: $transition_end;
 
             &:hover {
@@ -332,12 +380,12 @@
 
     a {
         transition: $transition_end;
-    
-    &:hover {
-        transition: $transition_start;
-        box-shadow: $color_font_base 0 1px 30px inset;
-        letter-spacing: 1px;
+
+        &:hover {
+            transition: $transition_start;
+            box-shadow: $color_font_base 0 1px 30px inset;
+            letter-spacing: 1px;
+        }
     }
-}
 
 }

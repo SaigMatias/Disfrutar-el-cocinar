@@ -15,7 +15,7 @@ body {
     .bloque_unico {
         @extend %flex_row_wrap_evenly;
         padding-bottom: 1rem;
-        background:$bg_page;  
+        background-color:$bg_page;  
     }
 
     .bloque_doble {

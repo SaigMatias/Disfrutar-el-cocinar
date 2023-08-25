@@ -19,7 +19,22 @@
 
     }
 
-    /* recetas */
+    /* bloques */
+    .index_welcome {
+
+        .talkbubble {
+            margin-top: 3.5rem;
+            margin-left: -2%;
+
+            p {
+                font-size: 1.2rem;
+                line-height: 1.8rem;
+            }
+
+        }
+
+    }
+
     .bloque_recetas {
 
         .row {
@@ -92,6 +107,7 @@
 
     }
 
+    /* bloques */
     .container-fluid {
 
         .bloque_doble {
@@ -105,6 +121,22 @@
                 line-height: 2rem;
                 padding: 1rem
             }
+
+        }
+
+    }
+
+    .index_welcome {
+
+        .talkbubble {
+            margin-left: -5%;
+            margin-top: 5rem;
+
+            p {
+                font-size: 1.7rem;
+                line-height: 2.5rem;
+            }
+
         }
 
     }
@@ -255,7 +287,7 @@
     footer {
 
         p {
-            font-size: .9rem
+            font-size: .9rem;
         }
 
     }
@@ -284,22 +316,66 @@
 
                 a {
 
+                    position: relative;
+
+                    &::after {
+                        content: attr(data-name);
+                        position: absolute;
+                        left: 140%;
+                        bottom: -40%;
+                        @include mix_bg-col(#444, $color_light);
+                        padding: 0 1rem .5rem;
+                        border: solid 1px #aaa;
+                        border-radius: 5px;
+                        font-weight: bold;
+                        font-family: map-get($family, sp);
+                        font-size: 1.2rem;
+                        letter-spacing: 1px;
+                        transform-origin: left;
+                        transform: scaleX(0);
+                        opacity: 0;
+                        transition: $transition_end;
+                    }
+
+                    &:hover {
+
+                        img {
+                            transition: $transition_start;
+                            transform: scale(1.25, 1.25) translateX(5px);
+                            opacity: 75%;
+                        }
+
+                        &::after {
+                            transition: $transition_start;
+                            transform: scaleX(1);
+                            opacity: 100%;
+                        }
+
+                    }
+
                     img {
                         width: 100%;
                         transition: $transition_end;
-
-                        &:hover {
-                            transition: $transition_start;
-                            transform: scale(1.25, 1.25) translateX(10px) rotate(3deg);
-                        }
                     }
-
-
 
                 }
 
             }
 
+        }
+
+    }
+
+    /* index */
+    .index_welcome {
+
+        img {
+            width: 35%;
+        }
+
+        .talkbubble {
+            width: 30%;
+            margin-left: -15%;
         }
 
     }
@@ -482,8 +558,21 @@
 
     }
 
-    /* recetas */
+    /* index */
+    .index_welcome {
 
+        img {
+            width: 25%;
+        }
+
+        .talkbubble {
+            width: 25%;
+            margin-left: -23%;
+        }
+
+    }
+
+    /* recetas */
     .bloque_recetas {
 
         .row {
@@ -554,6 +643,20 @@
 
             }
 
+        }
+
+    }
+
+
+    .index_welcome {
+
+        img {
+            width: 20%;
+        }
+
+        .talkbubble {
+            width: 18%;
+            margin-left: -30%;
         }
 
     }

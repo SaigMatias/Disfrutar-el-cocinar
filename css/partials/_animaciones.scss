@@ -1,53 +1,46 @@
-@keyframes fade {
-
-    0% {
-        opacity: 0;
-    }
-
-    100% {
-        opacity: 100%;
-    }
-
-}
-
 @keyframes fade_scale {
 
     0% {
-        transform-origin: top;
+        transform-origin: bottom;
         opacity: 0;
-        transform: scaleY(.5);
+        transform: scale(0.9, 1);
     }
 
     100% {
         opacity: 100%;
-        transform: scaleY(1);
+        transform: scale(1, 1);
     }
 
 }
 
-main {
+@keyframes fade_slide {
 
-    .bloque_mayor {
+    0% {
+        transform-origin: left;
+        opacity: 0;
+        transform: scale(0.9) translateX(-5%);
+    }
 
-        .bloque_doble {
-
-            h2 {
-                @include mix_anima(fade, 1s, 0)
-            }
-
-            p {
-                @include mix_anima(fade, 1s, 0.3s)
-            }
-
-            article {
-                @include mix_anima(fade, 1s, 1s)
-            }
-
-        }
-
+    100% {
+        opacity: 100%;
+        transform: scale(1)
     }
 
 }
+
+.index_welcome {
+
+    img {
+        @include mix_anima(fade_scale, .7s, .3s)
+    }
+
+    .talkbubble {
+        @include mix_anima(fade_slide, .7s, .8s);
+    }
+
+}
+
+
 
 .bloque_recetas {
 

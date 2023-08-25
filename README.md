@@ -20,7 +20,7 @@ Sitio web creado con Html, CSS y Bootstrap
     css/partials/_variables.scss
 
 
-### MIXIN, EXTEND Y VARIABLES
+### MAP, MIXIN, EXTEND Y VARIABLES
     
     Definidos en archivo css/partials/_variables.scss
 
@@ -39,8 +39,15 @@ Sitio web creado con Html, CSS y Bootstrap
         _bloques.scss: Contacto: .bloque_contacto form → .form_elementos (input y textarea), y .form_button (buttons)
         _menu-aside.scss: Todas (<768px): header nav collapse .menu_lista li → a
         _menu-aside.scss: Todas (<768px): header nav collapse .redes_sociales li a → img
+        _modal.scss: .modal-content .modal-body → button
         _responsive.scss: Todas (>768px): header nav .menu_lista_2 li → a
-        _responsive.scss: Todas (>768px): main .redes_sociales_2 ul li a → img
+        _responsive.scss: Todas (>768px): main .redes_sociales_2 ul li a → img y a::after
+
+
+## TRANSFORM
+        (Archivo: Página: elementos superiores → elemento aplicado)
+        _responsive.scss: Todas (>768px): header nav .menu_lista_2 li → a
+        _responsive.scss: Todas (>768px): main .redes_sociales_2 ul li a → img y a::after
         
         
 ## ANIMACIONES
@@ -58,3 +65,9 @@ Sitio web creado con Html, CSS y Bootstrap
         Contacto.html, _animaciones.scss: Contacto: main bloque_mayor .bloque_contacto → form
 
     
+## PSEUDOELEMENTOS Y PSEUDOCLASES
+        (Archivo: Página: → elementos superior → elemento aplicado)
+        _bloques.scss → .index_welcome → .talkbubble::before
+
+
+

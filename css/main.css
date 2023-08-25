@@ -105,7 +105,7 @@ body {
 }
 .container-fluid .bloque_unico {
   padding-bottom: 1rem;
-  background: rgba(255, 255, 255, 0.9);
+  background-color: rgba(255, 255, 255, 0.9);
 }
 .container-fluid .bloque_doble {
   padding: 15% 4%;
@@ -223,6 +223,47 @@ nav .collapse .redes_sociales li a img:hover {
 }
 
 /* inicio */
+.index_welcome {
+  background: url(../img/index_cocina.webp) center;
+  background-size: cover;
+  filter: grayscale(50%);
+}
+.index_welcome img {
+  width: 45%;
+  margin-top: 1rem;
+  filter: drop-shadow(-1px 2px 5px #333);
+}
+.index_welcome .talkbubble {
+  background-color: #333;
+  color: #f7f7f7;
+  position: relative;
+  border-radius: 10px;
+  padding: 0.5rem;
+  width: 40%;
+  height: -moz-min-content;
+  height: min-content;
+  margin-top: 2rem;
+  filter: drop-shadow(-1px 2px 5px #555);
+}
+.index_welcome .talkbubble p {
+  text-align: center;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  font-size: 1rem;
+  font-style: italic;
+}
+.index_welcome .talkbubble::before {
+  content: "";
+  position: absolute;
+  right: 99%;
+  top: 40%;
+  width: 0;
+  height: 0;
+  border-top: 13px solid transparent;
+  border-right: 26px solid #333;
+  border-bottom: 13px solid transparent;
+}
+
 .index_about h2 {
   font-size: 2.2rem;
 }
@@ -478,16 +519,43 @@ nav .collapse .redes_sociales li a img:hover {
 }
 
 /* modal */
-.modal_item li {
-  margin: 1rem 0;
-  border-bottom: #555 solid 1px;
+.modal-content {
+  background-color: #533a25;
+  box-shadow: 0 3px 30px #111;
 }
-.modal_item li a {
-  font-size: 1.1rem;
-  color: blanchedalmond;
+.modal-content .modal-body .modal_title-h4 {
+  background-color: rgba(32, 23, 17, 0.8);
+  color: antiquewhite;
+  letter-spacing: 3px;
 }
-.modal_item li a:hover {
-  color: #7a4d28;
+.modal-content .modal-body .modal_item {
+  background-color: rgba(32, 23, 17, 0.5);
+  width: 100%;
+  padding: 1rem 0.5rem;
+  border-radius: 7px;
+}
+.modal-content .modal-body .modal_item li {
+  margin: 1rem;
+  border-bottom: solid 1px rosybrown;
+  padding-bottom: 1rem;
+}
+.modal-content .modal-body .modal_item li:last-child {
+  border: 0;
+}
+.modal-content .modal-body .modal_item li a {
+  font-size: 1.5rem;
+  color: #eee;
+}
+.modal-content .modal-body .modal_item li a:hover {
+  color: rgb(32, 23, 17);
+}
+.modal-content .modal-body button {
+  transition: all 0.2s ease-in;
+}
+.modal-content .modal-body button:hover {
+  transition: all 0.2s ease-out;
+  filter: brightness(125%) grayscale(150%);
+  letter-spacing: 4px;
 }
 
 /* footer */
@@ -504,43 +572,39 @@ footer p {
   font-size: 0.8rem;
 }
 
-@keyframes fade {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 100%;
-  }
-}
 @keyframes fade_scale {
   0% {
-    transform-origin: top;
+    transform-origin: bottom;
     opacity: 0;
-    transform: scaleY(0.5);
+    transform: scale(0.9, 1);
   }
   100% {
     opacity: 100%;
-    transform: scaleY(1);
+    transform: scale(1, 1);
   }
 }
-main .bloque_mayor .bloque_doble h2 {
-  animation-name: fade;
-  animation-duration: 1s;
-  animation-delay: 0;
-  animation-timing-function: ease-in-out;
-  animation-fill-mode: backwards;
+@keyframes fade_slide {
+  0% {
+    transform-origin: left;
+    opacity: 0;
+    transform: scale(0.9) translateX(-5%);
+  }
+  100% {
+    opacity: 100%;
+    transform: scale(1);
+  }
 }
-main .bloque_mayor .bloque_doble p {
-  animation-name: fade;
-  animation-duration: 1s;
+.index_welcome img {
+  animation-name: fade_scale;
+  animation-duration: 0.7s;
   animation-delay: 0.3s;
   animation-timing-function: ease-in-out;
   animation-fill-mode: backwards;
 }
-main .bloque_mayor .bloque_doble article {
-  animation-name: fade;
-  animation-duration: 1s;
-  animation-delay: 1s;
+.index_welcome .talkbubble {
+  animation-name: fade_slide;
+  animation-duration: 0.7s;
+  animation-delay: 0.8s;
   animation-timing-function: ease-in-out;
   animation-fill-mode: backwards;
 }
@@ -646,7 +710,15 @@ main .bloque_mayor .bloque_doble article {
   nav .collapse .redes_sociales li {
     width: 10%;
   }
-  /* recetas */
+  /* bloques */
+  .index_welcome .talkbubble {
+    margin-top: 3.5rem;
+    margin-left: -2%;
+  }
+  .index_welcome .talkbubble p {
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+  }
   .bloque_recetas .row {
     width: 80%;
   }
@@ -672,6 +744,7 @@ main .bloque_mayor .bloque_doble article {
   nav .collapse .redes_sociales {
     margin-bottom: 6.5%;
   }
+  /* bloques */
   .container-fluid .bloque_doble {
     padding: 10%;
   }
@@ -679,6 +752,14 @@ main .bloque_mayor .bloque_doble article {
     font-size: 2.3rem;
     line-height: 2rem;
     padding: 1rem;
+  }
+  .index_welcome .talkbubble {
+    margin-left: -5%;
+    margin-top: 5rem;
+  }
+  .index_welcome .talkbubble p {
+    font-size: 1.7rem;
+    line-height: 2.5rem;
   }
   .bloque_recetas .row {
     width: 70%;
@@ -803,13 +884,49 @@ main .bloque_mayor .bloque_doble article {
   .redes_sociales_2 ul li {
     width: 70%;
   }
+  .redes_sociales_2 ul li a {
+    position: relative;
+  }
+  .redes_sociales_2 ul li a::after {
+    content: attr(data-name);
+    position: absolute;
+    left: 140%;
+    bottom: -40%;
+    background-color: #444;
+    color: #eee;
+    padding: 0 1rem 0.5rem;
+    border: solid 1px #aaa;
+    border-radius: 5px;
+    font-weight: bold;
+    font-family: "nunito", "gill sans", "gill sans mt", "trebuchet ms", sans-serif;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    transform-origin: left;
+    transform: scaleX(0);
+    opacity: 0;
+    transition: all 0.2s ease-in;
+  }
+  .redes_sociales_2 ul li a:hover img {
+    transition: all 0.2s ease-out;
+    transform: scale(1.25, 1.25) translateX(5px);
+    opacity: 75%;
+  }
+  .redes_sociales_2 ul li a:hover::after {
+    transition: all 0.2s ease-out;
+    transform: scaleX(1);
+    opacity: 100%;
+  }
   .redes_sociales_2 ul li a img {
     width: 100%;
     transition: all 0.2s ease-in;
   }
-  .redes_sociales_2 ul li a img:hover {
-    transition: all 0.2s ease-out;
-    transform: scale(1.25, 1.25) translateX(10px) rotate(3deg);
+  /* index */
+  .index_welcome img {
+    width: 35%;
+  }
+  .index_welcome .talkbubble {
+    width: 30%;
+    margin-left: -15%;
   }
   /* recetas */
   .bloque_recetas .row {
@@ -917,6 +1034,14 @@ main .bloque_mayor .bloque_doble article {
   .bloque_mayor .bloque_unico h2 {
     font-size: 2.5rem;
   }
+  /* index */
+  .index_welcome img {
+    width: 25%;
+  }
+  .index_welcome .talkbubble {
+    width: 25%;
+    margin-left: -23%;
+  }
   /* recetas */
   .bloque_recetas .row .card .card-body .card-title {
     font-size: 2rem;
@@ -941,6 +1066,13 @@ main .bloque_mayor .bloque_doble article {
   header .header_menu .header_menu_dre h1 {
     font-size: 6rem;
     margin-bottom: 1.5rem;
+  }
+  .index_welcome img {
+    width: 20%;
+  }
+  .index_welcome .talkbubble {
+    width: 18%;
+    margin-left: -30%;
   }
 }
 @media screen and (min-width: 1400px) {
