@@ -31,16 +31,14 @@
 .index_welcome {
 
     img {
-        @include mix_anima(fade_scale, .7s, .3s)
+        @include mix_anima(fade_scale, .8s, .3s)
     }
 
     .talkbubble {
-        @include mix_anima(fade_slide, .7s, .8s);
+        @include mix_anima(fade_slide, 1s, .5s);
     }
 
 }
-
-
 
 .bloque_recetas {
 

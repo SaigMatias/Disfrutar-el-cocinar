@@ -302,6 +302,7 @@
         padding: 1rem 0;
         background: $color_sp_mid;
         border-radius: 0 5px 5px 0;
+        z-index: 2;
 
         ul {
             padding: 0;
@@ -475,9 +476,14 @@
                 width: auto;
                 margin: .5rem;
 
-                img {
-                    width: 100%;
+                a {
+
+                    img {
+                        width: 100%;
+                    }
+
                 }
+
             }
 
             .header_menu_dre {

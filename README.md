@@ -1,11 +1,19 @@
 # Disfrutar-el-cocinar
+
+## RESUMEN
 Sitio web creado con Html, CSS y Bootstrap
 
 
-## SCSS
 
 
-### Estructura de directorios
+
+## VERSION EXTENDIDA
+
+
+### SCSS
+
+
+#### Estructura de directorios
 
     css/main.scss
     css/partials/_animaciones.scss
@@ -20,16 +28,26 @@ Sitio web creado con Html, CSS y Bootstrap
     css/partials/_variables.scss
 
 
-### MAP, MIXIN, EXTEND Y VARIABLES
+#### VARIABLES, MAP, MIXIN Y EXTEND
     
     Definidos en archivo css/partials/_variables.scss
+        Variables: colores, border, transiciones
+        Map: family fonts
+        Mixin: animaciones; color y background color
+        Extend: display flex, titulos 
 
-### FOR
+
+#### FOR
+
         (Archivo: Página: elementos superiores → elemento aplicado)
         _animaciones.scss: Recetas: .bloque_recetas .row → .anima_n 
     
 
-## TRANSICIONES
+
+### CSS
+
+
+#### TRANSICIONES
 
     · Definidas en variables "$transition_start" para inicio de hover, y "$transition_end" al retirar el cursor
 
@@ -44,30 +62,50 @@ Sitio web creado con Html, CSS y Bootstrap
         _responsive.scss: Todas (>768px): main .redes_sociales_2 ul li a → img y a::after
 
 
-## TRANSFORM
+#### TRANSFORM
+
         (Archivo: Página: elementos superiores → elemento aplicado)
         _responsive.scss: Todas (>768px): header nav .menu_lista_2 li → a
         _responsive.scss: Todas (>768px): main .redes_sociales_2 ul li a → img y a::after
+        _animaciones.scss: Inicio, Recetas: fade_scale
+        _animaciones.scss: Inicio, Recetas: fade_slide
         
         
-## ANIMACIONES
+#### ANIMACIONES
         
-        (Archivo: Página: → elementos superior → elemento → animación)
+        (Archivo: Página: → elementos superiores → elemento → animación)
         
-        CSS
-        _animaciones.scss: Inicio: main bloque_mayor .bloque_doble → h2, p, article (fade)
+        --- CSS ---
+        _animaciones.scss: Inicio: main bloque_mayor .index_welcome → img (fade_scale)
+        _animaciones.scss: Inicio: main bloque_mayor .index_welcome → .talkbubble (fade_slide)
         _animaciones.scss: Recetas: main bloque_mayor .bloque_recetas .row → .anima_n (fade_scale)
         
-        Libreria AOS (zoom-in-up)
+        --- Libreria AOS (zoom-in-up) ---
         Recursos.html: Recursos: main bloque_mayor .bloque_recursos → article
         
-        Animista (fade-in-bottom)
+        --- Animista (fade-in-bottom) ---
         Contacto.html, _animaciones.scss: Contacto: main bloque_mayor .bloque_contacto → form
 
     
-## PSEUDOELEMENTOS Y PSEUDOCLASES
-        (Archivo: Página: → elementos superior → elemento aplicado)
-        _bloques.scss → .index_welcome → .talkbubble::before
+#### PSEUDOELEMENTOS Y PSEUDOCLASES
+
+        (Archivo: Página: → elementos superiores → elemento aplicado)
+        _bloques.scss → .index_welcome → .talkbubble::after
+        _bloques.scss → Recursos: .bloque_recursos article → nth-child en h3 y a
+        _modal.scss → Recetas: .bloque_recetas .modal #recetas_carnes ... .modal_item → li:last-child
+        
+        
+#### FUENTES IMPORTADAS
+
+        Importadas en archivo css/partials/_variables.scss
+        google fonts: crimson text, nunito, open sans,
+        font-face: hight tower
 
 
+### BOOTSTRAP
 
+        (Página: → elemento principal usado)
+        Todas → container-fluid
+        Recetas → cards, modal x 2 (recetas y construcción), button
+        Recursos → modal
+        Simulacro_envio → button

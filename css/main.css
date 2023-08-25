@@ -126,7 +126,7 @@ header .header_menu .header_menu_izq {
   width: 30%;
   margin: 1rem auto 0;
 }
-header .header_menu .header_menu_izq img {
+header .header_menu .header_menu_izq a img {
   width: 100%;
   opacity: 70%;
   filter: drop-shadow(-1px 2px 7px #533a25);
@@ -596,15 +596,15 @@ footer p {
 }
 .index_welcome img {
   animation-name: fade_scale;
-  animation-duration: 0.7s;
+  animation-duration: 0.8s;
   animation-delay: 0.3s;
   animation-timing-function: ease-in-out;
   animation-fill-mode: backwards;
 }
 .index_welcome .talkbubble {
   animation-name: fade_slide;
-  animation-duration: 0.7s;
-  animation-delay: 0.8s;
+  animation-duration: 1s;
+  animation-delay: 0.5s;
   animation-timing-function: ease-in-out;
   animation-fill-mode: backwards;
 }
@@ -872,6 +872,7 @@ footer p {
     padding: 1rem 0;
     background: blanchedalmond;
     border-radius: 0 5px 5px 0;
+    z-index: 2;
   }
   .redes_sociales_2 ul {
     padding: 0;
@@ -982,7 +983,7 @@ footer p {
     width: auto;
     margin: 0.5rem;
   }
-  header .header_menu .header_menu_izq img {
+  header .header_menu .header_menu_izq a img {
     width: 100%;
   }
   header .header_menu .header_menu_dre {
