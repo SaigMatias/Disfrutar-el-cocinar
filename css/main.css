@@ -849,11 +849,11 @@ footer p {
     justify-content: space-evenly;
     position: sticky;
     top: 0;
-    padding: 0;
   }
   .bloque_tradicion ul li {
     border-left: solid 1px #656565;
     width: 100%;
+    padding: 0;
   }
   .bloque_tradicion ul li a {
     font-size: 1.3rem;
