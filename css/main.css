@@ -411,6 +411,7 @@ nav .collapse .redes_sociales li a img:hover {
 }
 .bloque_tradicion ul li {
   border-bottom: 1px solid #646464;
+  padding: 1rem;
 }
 .bloque_tradicion ul li a {
   color: #eee;
@@ -848,6 +849,7 @@ footer p {
     justify-content: space-evenly;
     position: sticky;
     top: 0;
+    padding: 0;
   }
   .bloque_tradicion ul li {
     border-left: solid 1px #656565;
