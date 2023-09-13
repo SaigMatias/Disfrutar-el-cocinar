@@ -1,40 +1,69 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Disfrutar el cocinar</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
   <link rel="stylesheet" href="../css/style.css">
-  
 </head>
+
 <body>
   <header>
 
-   <div class="header_menu">
-      <img src="../img/logo_cocinero.png" alt="Logo">
-   
-    <div class="header_menu_dre">
-      <h1>Disfrutar el cocinar</h1>
-      <nav>
-        <ul>
-          <li><a href="../index.html">INICIO</a></li>
-          <li><a href="recetas.html">RECETAS</a></li>
-          <li><a href="recursos.html">RECURSOS</a></li>
-          <li><a href="tradicion.html">TRADICION</a></li>
-          <li class="menu_active"><a href="contacto.html">CONTACTO</a></li>
-        </ul>
-      </nav>
-   </div>
-   </div>
+    <div class="header_menu">
+
+      <div class="header_menu_izq">
+        <img src="../img/logo_cocinero.png" alt="Logo">
+      </div>
+
+      <div class="header_menu_dre">
+        <h1>Disfrutar<br /> el cocinar</h1>
+        <nav>
+
+          <button class="btn-collapse" type="button" data-bs-toggle="collapse" data-bs-target="#menu_collapse"
+            aria-expanded="false" aria-controls="collapseExample">
+            <img src="../img/menu.png" alt="menu imagen"><span>Menu</span>
+          </button>
+
+          <div class="collapse" id="menu_collapse">
+            <ul class="menu_lista ps-0">
+              <li><a href="../index.html">INICIO</a></li>
+              <li><a href="recetas.html">RECETAS</a></li>
+              <li><a href="recursos.html">RECURSOS</a></li>
+              <li><a href="tradicion.html">TRADICION</a></li>
+              <li><a id="menu_active" href="contacto.html">CONTACTO</a></li>
+            </ul>
+            <ul class="redes_sociales">
+              <li><a href="#"><img src="../img/rs_facebook.png" alt="Facebook"></a></li>
+              <li><a href="#"><img src="../img/rs_instagram.png" alt="Instagram"></a></li>
+              <li><a href="#"><img src="../img/rs_tik-tok.png" alt="TikTok"></a></li>
+              <li><a href="#"><img src="../img/rs_tweeter.png" alt="Tweeter"></a></li>
+              <li><a href="#"><img src="../img/rs_youtube.png" alt="YouTube"></a></li>
+            </ul>
+          </div>
+
+          <ul class="menu_lista_2">
+            <li><a href="../index.html">INICIO</a></li>
+            <li><a href="recetas.html">RECETAS</a></li>
+            <li><a href="recursos.html">RECURSOS</a></li>
+            <li><a href="tradicion.html">TRADICION</a></li>
+            <li><a id="menu_active" href="contacto.html">CONTACTO</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
 
   </header>
-  
+
   <main>
-  
-    <aside class="redes_sociales">
+
+    <aside class="redes_sociales_2">
       <h2>REDES SOCIALES</h2>
       <ul>
-        <li><a href="#"><img src="../img/rs_facebook.png" alt="Facebook"><span>Facebook</span></a></li>   
+        <li><a href="#"><img src="../img/rs_facebook.png" alt="Facebook"><span>Facebook</span></a></li>
         <li><a href="#"><img src="../img/rs_instagram.png" alt="Instagram"><span>Instagram</span></a></li>
         <li><a href="#"><img src="../img/rs_tik-tok.png" alt="TikTok"><span>TikTok</span></a></li>
         <li><a href="#"><img src="../img/rs_tweeter.png" alt="Tweeter"><span>Tweeter</span></a></li>
@@ -42,33 +71,40 @@
       </ul>
     </aside>
 
-    <div class="container">
-        <section class="bloque_unico">
-      
-          <form action="simulacro_envio.html">
-            
-            <label for="nombre">NOMBRE Y APELLIDO *</label>
-            <input type="text" name="nombre" id="nombre" placeholder="Jonh Doe" required autofocus>
-          
-            <label for="telefono">TELÉFONO</label>
-            <input type="tel" name="telefono" id="telefono" placeholder="123456789">
+    <div class="container-fluid bloque_mayor">
 
-            <label for="mail">EMAIL *</label>
-            <input type="email" name="mail" id="mail" placeholder="ejemplo@email.com" required>
+      <section class="bloque_unico">
 
-            <label for="consulta">COMENTARIOS Y CONSULTAS *</label>
-            <textarea name="consulta" id="consulta" placeholder="Ej. Me interesaría saber de..." maxlength="500" title="500 caracteres máximo" required></textarea>
-            <input class="form_button reset" type="reset" value="LIMPIAR FORMULARIO">
-            <input class="form_button envio" type="submit" value="ENVIAR">
+        <form action="simulacro_envio.html">
 
-          </form>
+          <label for="nombre">NOMBRE Y APELLIDO<span class="text-primary ms-1">*</span></label>
+          <input class="form_elementos" type="text" name="nombre" id="nombre" placeholder="Jonh Doe" required autofocus>
 
-        </section>
+          <label for="telefono">TELÉFONO</label>
+          <input class="form_elementos" type="tel" name="telefono" id="telefono" placeholder="123456789">
+
+          <label for="mail">EMAIL<span class="text-primary ms-1">*</span></label>
+          <input class="form_elementos" type="email" name="mail" id="mail" placeholder="ejemplo@email.com" required>
+
+          <label for="consulta">COMENTARIOS Y CONSULTAS<span class="text-primary ms-1">*</span></label>
+          <textarea class="form_elementos" name="consulta" id="consulta" placeholder="Ej. Me interesaría saber de..."
+            maxlength="500" title="500 caracteres máximo" required></textarea>
+          <input class="form_button reset" type="reset" value="LIMPIAR FORMULARIO">
+          <input class="form_button envio" type="submit" value="ENVIAR">
+        </form>
+
+      </section>
+
     </div>
 
   </main>
-  
-  
-<footer><p>© Creado por Leandro Matias Saig</p></footer>
+
+  <footer>
+    <p>© Creado por Leandro Matias Saig</p>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+    crossorigin="anonymous"></script>
 </body>
+
 </html>
