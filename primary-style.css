@@ -1,0 +1,72 @@
+body {
+    background-color: #fff;
+}
+
+#palete {
+  display: flex;
+  flex-flow: wrap;
+}
+
+#palete div {color:transparent;
+width:25%;
+height:200px}
+
+.col-1 {
+    background-color: #7d677e;
+}
+
+.col-2 {
+    background-color: #4f2c4d;
+}
+
+.col-3 {
+    background-color: #360b41;
+}
+
+.col-4 {
+    background-color: #ccc9aa;
+}
+
+.col-5 {
+    background-color: #fafdea;
+}
+
+.col-6 {
+    background-color: #636363;
+}
+
+.col-7 {
+    background-color: #85827e;
+}
+
+.col-8 {
+    background-color: #d1b39f;
+}
+
+.col-9 {
+    background-color: #ffecd1;
+}
+
+.col-10 {
+    background-color: #ffd1b3;
+}
+
+.col-11 {
+    background-color: #c9b5a8;
+}
+
+.col-12 {
+    background-color: #a49184;
+}
+
+.col-13 {
+    background-color: #7e6d61;
+}
+
+.col-14 {
+    background-color: #59493e;
+}
+
+.col-15 {
+    background: #33251b;
+}

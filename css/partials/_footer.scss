@@ -1,0 +1,15 @@
+/* footer */
+footer {
+    background: $color_highlight_base;
+    padding: .5rem;
+
+    p {
+        font-weight: bold;
+        text-align: center;
+        letter-spacing: 1px;
+        margin: 0;
+        color: $color_highlight_light;
+        font-size: .8rem;
+    }
+
+}

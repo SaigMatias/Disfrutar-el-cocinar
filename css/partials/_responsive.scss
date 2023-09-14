@@ -1,0 +1,821 @@
+/* responsive */
+
+@media screen and (min-width: 375px) {
+
+    nav {
+
+        .collapse {
+
+            .redes_sociales {
+                margin: 2.5% auto;
+
+                li {
+                    width: 10%;
+                }
+
+            }
+
+        }
+
+    }
+
+    /* bloques */
+    .index_welcome {
+
+        .talkbubble {
+            margin-top: 3.5rem;
+            margin-left: -2%;
+
+            p {
+                font-size: 1.2rem;
+                line-height: 1.8rem;
+            }
+
+        }
+
+    }
+
+    .bloque_recetas {
+
+        .row {
+            width: 80%;
+
+            .card {
+
+                .card-body {
+
+                    .btn {
+
+                        span {
+                            margin-left: .5rem;
+                        }
+
+                    }
+
+                }
+
+            }
+
+        }
+
+    }
+
+
+    .bloque_tradicion {
+
+        article {
+
+            h3 {
+                font-size: 2rem;
+            }
+
+            h4 {
+                font-size: 1.4rem;
+                margin-bottom: .75rem;
+            }
+        }
+    }
+
+}
+
+@media screen and (min-width:575px) {
+
+    header {
+
+        .header_menu {
+
+            .header_menu_dre {
+
+                h1 {
+                    margin-bottom: 1.5rem;
+                    font-size: 4rem;
+                    line-height: 3rem;
+                }
+
+            }
+
+        }
+
+    }
+
+    nav {
+
+        .btn-collapse {
+            padding: .5rem 0;
+
+            span {
+                text-transform: uppercase;
+            }
+
+            img {
+                opacity: .7;
+            }
+
+        }
+
+        .collapse {
+
+            .redes_sociales {
+                margin-bottom: 6.5%;
+            }
+
+        }
+
+    }
+
+    /* bloques */
+    .container-fluid {
+
+        .bloque_doble {
+            padding: 10%
+        }
+
+        .bloque_unico {
+
+            h2 {
+                font-size: 2.3rem;
+                line-height: 2rem;
+                padding: 1rem
+            }
+
+        }
+
+    }
+
+    .index_welcome {
+
+        .talkbubble {
+            margin-left: -5%;
+            margin-top: 5rem;
+
+            p {
+                font-size: 1.7rem;
+                line-height: 2.5rem;
+            }
+
+        }
+
+    }
+
+    .bloque_recetas {
+
+        .row {
+            width: 70%;
+        }
+
+    }
+
+    .bloque_recursos {
+
+        article {
+            width: 75%;
+            margin-bottom: 1.5rem;
+            border-bottom: solid 3px $color_light;
+            box-shadow: $color_mid 0 3px 7px;
+
+            h3 {
+                margin-bottom: 1rem
+            }
+
+            p {
+                margin-bottom: 2rem;
+            }
+
+            a {
+                width: 75%
+            }
+
+        }
+
+    }
+
+    .bloque_tradicion {
+
+        ul {
+            flex-flow: row nowrap;
+            justify-content: space-evenly;
+            position: sticky;
+            top: 0;
+
+            li {
+                border-left: solid 1px #656565;
+                width: 100%;
+                padding:0;
+
+
+                a {
+                    font-size: 1.3rem;
+                    display: flex;
+                    justify-content: center;
+
+                    img {
+                        width: 15%
+                    }
+
+                }
+
+            }
+
+        }
+
+        article {
+
+            h3 {
+                font-size: 2rem;
+                line-height: 2.5rem;
+            }
+
+            h4 {
+                font-size: 1.4rem;
+                margin-bottom: .75rem;
+            }
+
+        }
+
+    }
+
+}
+
+@media screen and (min-width:768px) {
+
+    header {
+
+        .header_menu {
+
+            .header_menu_izq {
+                width: 20%;
+            }
+
+        }
+
+    }
+
+    /* menu */
+    nav {
+
+        .btn-collapse {
+            display: none;
+        }
+
+        .menu_lista_2 {
+            display: flex;
+            justify-content: space-evenly;
+            margin-bottom: 0;
+            padding-left: 0;
+
+            li {
+                width: 100%;
+
+                a {
+                    font-family: map-get($family, sp);
+                    font-weight: 800;
+                    @include mix_bg-col($bg_submenu_mobile, $color_highlight_base);
+                    display: block;
+                    padding: .5rem 0;
+                    letter-spacing: 2px;
+                    font-size: 1.3rem;
+                    text-align: center;
+                    border-top: $border_light;
+                    transition: $transition_end;
+
+                    &:hover {
+                        transition: $transition_start;
+                        border-color: $color_sp_mid;
+                        @include mix_bg-col($color_highlight_base, $color_highlight_light);
+
+                    }
+
+                }
+
+                .menu_active {
+                    @include mix_bg-col($bg_menu_active, $color_highlight_light);
+                    border-color: $color_sp_mid;
+
+                    &:hover {
+                        @include mix_bg-col($color_font_mid, $color_light);
+                        border-color: $color_base;
+                    }
+
+                }
+
+            }
+
+        }
+
+    }
+
+    /* bloques */
+    main {
+        background: $bg_submenu_mobile;
+        display: grid;
+        grid-template-areas: "redes_sociales bloque_mayor";
+        justify-content: center;
+        column-gap: 1%;
+        padding: 1% 1% 1% 0;
+    }
+
+    .bloque_mayor {
+        grid-area: bloque_mayor;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: .3rem;
+        justify-content: space-evenly;
+
+        .bloque_unico {
+            padding-bottom: 1rem;
+            grid-column: 1/3;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+        }
+
+        .bloque_doble {
+            grid-column: span;
+            padding: 3% 4%;
+            border-bottom: 0;
+        }
+
+    }
+
+    footer {
+
+        p {
+            font-size: .9rem;
+        }
+
+    }
+
+    /* aside */
+    .redes_sociales_2 {
+        display: block;
+        grid-area: redes_sociales;
+        height: fit-content;
+        position: sticky;
+        top: 5%;
+        padding: 1rem 0;
+        background: $color_sp_mid;
+        border-radius: 0 5px 5px 0;
+        z-index: 2;
+
+        ul {
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            row-gap: 1rem;
+            align-items: center;
+
+            li {
+                width: 70%;
+
+                a {
+
+                    position: relative;
+
+                    &::after {
+                        content: attr(data-name);
+                        position: absolute;
+                        left: 140%;
+                        bottom: -40%;
+                        @include mix_bg-col(#444, $color_light);
+                        padding: 0 1rem .5rem;
+                        border: solid 1px #aaa;
+                        border-radius: 5px;
+                        font-weight: bold;
+                        font-family: map-get($family, sp);
+                        font-size: 1.2rem;
+                        letter-spacing: 1px;
+                        transform-origin: left;
+                        transform: scaleX(0);
+                        opacity: 0;
+                        transition: $transition_end;
+                    }
+
+                    &:hover {
+
+                        img {
+                            transition: $transition_start;
+                            transform: scale(1.25, 1.25) translateX(5px);
+                            opacity: 75%;
+                        }
+
+                        &::after {
+                            transition: $transition_start;
+                            transform: scaleX(1);
+                            opacity: 100%;
+                        }
+
+                    }
+
+                    img {
+                        width: 100%;
+                        transition: $transition_end;
+                    }
+
+                }
+
+            }
+
+        }
+
+    }
+
+    /* index */
+    .index_welcome {
+
+        img {
+            width: 35%;
+        }
+
+        .talkbubble {
+            width: 30%;
+            margin-left: -15%;
+        }
+
+    }
+
+    /* recetas */
+    .bloque_recetas {
+
+        .row {
+            flex-direction: row;
+            width: 90%;
+
+            .card {
+
+                .card-body {
+
+                    .card-title {
+                        font-size: 1.5rem
+                    }
+
+                }
+
+            }
+
+        }
+
+    }
+
+    /* recursos */
+    .bloque_recursos {
+        flex-direction: row;
+        gap: 1rem;
+
+        h2 {
+            font-size: 2rem;
+        }
+
+        article {
+            width: 45%;
+
+            h3 {
+                min-height: 2rem;
+            }
+
+            p {
+                min-height: 10.5rem;
+            }
+
+        }
+
+    }
+
+    /* tradición */
+    .bloque_tradicion {
+
+        article {
+            width: 95%;
+
+            h3 {
+                font-size: 2.25rem;
+                line-height: 2.75rem;
+            }
+
+            h4 {
+                font-size: 1.75rem;
+            }
+
+            p {
+                margin: .75rem auto 1.5rem auto;
+            }
+
+            img {
+                width: 90%;
+            }
+
+            iframe {
+                height: 60vw;
+            }
+
+        }
+
+    }
+
+    /* formulario */
+
+    .bloque_contacto {
+
+        form {
+
+            .form_button {
+                width: 45%;
+                margin: auto
+            }
+
+        }
+
+    }
+
+}
+
+
+@media screen and (min-width:992px) {
+
+    /* header */
+    header {
+        background-position: bottom;
+
+        .header_menu {
+            background: $bg_header;
+            display: grid;
+            grid-template-columns: 1fr 6fr;
+            align-items: end;
+            padding: 1rem;
+
+
+            .header_menu_izq {
+                grid-column: 1/2;
+                display: flex;
+                justify-content: center;
+                width: auto;
+                margin: .5rem;
+
+                a {
+
+                    img {
+                        width: 100%;
+                    }
+
+                }
+
+            }
+
+            .header_menu_dre {
+                grid-column: 2/2;
+
+                h1 {
+                    letter-spacing: 4px;
+                    font-size: 5rem;
+                    margin-bottom: .75rem;
+
+                    br {
+                        display: none
+                    }
+
+                }
+
+            }
+
+        }
+
+    }
+
+    /* menu */
+    nav {
+
+        .menu_lista_2 {
+            display: flex;
+            justify-content: space-evenly;
+            margin-bottom: .2rem;
+
+            li {
+                width: 19%;
+                padding: .5rem 0;
+
+                a {
+                    border-radius: 10px;
+                    padding: 0 0 .6rem;
+                    background: linear-gradient(rgba(255, 255, 255, .3), #fff);
+                    color: $color_highlight_base;
+                    border-top: solid 1px $color_light;
+                    filter: drop-shadow(0 2px 5px $color_base);
+
+                    &:hover {
+                        background: unset;
+                        border: transparent;
+                        @include mix_bg-col($color_highlight_base, $color_highlight_light);
+                        transform: scale(1.025);
+                    }
+
+                }
+
+                .menu_active {
+                    border-color: transparent;
+                    background: $color_highlight_base;
+
+                    &:hover {
+                        transform: scale(0.975);
+                        @include mix_bg-col($color_font_mid, $color_light);
+                    }
+                }
+
+            }
+
+        }
+
+    }
+
+    /* bloques */
+    .bloque_mayor {
+
+        .bloque_unico {
+
+            h2 {
+                font-size: 2.5rem;
+            }
+
+        }
+
+    }
+
+    /* index */
+    .index_welcome {
+
+        img {
+            width: 25%;
+        }
+
+        .talkbubble {
+            width: 25%;
+            margin-left: -23%;
+        }
+
+    }
+
+    /* recetas */
+    .bloque_recetas {
+
+        .row {
+
+            .card {
+
+                .card-body {
+
+                    .card-title {
+                        font-size: 2rem;
+                    }
+
+                }
+
+            }
+
+        }
+
+    }
+
+    /* recursos */
+    .bloque_recursos {
+
+        article {
+
+            p {
+                font-size: 1rem;
+            }
+
+        }
+
+    }
+
+    /* tradicion */
+    .bloque_tradicion {
+
+        ul {
+
+            li {
+
+                a {
+                    font-size: 1.5rem;
+
+                    img {
+                        width: 12.5%
+                    }
+
+                }
+
+            }
+
+        }
+
+        article {
+            width: 90%;
+            margin-bottom: 3rem;
+            padding-bottom: 4rem;
+            border-color: $color_base;
+
+            h3 {
+                font-size: 3rem
+            }
+
+            h4 {
+                margin-top: 2.75rem;
+                font-size: 2.5rem;
+            }
+
+            img {
+                width: 60%;
+            }
+
+            iframe {
+                height: 40vw;
+            }
+
+        }
+
+    }
+
+    /* formulario */
+    .bloque_contacto {
+
+        form {
+
+            label {
+                font-size: 1.5rem;
+                letter-spacing: 1px;
+            }
+
+        }
+
+    }
+
+}
+
+
+@media screen and (min-width: 1200px) {
+
+    header {
+
+        .header_menu {
+            grid-template-columns: 1fr 7fr;
+
+            .header_menu_izq {
+                width: 80%;
+            }
+
+            .header_menu_dre {
+
+                h1 {
+                    font-size: 6rem;
+                    margin-bottom: 1.5rem
+                }
+
+            }
+
+        }
+
+    }
+
+
+    .index_welcome {
+
+        img {
+            width: 20%;
+        }
+
+        .talkbubble {
+            width: 18%;
+            margin-left: -30%;
+        }
+
+    }
+
+    .bloque_tradicion {
+
+        ul {
+
+            li {
+
+                a {
+
+                    img {
+                        width: 10%
+                    }
+
+                }
+
+            }
+
+        }
+
+    }
+
+}
+
+
+@media screen and (min-width: 1400px) {
+
+    body {
+        max-width: 1500px;
+    }
+
+}

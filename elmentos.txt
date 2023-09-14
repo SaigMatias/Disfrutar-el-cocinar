@@ -1,0 +1,51 @@
+Skills
+HTML5
+CSS3
+JavaScript
+React JS
+Bootstrap
+SASS & SCSS
+Git & GitHub
+JSON
+Firebase
+Fetch API
+Accesibilidad web
+Diseño responsivo
+
+Software
+Visual Studio Code
+FileZilla
+Adobe Photoshop
+Adobe Illustrator
+Adobe Premiere
+
+Idiomas
+Español (Nativo)
+Inglés (C2 Proficient)
+
+
+-----------------------------------
+
+cantarell
+lato
+
+
+montserrat titulo
+
+
+Colores
+
+barra: #43434c - #3c3c43
+body: #57606b ( #f2efed )
+bloques: #faebd6
+sub bloques: #fdf8f2
+
+
+
+
+Nombre: #bfbfbf
+profesion: #f0e7db
+menu nav: #adacb0
+pagina font: #4c4d4f
+proy princ: #f2efed
+pry sec: #d1d2d4 ( #778492 )

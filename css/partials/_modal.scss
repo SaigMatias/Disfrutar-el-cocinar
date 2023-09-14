@@ -1,0 +1,56 @@
+/* modal */
+.modal-content {
+    background-color: $color_highlight_base;
+    box-shadow: 0 3px 30px #111;
+
+    .modal-body {
+
+        .modal_title-h4 {
+            background-color: rgba(32, 23, 17, .8);
+            color: antiquewhite;
+            letter-spacing: 3px;
+        }
+
+        .modal_item {
+            background-color: rgba(32, 23, 17, .5);
+            width: 100%;
+            padding: 1rem .5rem;
+            border-radius: 7px;
+
+            li {
+                margin: 1rem;
+                border-bottom: solid 1px rosybrown;
+                padding-bottom: 1rem;
+
+                &:last-child {
+                    border: 0
+                }
+
+                a {
+                    font-size: 1.5rem;
+                    color: $color_light;
+
+                    &:hover {
+                        color: rgb(32, 23, 17);
+                    }
+
+                }
+
+            }
+
+        }
+
+        button {
+            transition: $transition_end;
+
+            &:hover {
+                transition: $transition_start;
+                filter: brightness(125%) grayscale(150%);
+                letter-spacing: 4px;
+            }
+            
+        }
+
+    }
+
+}
