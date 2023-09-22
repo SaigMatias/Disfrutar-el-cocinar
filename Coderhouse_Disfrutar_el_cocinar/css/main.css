@@ -3,15 +3,22 @@
 @import url("https://fonts.googleapis.com/css2?family=nunito:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600;1,700;1,800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=crimson+text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=open+sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap");
+
 @font-face {
   font-family: "high_tower";
   src: url(fonts/high_tower.ttf);
 }
+
 /* variables */
 /* map */
 /* mixin */
 /* extends */
-.bloque_tradicion ul, .bloque_recursos article, .bloque_recursos, .bloque_recetas .row, nav .collapse .menu_lista, header .header_menu {
+.bloque_tradicion ul,
+.bloque_recursos article,
+.bloque_recursos,
+.bloque_recetas .row,
+nav .collapse .menu_lista,
+header .header_menu {
   display: flex;
   flex-flow: column wrap;
 }
@@ -27,25 +34,32 @@ nav .btn-collapse {
   align-items: center;
 }
 
-nav .collapse .redes_sociales, .container-fluid .bloque_unico {
+nav .collapse .redes_sociales,
+.container-fluid .bloque_unico {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-evenly;
 }
 
-nav .collapse .menu_lista li a, nav .btn-collapse {
+nav .collapse .menu_lista li a,
+nav .btn-collapse {
   font-family: "nunito", "gill sans", "gill sans mt", "trebuchet ms", sans-serif;
   font-weight: 800;
 }
 
-.index_about h2, .bloque_tradicion h2, .bloque_recursos h2, .bloque_recetas h2 {
+.index_about h2,
+.bloque_tradicion h2,
+.bloque_recursos h2,
+.bloque_recetas h2 {
   font-family: "high_tower", georgia, "times new roman", times, serif;
   border-bottom: 2px solid #eee;
   margin-bottom: 0.9rem;
   font-weight: 500;
 }
 
-.bloque_tradicion h2, .bloque_recursos h2, .bloque_recetas h2 {
+.bloque_tradicion h2,
+.bloque_recursos h2,
+.bloque_recetas h2 {
   background-color: #533a25;
   color: #fcead6;
   padding: 0.5rem;
@@ -59,7 +73,9 @@ nav .collapse .menu_lista li a, nav .btn-collapse {
   width: 100%;
 }
 
-.bloque_tradicion article h3, .bloque_recursos article h3, .index_novedades article a h3 {
+.bloque_tradicion article h3,
+.bloque_recursos article h3,
+.index_novedades article a h3 {
   text-align: center;
   margin: 1rem auto;
   font-size: 2.5rem;
@@ -103,10 +119,12 @@ body {
   margin: 0;
   padding: 0;
 }
+
 .container-fluid .bloque_unico {
   padding-bottom: 1rem;
   background-color: rgba(255, 255, 255, 0.9);
 }
+
 .container-fluid .bloque_doble {
   padding: 15% 4%;
   margin: 0;
@@ -114,19 +132,26 @@ body {
   background: rgba(255, 255, 255, 0.9);
 }
 
+/* portafolio */
+
 #retreat {
   position: fixed;
-  top:0%;
-  left:0;
+  top: 0%;
+  left: 0;
   background: hsla(0, 0%, 13%, 0.75);
   width: 100%;
 }
 
-#retreat a p {
+#retreat a p,
+#retreat a span {
   font: small-caps bold 1.2rem 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  color:#fff;
+  color: #fff;
   letter-spacing: 2px;
   text-align: center;
+}
+
+#retreat a span {
+  display: none;
 }
 
 #retreat img {
@@ -139,18 +164,22 @@ header {
   background: url(../img/header_bg.jpg) no-repeat center;
   background-size: cover;
 }
+
 header .header_menu {
   background: rgba(253, 249, 238, 0.322);
 }
+
 header .header_menu .header_menu_izq {
   width: 30%;
   margin: 1rem auto 0;
 }
+
 header .header_menu .header_menu_izq a img {
   width: 100%;
   opacity: 70%;
   filter: drop-shadow(-1px 2px 7px #533a25);
 }
+
 header .header_menu .header_menu_dre h1 {
   font-family: "crimson-text", georgia, "times new roman", times, serif;
   letter-spacing: 1px;
@@ -167,6 +196,7 @@ header .header_menu .header_menu_dre h1 {
 nav .menu_lista_2 {
   display: none;
 }
+
 nav .btn-collapse {
   width: 100%;
   background: rgba(83, 58, 37, 0.75);
@@ -174,10 +204,12 @@ nav .btn-collapse {
   padding: 0.1rem 0;
   gap: 3%;
 }
+
 nav .btn-collapse img {
   width: 24px;
   opacity: 0.6;
 }
+
 nav .btn-collapse span {
   font-size: 1.5rem;
   letter-spacing: 1px;
@@ -185,23 +217,28 @@ nav .btn-collapse span {
   font-weight: 600;
   margin-bottom: 0.7rem;
 }
+
 nav .collapsing {
   transition: 0.01s;
   display: none;
 }
+
 nav .collapse {
   background: rgba(253, 249, 238, 0.322);
   padding-bottom: 2%;
   margin-bottom: 2rem;
   border-bottom: 2px solid #eee;
 }
+
 nav .collapse .menu_lista {
   justify-content: space-between;
   margin-bottom: 0.2rem;
 }
+
 nav .collapse .menu_lista li {
   margin: 1% 0;
 }
+
 nav .collapse .menu_lista li a {
   background-color: rgba(255, 255, 255, 0.6);
   color: #533a25;
@@ -213,25 +250,30 @@ nav .collapse .menu_lista li a {
   border-top: 2px solid #eee;
   transition: all 0.2s ease-in;
 }
+
 nav .collapse .menu_lista li a:hover {
   transition: all 0.2s ease-out;
   border-color: transparent;
   background-color: #533a25;
   color: #fcead6;
 }
+
 nav .collapse .menu_lista li .menu_active {
   background-color: #a5512a;
   color: #fcead6;
   border-color: transparent;
 }
+
 nav .collapse .redes_sociales li {
   width: 15%;
 }
+
 nav .collapse .redes_sociales li a img {
   transition: all 0.2s ease-in;
   width: 100%;
   filter: drop-shadow(-1px 3px 3px #aaa);
 }
+
 nav .collapse .redes_sociales li a img:hover {
   transition: all 0.2s ease-out;
   opacity: 50%;
@@ -248,11 +290,13 @@ nav .collapse .redes_sociales li a img:hover {
   background-size: cover;
   filter: grayscale(50%);
 }
+
 .index_welcome img {
   width: 45%;
   margin-top: 1rem;
   filter: drop-shadow(-1px 2px 5px #333);
 }
+
 .index_welcome .talkbubble {
   background-color: #333;
   color: #f7f7f7;
@@ -265,6 +309,7 @@ nav .collapse .redes_sociales li a img:hover {
   margin-top: 2rem;
   filter: drop-shadow(-1px 2px 5px #555);
 }
+
 .index_welcome .talkbubble p {
   text-align: center;
   font-weight: bold;
@@ -272,6 +317,7 @@ nav .collapse .redes_sociales li a img:hover {
   font-size: 1rem;
   font-style: italic;
 }
+
 .index_welcome .talkbubble::before {
   content: "";
   position: absolute;
@@ -287,11 +333,13 @@ nav .collapse .redes_sociales li a img:hover {
 .index_about h2 {
   font-size: 2.2rem;
 }
+
 .index_about p strong {
   font-weight: bold;
   font-style: italic;
   color: #533a25;
 }
+
 .index_about .firma {
   text-align: right;
   font-weight: bold;
@@ -303,6 +351,7 @@ nav .collapse .redes_sociales li a img:hover {
   padding: 2%;
   margin-bottom: 2rem;
 }
+
 .index_novedades article a h3 {
   background-color: antiquewhite;
   color: #333;
@@ -313,6 +362,7 @@ nav .collapse .redes_sociales li a img:hover {
   margin: 1rem;
   transition: all 0.2s ease-in;
 }
+
 .index_novedades article a p {
   font-size: 1.2rem;
   margin: 1rem;
@@ -320,20 +370,23 @@ nav .collapse .redes_sociales li a img:hover {
   color: #555;
   font-weight: 500;
 }
+
 .index_novedades article a p.info {
   font-size: 1.1rem;
   font-style: italic;
   color: #7a4d28;
   padding: 1rem 2rem;
   -webkit-text-decoration: underline solid 2px burlywood;
-          text-decoration: underline solid 2px burlywood;
+  text-decoration: underline solid 2px burlywood;
   transition: all 0.2s ease-in;
 }
+
 .index_novedades article a:hover h3 {
   transition: all 0.2s ease-out;
   background-color: #7a4d28;
   color: #f7f7f7;
 }
+
 .index_novedades article a:hover .info {
   transition: all 0.2s ease-out;
   background-color: burlywood;
@@ -344,21 +397,26 @@ nav .collapse .redes_sociales li a img:hover {
 .bloque_recetas .row {
   margin: 0 auto;
 }
+
 .bloque_recetas .row .card {
   background: #f7f7f7;
   margin-bottom: 2rem;
 }
+
 .bloque_recetas .row .card .card-body {
   background: burlywood;
 }
+
 .bloque_recetas .row .card .card-body .card-title {
   color: #533a25;
   font-size: 2rem;
 }
+
 .bloque_recetas .row .card .card-body .btn {
   background-color: #533a25;
   color: blanchedalmond;
 }
+
 .bloque_recetas .row .card .card-body .btn:hover {
   background-color: blanchedalmond;
   color: #533a25;
@@ -369,16 +427,19 @@ nav .collapse .redes_sociales li a img:hover {
   gap: 2rem;
   align-items: center;
 }
+
 .bloque_recursos h2 {
   flex-grow: 2;
   margin-bottom: 0;
 }
+
 .bloque_recursos article {
   width: 99%;
   justify-content: space-between;
   background: #fff;
   border-bottom: 2px solid #eee;
 }
+
 .bloque_recursos article h3 {
   background-color: #533a25;
   color: #fff;
@@ -389,10 +450,12 @@ nav .collapse .redes_sociales li a img:hover {
   width: 100%;
   border-radius: 4px;
 }
+
 .bloque_recursos article p {
   font-size: 0.9rem;
   margin: 0.5rem 1rem;
 }
+
 .bloque_recursos article a {
   background-color: blanchedalmond;
   color: #533a25;
@@ -406,19 +469,26 @@ nav .collapse .redes_sociales li a img:hover {
   border-radius: 7px;
   transition: all 0.2s ease-in;
 }
+
 .bloque_recursos article a:hover {
   transition: all 0.2s ease-out;
   background-color: #7a4d28;
   color: #f7f7f7;
 }
-.bloque_recursos article:nth-child(2) h3, .bloque_recursos article:nth-child(3) h3 {
+
+.bloque_recursos article:nth-child(2) h3,
+.bloque_recursos article:nth-child(3) h3 {
   background: linear-gradient(to top, #533a25, #7a4d28);
 }
-.bloque_recursos article:nth-child(2) a, .bloque_recursos article:nth-child(3) a {
+
+.bloque_recursos article:nth-child(2) a,
+.bloque_recursos article:nth-child(3) a {
   transition: all 0.2s ease-in;
   background: linear-gradient(to top, burlywood, blanchedalmond);
 }
-.bloque_recursos article:nth-child(2) a:hover, .bloque_recursos article:nth-child(3) a:hover {
+
+.bloque_recursos article:nth-child(2) a:hover,
+.bloque_recursos article:nth-child(3) a:hover {
   transition: all 0.2s ease-out;
   background: linear-gradient(to top, #533a25, #7a4d28);
 }
@@ -429,10 +499,12 @@ nav .collapse .redes_sociales li a img:hover {
   background: #555;
   padding: 0;
 }
+
 .bloque_tradicion ul li {
   border-bottom: 1px solid #646464;
   padding: 1rem;
 }
+
 .bloque_tradicion ul li a {
   color: #eee;
   text-transform: uppercase;
@@ -441,21 +513,26 @@ nav .collapse .redes_sociales li a img:hover {
   padding: 0.75rem 0;
   transition: all 0.2s ease-in;
 }
+
 .bloque_tradicion ul li a:hover {
   transition: all 0.2s ease-out;
   background-color: #ccc;
   color: #333;
 }
+
 .bloque_tradicion ul li a img {
   width: 10%;
   margin-right: 1rem;
 }
+
 .bloque_tradicion ul li:last-child {
   filter: grayscale(100%) opacity(50%);
 }
+
 .bloque_tradicion h2 {
   margin-bottom: 0;
 }
+
 .bloque_tradicion article {
   padding: 2rem 1rem;
   border-bottom: dashed 2px #ccc;
@@ -464,13 +541,15 @@ nav .collapse .redes_sociales li a img:hover {
   justify-content: center;
   align-items: center;
 }
+
 .bloque_tradicion article h3 {
   color: #333;
   font-size: 1.5rem;
   line-height: 2rem;
   -webkit-text-decoration: underline solid #555 3px;
-          text-decoration: underline solid #555 3px;
+  text-decoration: underline solid #555 3px;
 }
+
 .bloque_tradicion article h4 {
   font-size: 1.25em;
   margin-top: 1.75rem;
@@ -481,23 +560,28 @@ nav .collapse .redes_sociales li a img:hover {
   border-bottom: 2px solid #ccc;
   text-transform: uppercase;
 }
+
 .bloque_tradicion article h4 span {
   text-transform: none;
   font-variant: small-caps;
   display: block;
 }
+
 .bloque_tradicion article p {
   width: 95%;
 }
+
 .bloque_tradicion article .introduccion {
   font-style: italic;
   font-family: "crimson-text", georgia, "times new roman", times, serif;
 }
+
 .bloque_tradicion article img {
   width: 100%;
   margin: 0.5rem auto;
   border: solid 4px #eee;
 }
+
 .bloque_tradicion article iframe {
   width: 90%;
   height: 50vh;
@@ -506,6 +590,7 @@ nav .collapse .redes_sociales li a img:hover {
   margin: 1rem auto 2rem;
   display: block;
 }
+
 .bloque_tradicion article .proximo {
   color: #aaa;
   text-transform: uppercase;
@@ -519,6 +604,7 @@ nav .collapse .redes_sociales li a img:hover {
   margin: auto;
   padding: 3rem 0;
 }
+
 .bloque_contacto form label {
   border-radius: 3px;
   font-weight: bold;
@@ -527,6 +613,7 @@ nav .collapse .redes_sociales li a img:hover {
   width: 100%;
   font-size: 1.3rem;
 }
+
 .bloque_contacto form .form_elementos {
   border-radius: 3px;
   background: #eee;
@@ -537,16 +624,20 @@ nav .collapse .redes_sociales li a img:hover {
   font-size: 1rem;
   transition: all 0.2s ease-in;
 }
-.bloque_contacto form .form_elementos:focus, .bloque_contacto form .form_elementos:hover {
+
+.bloque_contacto form .form_elementos:focus,
+.bloque_contacto form .form_elementos:hover {
   transition: all 0.2s ease-out;
   background: #fff;
   border-color: rgb(55, 90, 165);
   outline: 0;
 }
+
 .bloque_contacto form textarea {
   height: 12rem;
   resize: none;
 }
+
 .bloque_contacto form .form_button {
   font-weight: bold;
   text-align: center;
@@ -558,14 +649,17 @@ nav .collapse .redes_sociales li a img:hover {
   border-radius: 5px;
   transition: all 0.2s ease-in;
 }
+
 .bloque_contacto form .form_button:hover {
   transition: all 0.2s ease-out;
 }
+
 .bloque_contacto form .reset {
   opacity: 0.75;
   border-color: #533a25;
   color: #533a25;
 }
+
 .bloque_contacto form .reset:hover {
   background-color: brown;
   color: #f7f7f7;
@@ -573,12 +667,14 @@ nav .collapse .redes_sociales li a img:hover {
   opacity: 100%;
   letter-spacing: 2px;
 }
+
 .bloque_contacto form .envio {
   background-color: rgb(55, 90, 165);
   color: #f7f7f7;
   border-color: #333;
   box-shadow: transparent 0 0 1px inset;
 }
+
 .bloque_contacto form .envio:hover {
   box-shadow: rgb(55, 90, 165) 0 0 5px inset;
   background-color: #f7f7f7;
@@ -590,6 +686,7 @@ nav .collapse .redes_sociales li a img:hover {
 .bloque_simulacro_envio a {
   transition: all 0.2s ease-in;
 }
+
 .bloque_simulacro_envio a:hover {
   transition: all 0.2s ease-out;
   box-shadow: #222 0 1px 30px inset;
@@ -601,35 +698,43 @@ nav .collapse .redes_sociales li a img:hover {
   background-color: #533a25;
   box-shadow: 0 3px 30px #111;
 }
+
 .modal-content .modal-body .modal_title-h4 {
   background-color: rgba(32, 23, 17, 0.8);
   color: antiquewhite;
   letter-spacing: 3px;
 }
+
 .modal-content .modal-body .modal_item {
   background-color: rgba(32, 23, 17, 0.5);
   width: 100%;
   padding: 1rem 0.5rem;
   border-radius: 7px;
 }
+
 .modal-content .modal-body .modal_item li {
   margin: 1rem;
   border-bottom: solid 1px rosybrown;
   padding-bottom: 1rem;
 }
+
 .modal-content .modal-body .modal_item li:last-child {
   border: 0;
 }
+
 .modal-content .modal-body .modal_item li a {
   font-size: 1.5rem;
   color: #eee;
 }
+
 .modal-content .modal-body .modal_item li a:hover {
   color: rgb(32, 23, 17);
 }
+
 .modal-content .modal-body button {
   transition: all 0.2s ease-in;
 }
+
 .modal-content .modal-body button:hover {
   transition: all 0.2s ease-out;
   filter: brightness(125%) grayscale(150%);
@@ -641,6 +746,7 @@ footer {
   background: #533a25;
   padding: 0.5rem;
 }
+
 footer p {
   font-weight: bold;
   text-align: center;
@@ -656,22 +762,26 @@ footer p {
     opacity: 0;
     transform: scale(0.9, 1);
   }
+
   100% {
     opacity: 100%;
     transform: scale(1, 1);
   }
 }
+
 @keyframes fade_slide {
   0% {
     transform-origin: left;
     opacity: 0;
     transform: scale(0.9) translateX(-5%);
   }
+
   100% {
     opacity: 100%;
     transform: scale(1);
   }
 }
+
 .index_welcome img {
   animation-name: fade_scale;
   animation-duration: 0.8s;
@@ -679,6 +789,7 @@ footer p {
   animation-timing-function: ease-in-out;
   animation-fill-mode: backwards;
 }
+
 .index_welcome .talkbubble {
   animation-name: fade_slide;
   animation-duration: 1s;
@@ -694,6 +805,7 @@ footer p {
   animation-timing-function: ease-in-out;
   animation-fill-mode: backwards;
 }
+
 .bloque_recetas .row .anima_2 {
   animation-name: fade_scale;
   animation-duration: 0.6s;
@@ -701,6 +813,7 @@ footer p {
   animation-timing-function: ease-in-out;
   animation-fill-mode: backwards;
 }
+
 .bloque_recetas .row .anima_3 {
   animation-name: fade_scale;
   animation-duration: 0.6s;
@@ -708,6 +821,7 @@ footer p {
   animation-timing-function: ease-in-out;
   animation-fill-mode: backwards;
 }
+
 .bloque_recetas .row .anima_4 {
   animation-name: fade_scale;
   animation-duration: 0.6s;
@@ -715,6 +829,7 @@ footer p {
   animation-timing-function: ease-in-out;
   animation-fill-mode: backwards;
 }
+
 .bloque_recetas .row .anima_5 {
   animation-name: fade_scale;
   animation-duration: 0.6s;
@@ -722,6 +837,7 @@ footer p {
   animation-timing-function: ease-in-out;
   animation-fill-mode: backwards;
 }
+
 .bloque_recetas .row .anima_6 {
   animation-name: fade_scale;
   animation-duration: 0.6s;
@@ -729,6 +845,7 @@ footer p {
   animation-timing-function: ease-in-out;
   animation-fill-mode: backwards;
 }
+
 .bloque_recetas .row .anima_7 {
   animation-name: fade_scale;
   animation-duration: 0.6s;
@@ -736,6 +853,7 @@ footer p {
   animation-timing-function: ease-in-out;
   animation-fill-mode: backwards;
 }
+
 .bloque_recetas .row .anima_8 {
   animation-name: fade_scale;
   animation-duration: 0.6s;
@@ -743,6 +861,7 @@ footer p {
   animation-timing-function: ease-in-out;
   animation-fill-mode: backwards;
 }
+
 .bloque_recetas .row .anima_9 {
   animation-name: fade_scale;
   animation-duration: 0.6s;
@@ -767,11 +886,13 @@ footer p {
     transform: translateY(50px);
     opacity: 0;
   }
+
   100% {
     transform: translateY(0);
     opacity: 1;
   }
 }
+
 .fade-in-bottom {
   animation: fade-in-bottom 0.6s cubic-bezier(0.39, 0.575, 0.565, 1) both;
 }
@@ -785,135 +906,167 @@ footer p {
   nav .collapse .redes_sociales {
     margin: 2.5% auto;
   }
+
   nav .collapse .redes_sociales li {
     width: 10%;
   }
+
   /* bloques */
 
-#retreat a p {
-  font-size:1.5rem
-}
+  #retreat a p {
+    font-size: 1.5rem
+  }
 
   .index_welcome .talkbubble {
     margin-top: 3.5rem;
     margin-left: -2%;
   }
+
   .index_welcome .talkbubble p {
     font-size: 1.2rem;
     line-height: 1.8rem;
   }
+
   .bloque_recetas .row {
     width: 80%;
   }
+
   .bloque_recetas .row .card .card-body .btn span {
     margin-left: 0.5rem;
   }
+
   .bloque_tradicion article h3 {
     font-size: 2rem;
   }
+
   .bloque_tradicion article h4 {
     font-size: 1.4rem;
     margin-bottom: 0.75rem;
   }
 }
+
 @media screen and (min-width: 575px) {
   header .header_menu .header_menu_dre h1 {
     margin-bottom: 1.5rem;
     font-size: 4rem;
     line-height: 3rem;
   }
+
   nav .btn-collapse {
     padding: 0.5rem 0;
   }
+
   nav .btn-collapse span {
     text-transform: uppercase;
   }
+
   nav .btn-collapse img {
     opacity: 0.7;
   }
+
   nav .collapse .redes_sociales {
     margin-bottom: 6.5%;
   }
+
   /* bloques */
   .container-fluid .bloque_doble {
     padding: 10%;
   }
+
   .container-fluid .bloque_unico h2 {
     font-size: 2.3rem;
     line-height: 2rem;
     padding: 1rem;
   }
+
   .index_welcome .talkbubble {
     margin-left: -5%;
     margin-top: 5rem;
   }
+
   .index_welcome .talkbubble p {
     font-size: 1.7rem;
     line-height: 2.5rem;
   }
+
   .bloque_recetas .row {
     width: 70%;
   }
+
   .bloque_recursos article {
     width: 75%;
     margin-bottom: 1.5rem;
     border-bottom: solid 3px #eee;
     box-shadow: #ccc 0 3px 7px;
   }
+
   .bloque_recursos article h3 {
     margin-bottom: 1rem;
   }
+
   .bloque_recursos article p {
     margin-bottom: 2rem;
   }
+
   .bloque_recursos article a {
     width: 75%;
   }
+
   .bloque_tradicion ul {
     flex-flow: row nowrap;
     justify-content: space-evenly;
     position: sticky;
     top: 0;
   }
+
   .bloque_tradicion ul li {
     border-left: solid 1px #656565;
     width: 100%;
     padding: 0;
   }
+
   .bloque_tradicion ul li a {
     font-size: 1.3rem;
     display: flex;
     justify-content: center;
   }
+
   .bloque_tradicion ul li a img {
     width: 15%;
   }
+
   .bloque_tradicion article h3 {
     font-size: 2rem;
     line-height: 2.5rem;
   }
+
   .bloque_tradicion article h4 {
     font-size: 1.4rem;
     margin-bottom: 0.75rem;
   }
 }
+
 @media screen and (min-width: 768px) {
   header .header_menu .header_menu_izq {
     width: 20%;
   }
+
   /* menu */
   nav .btn-collapse {
     display: none;
   }
+
   nav .menu_lista_2 {
     display: flex;
     justify-content: space-evenly;
     margin-bottom: 0;
     padding-left: 0;
   }
+
   nav .menu_lista_2 li {
     width: 100%;
   }
+
   nav .menu_lista_2 li a {
     font-family: "nunito", "gill sans", "gill sans mt", "trebuchet ms", sans-serif;
     font-weight: 800;
@@ -927,51 +1080,61 @@ footer p {
     border-top: 2px solid #eee;
     transition: all 0.2s ease-in;
   }
+
   nav .menu_lista_2 li a:hover {
     transition: all 0.2s ease-out;
     border-color: blanchedalmond;
     background-color: #533a25;
     color: #fcead6;
   }
+
   nav .menu_lista_2 li .menu_active {
     background-color: #a5512a;
     color: #fcead6;
     border-color: blanchedalmond;
   }
+
   nav .menu_lista_2 li .menu_active:hover {
     background-color: #333;
     color: #eee;
     border-color: #aaa;
   }
 
-/* Portafolio */
- #retreat {
-  position: fixed;
-  top: unset;
-  bottom: .5%;
-  left: .5%;
-  opacity: .5;
-  transition: .15s;
-  width:54px;
-  filter: drop-shadow(0 2px 3px #333);
-  z-index: 10;
-}
+  /* Portafolio */
+  #retreat {
+    position: fixed;
+    top: unset;
+    bottom: .5%;
+    left: .5%;
+    opacity: .7;
+    transition: .15s;
+    width: 54px;
+    filter: drop-shadow(0 2px 3px #333);
+    z-index: 10;
+    background: transparent;
+  }
 
-#retreat a p {
-  display: none;
-}
+  #retreat a p {
+    display: none;
+  }
 
-#retreat a img {
-  display: block;
-  width:100%
-}
+  #retreat a span {
+    display: block;
+    font-size: 1rem;
+    letter-spacing: 1px;
+  }
 
-#retreat:hover {
-  opacity: 1;
-  transition: .15s;
-} 
+  #retreat a img {
+    display: block;
+    width: 100%
+  }
 
-/* bloques */
+  #retreat:hover {
+    opacity: 1;
+    transition: .15s;
+  }
+
+  /* bloques */
 
   main {
     background: rgba(255, 255, 255, 0.6);
@@ -979,9 +1142,10 @@ footer p {
     grid-template-areas: "redes_sociales bloque_mayor";
     justify-content: center;
     -moz-column-gap: 1%;
-         column-gap: 1%;
+    column-gap: 1%;
     padding: 1% 1% 1% 0;
   }
+
   .bloque_mayor {
     grid-area: bloque_mayor;
     display: grid;
@@ -989,6 +1153,7 @@ footer p {
     gap: 0.3rem;
     justify-content: space-evenly;
   }
+
   .bloque_mayor .bloque_unico {
     padding-bottom: 1rem;
     grid-column: 1/3;
@@ -996,14 +1161,17 @@ footer p {
     flex-wrap: wrap;
     justify-content: space-evenly;
   }
+
   .bloque_mayor .bloque_doble {
     grid-column: span;
     padding: 3% 4%;
     border-bottom: 0;
   }
+
   footer p {
     font-size: 0.9rem;
   }
+
   /* aside */
   .redes_sociales_2 {
     display: block;
@@ -1017,6 +1185,7 @@ footer p {
     border-radius: 0 5px 5px 0;
     z-index: 2;
   }
+
   .redes_sociales_2 ul {
     padding: 0;
     margin: 0;
@@ -1025,12 +1194,15 @@ footer p {
     row-gap: 1rem;
     align-items: center;
   }
+
   .redes_sociales_2 ul li {
     width: 70%;
   }
+
   .redes_sociales_2 ul li a {
     position: relative;
   }
+
   .redes_sociales_2 ul li a::after {
     content: attr(data-name);
     position: absolute;
@@ -1050,84 +1222,106 @@ footer p {
     opacity: 0;
     transition: all 0.2s ease-in;
   }
+
   .redes_sociales_2 ul li a:hover img {
     transition: all 0.2s ease-out;
     transform: scale(1.25, 1.25) translateX(5px);
     opacity: 75%;
   }
+
   .redes_sociales_2 ul li a:hover::after {
     transition: all 0.2s ease-out;
     transform: scaleX(1);
     opacity: 100%;
   }
+
   .redes_sociales_2 ul li a img {
     width: 100%;
     transition: all 0.2s ease-in;
   }
+
   /* index */
   .index_welcome img {
     width: 35%;
   }
+
   .index_welcome .talkbubble {
     width: 30%;
     margin-left: -15%;
   }
+
   /* recetas */
   .bloque_recetas .row {
     flex-direction: row;
     width: 90%;
   }
+
   .bloque_recetas .row .card .card-body .card-title {
     font-size: 1.5rem;
   }
+
   /* recursos */
   .bloque_recursos {
     flex-direction: row;
     gap: 1rem;
   }
+
   .bloque_recursos h2 {
     font-size: 2rem;
   }
+
   .bloque_recursos article {
     width: 45%;
   }
+
   .bloque_recursos article h3 {
     min-height: 2rem;
   }
+
   .bloque_recursos article p {
     min-height: 10.5rem;
   }
+
   /* tradición */
   .bloque_tradicion article {
     width: 95%;
   }
+
   .bloque_tradicion article h3 {
     font-size: 2.25rem;
     line-height: 2.75rem;
   }
+
   .bloque_tradicion article h4 {
     font-size: 1.75rem;
   }
+
   .bloque_tradicion article p {
     margin: 0.75rem auto 1.5rem auto;
   }
+
   .bloque_tradicion article img {
     width: 90%;
   }
+
   .bloque_tradicion article iframe {
     height: 60vw;
   }
+
   /* formulario */
   .bloque_contacto form .form_button {
     width: 45%;
     margin: auto;
   }
 }
+
 @media screen and (min-width: 992px) {
+
   /* header */
   header {
     background-position: bottom;
   }
+
   header .header_menu {
     background: rgba(253, 249, 238, 0.322);
     display: grid;
@@ -1135,6 +1329,7 @@ footer p {
     align-items: end;
     padding: 1rem;
   }
+
   header .header_menu .header_menu_izq {
     grid-column: 1/2;
     display: flex;
@@ -1142,30 +1337,37 @@ footer p {
     width: auto;
     margin: 0.5rem;
   }
+
   header .header_menu .header_menu_izq a img {
     width: 100%;
   }
+
   header .header_menu .header_menu_dre {
     grid-column: 2/2;
   }
+
   header .header_menu .header_menu_dre h1 {
     letter-spacing: 4px;
     font-size: 5rem;
     margin-bottom: 0.75rem;
   }
+
   header .header_menu .header_menu_dre h1 br {
     display: none;
   }
+
   /* menu */
   nav .menu_lista_2 {
     display: flex;
     justify-content: space-evenly;
     margin-bottom: 0.2rem;
   }
+
   nav .menu_lista_2 li {
     width: 19%;
     padding: 0.5rem 0;
   }
+
   nav .menu_lista_2 li a {
     border-radius: 10px;
     padding: 0 0 0.6rem;
@@ -1174,6 +1376,7 @@ footer p {
     border-top: solid 1px #eee;
     filter: drop-shadow(0 2px 5px #aaa);
   }
+
   nav .menu_lista_2 li a:hover {
     background: unset;
     border: transparent;
@@ -1181,10 +1384,12 @@ footer p {
     color: #fcead6;
     transform: scale(1.025);
   }
+
   nav .menu_lista_2 li .menu_active {
     border-color: transparent;
     background: #533a25;
   }
+
   nav .menu_lista_2 li .menu_active:hover {
     transform: scale(0.975);
     background-color: #333;
@@ -1193,84 +1398,106 @@ footer p {
 
   /* portafolio */
   #retreat {
-    width:54px
+    width: 54px
   }
+
   /* bloques */
   .bloque_mayor .bloque_unico h2 {
     font-size: 2.5rem;
   }
+
   /* index */
   .index_welcome img {
     width: 25%;
   }
+
   .index_welcome .talkbubble {
     width: 25%;
     margin-left: -23%;
   }
+
   /* recetas */
   .bloque_recetas .row .card .card-body .card-title {
     font-size: 2rem;
   }
+
   /* recursos */
   .bloque_recursos article p {
     font-size: 1rem;
   }
+
   /* tradicion */
   .bloque_tradicion ul li a {
     font-size: 1.5rem;
   }
+
   .bloque_tradicion ul li a img {
     width: 12.5%;
   }
+
   .bloque_tradicion article {
     width: 90%;
     margin-bottom: 3rem;
     padding-bottom: 4rem;
     border-color: #aaa;
   }
+
   .bloque_tradicion article h3 {
     font-size: 3rem;
   }
+
   .bloque_tradicion article h4 {
     margin-top: 2.75rem;
     font-size: 2.5rem;
   }
+
   .bloque_tradicion article img {
     width: 60%;
   }
+
   .bloque_tradicion article iframe {
     height: 40vw;
   }
+
   /* formulario */
   .bloque_contacto form label {
     font-size: 1.5rem;
     letter-spacing: 1px;
   }
 }
+
 @media screen and (min-width: 1200px) {
   header .header_menu {
     grid-template-columns: 1fr 7fr;
   }
+
   header .header_menu .header_menu_izq {
     width: 80%;
   }
+
   header .header_menu .header_menu_dre h1 {
     font-size: 6rem;
     margin-bottom: 1.5rem;
   }
+
   .index_welcome img {
     width: 20%;
   }
+
   .index_welcome .talkbubble {
     width: 18%;
     margin-left: -30%;
   }
+
   .bloque_tradicion ul li a img {
     width: 10%;
   }
 }
+
 @media screen and (min-width: 1400px) {
   body {
     max-width: 1500px;
   }
-}/*# sourceMappingURL=main.css.map */
+}
+
+/*# sourceMappingURL=main.css.map */
