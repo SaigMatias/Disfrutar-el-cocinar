@@ -69,8 +69,8 @@ header {
 
 nav {
     width: 30%;
-    font: 600 1rem/1.35rem var(--font-title);
-    letter-spacing: .5px;
+    font: 600 1.15rem/1.35rem var(--font-title);
+    letter-spacing: 1px;
     text-transform: uppercase;
     text-align: center;
     align-self: self-end;
@@ -79,20 +79,27 @@ nav {
 nav ul {
     display: flex;
     justify-content: space-between;
+    gap: 10%
+}
+
+nav ul li {
+    border-bottom: 1px dashed #555;
+    padding: .3rem 1rem;
 }
 
 nav ul li a {
-    color: #adaba7;
+    color: #bebcba;
     transition: .3s;
 }
 
-nav ul li:hover {
-    border-color: #266292
+nav ul li a span {
+    color:#777;
+    display: block;
 }
 
 nav ul li a:hover {
-    transition: .3s;
-    color: #e9e6e0;
+    transition: .1s;
+    color: #b7d2e9;
 }
 
 .up {
@@ -100,8 +107,9 @@ nav ul li a:hover {
     bottom: 0;
     right: 0;
     padding: 1rem 2rem;
-    opacity:.4;
-    
+    opacity: .3;
+    background: rgba(121, 131, 163, 0.068);
+    transition: .15s;
 }
 
 .up a {
@@ -110,6 +118,11 @@ nav ul li a:hover {
     display: flex;
     gap:.5rem;
     align-items: center;
+}
+
+.up:hover {
+    opacity: .8;
+    transition: .15s;
 }
 
 /* --- section --- */
