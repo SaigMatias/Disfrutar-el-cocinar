@@ -1,0 +1,112 @@
+/* menu */
+nav {
+
+    .menu_lista_2 {
+        display: none
+    }
+
+    .btn-collapse {
+        @extend %flex_row_center;
+        @extend %title_ft_sp;
+        width: 100%;
+        background: $bg_menu_mobile;
+        border: 0;
+        padding: .1rem 0;
+        gap: 3%;
+
+        img {
+            width: 24px;
+            opacity: .6;
+        }
+
+        span {
+            font-size: 1.5rem;
+            letter-spacing: 1px;
+            color: $color_light;
+            font-weight: 600;
+            margin-bottom: .7rem
+        }
+
+    }
+
+    .collapsing {
+        transition: .01s;
+        display: none
+    }
+
+    .collapse {
+        background: $bg_header;
+        padding-bottom: 2%;
+        margin-bottom: 2rem;
+        border-bottom: $border_light;
+
+        .menu_lista {
+            @extend %flex_column;
+            justify-content: space-between;
+            margin-bottom: .2rem;
+
+            li {
+                margin: 1% 0;
+
+                a {
+                    @extend %title_ft_sp;
+                    @include mix_bg-col($bg_submenu_mobile, $color_highlight_base);
+                    display: block;
+                    padding: .5rem 0;
+                    letter-spacing: 2px;
+                    font-size: 1.3rem;
+                    text-align: center;
+                    border-top: $border_light;
+                    transition: $transition_end;
+
+                    &:hover {
+                        transition: $transition_start;
+                        border-color: transparent;
+                        @include mix_bg-col($color_highlight_base, $color_highlight_light)
+                    }
+
+                }
+
+                .menu_active {
+                    @include mix_bg-col($bg_menu_active, $color_highlight_light);
+                    border-color: transparent;
+                }
+
+            }
+
+        }
+
+        .redes_sociales {
+            @extend %flex_row_wrap_evenly;
+
+            li {
+                width: 15%;
+
+                a {
+
+                    img {
+                        transition: $transition_end;
+                        width: 100%;
+                        filter: drop-shadow(-1px 3px 3px $color_base);
+
+                        &:hover {
+                            transition: $transition_start;
+                            opacity: 50%;
+                        }
+
+                    }
+ 
+                }
+
+            }
+
+        }
+
+    }
+
+}
+
+/* aside */
+.redes_sociales_2 {
+    display: none;
+}

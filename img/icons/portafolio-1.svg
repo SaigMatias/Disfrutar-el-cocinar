@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="27.581739mm"
+   height="30.234076mm"
+   viewBox="0 0 27.581739 30.234076"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.3 (0e150ed, 2023-07-21)"
+   sodipodi:docname="portafolio-1.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#cccccc"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="1"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     inkscape:zoom="2.19278"
+     inkscape:cx="58.829431"
+     inkscape:cy="19.153768"
+     inkscape:window-width="1280"
+     inkscape:window-height="940"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs1">
+    <rect
+       x="45.552364"
+       y="360.61179"
+       width="71.432823"
+       height="61.220417"
+       id="rect37" />
+  </defs>
+  <g
+     inkscape:label="Capa 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-12.699999,-214.3125)">
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1.13585;stroke-linecap:square;stroke-opacity:1"
+       id="rect8"
+       width="3.1749995"
+       height="27.011332"
+       x="37.106739"
+       y="215.83032"
+       ry="0.23638055" />
+    <rect
+       style="fill:#4b4b4e;fill-opacity:1;stroke:none;stroke-width:3.43845;stroke-linecap:square;stroke-opacity:1"
+       id="rect9"
+       width="25.99424"
+       height="30.234076"
+       x="12.699999"
+       y="214.3125"
+       ry="0.26458332" />
+    <text
+       xml:space="preserve"
+       id="text36"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13.3333px;line-height:1.15;font-family:'Neutra Text TF';-inkscape-font-specification:'Neutra Text TF';letter-spacing:0px;word-spacing:0px;white-space:pre;shape-inside:url(#rect37);display:inline;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.200025;stroke-dasharray:none"
+       transform="matrix(0.53565102,0,0,0.5395941,-10.094721,25.432198)"><tspan
+         x="45.552734"
+         y="371.98167"
+         id="tspan3">PORTA&#10;</tspan><tspan
+         x="45.552734"
+         y="387.31495"
+         id="tspan4">FOLIO</tspan></text>
+  </g>
+</svg>

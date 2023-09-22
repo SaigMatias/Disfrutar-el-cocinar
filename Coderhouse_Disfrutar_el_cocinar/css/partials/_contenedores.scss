@@ -1,0 +1,28 @@
+/* contenedores */
+body {
+    width: 100%;
+    margin: 0 auto;
+    background: url(../img/texture_01.webp) no-repeat;
+    background-size: cover;
+    font-family: map-get($family, base);
+    @include mix_bg-col($color_light,$color_font_base);
+}
+
+.container-fluid {
+    margin: 0;
+    padding: 0;
+    
+    .bloque_unico {
+        @extend %flex_row_wrap_evenly;
+        padding-bottom: 1rem;
+        background-color:$bg_page;  
+    }
+
+    .bloque_doble {
+        padding: 15% 4%;
+        margin: 0;
+        border-bottom: $border_light;
+        background:$bg_page;  
+    }
+    
+}
