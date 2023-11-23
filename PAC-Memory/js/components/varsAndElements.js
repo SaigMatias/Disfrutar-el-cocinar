@@ -1,4 +1,4 @@
-import { arrayElemCreator, arrayElemToasty, btnAction, ending, elemCreator, fade, loader, restartGame, scrollToBottom, toast } from "../helpers/functions.js";
+import { arrayElemCreator, arrayElemToasty, btnAction, ending, elemCreator, fade, loader, restartGame, scrollToBottom, scrollToTop, toast } from "../helpers/functions.js";
 import { history, opening, tutorialItems, save } from "./messages.js";
 import { backupQuestions } from "./backupQuestions.js";
 
@@ -45,7 +45,7 @@ export const startGame = () => {
             toast('#root', regContent, 10000, 'userRegInit', true)
 
         } else {
-            toast('#root', 'Sí hubiera algún registro, aquí habría estarían los resultados... cuando termine la partida se puede agregar el suyo, solo conservamos el ultimo',3000, 'userRegInit', true)
+            toast('#root', 'Sí hubiera algún registro, aquí habría estarían los resultados...\nCuando termine la partida se puede agregar el suyo, solo conservamos el ultimo\n\n',3000, 'userRegInit', true)
         }
 
     });
@@ -127,6 +127,7 @@ const sectionQuestions = () => {
     selectQuestion(qBaseArray, qAlterFirst, qAlterSecond)
 
     // Questions
+    scrollToTop()
     const questionsContainer = elemCreator('div', '', '#root', 'questionsContainer');
 
     for (let i = 0; i < questions.length; i++) {
@@ -173,7 +174,7 @@ const sectionQuestions = () => {
     // Retry
 
     if (retry === 0) {
-        const btnRetry = `<input type="button" value="Reintentar" class="btn-questions-retry" id="btn-questions-retry">`
+        const btnRetry = `<input type="button" value="Reintentar" class="btn btn-questions-retry" id="btn-questions-retry">`
         const retryContainer = elemCreator('div', btnRetry, '#questionsContainer', 'retryContainer')
 
         btnAction('#btn-questions-retry', () => {
@@ -190,7 +191,7 @@ const sectionQuestions = () => {
 
 
     // Close
-    const btnClose = `<input type="button" value="Terminar juego" class="btn-questions-close" id="btn-questions-close">`
+    const btnClose = `<input type="button" value="Terminar juego" class="btn btn-questions-close" id="btn-questions-close">`
     elemCreator('div', btnClose, '#questionsContainer', 'closeContainer')
 
     btnAction('#btn-questions-close', () => {
@@ -249,15 +250,15 @@ const assessment = () => {
     scoreAsm();
 
     const asmContent = `
-        <h3>Resultados</h3>
+        <h2>Resultados</h2>
         <p> Con esto concluye el juego, estos son tus resultados... </p>
         <p> ${answers} respuestas marcadas de ${qsTotal} preguntas </p>
         <p> ${successAnswer} aciertos... ${successRatio}% del total</p>
         <p> ${errorAnswer} errores... ${errorRatio}% del total</p>
         ${score}
         <div class="buttons">
-            <input type="button" value="Guardar resultados y salir" class="btn-asm btn-first" id="btn-asm-save">
-            <input type="button" value="Finalizar sin guardar" class="btn-asm btn-second" id="btn-asm-nosave">
+            <input type="button" value="Guardar resultados y salir" class="btn btn-asm btn-first" id="btn-asm-save">
+            <input type="button" value="Finalizar sin guardar" class="btn btn-asm btn-second" id="btn-asm-nosave">
         </div>
         `;
 
@@ -272,20 +273,19 @@ const assessment = () => {
     btnAction('#btn-asm-save', () => {
         const clearBtns1 = document.querySelector('#btn-asm-save')
         const clearBtns2 = document.querySelector('#btn-asm-nosave')
-        fade(clearBtns1)
-        fade(clearBtns2)
+        clearBtns1.disabled = true;
+        clearBtns1.classList.add('btn-disabled')
+        clearBtns2.disabled = true;
+        clearBtns2.classList.add('btn-disabled')
 
         const regFormContent = `
         <div class="buttons">
         <input type="text" class="regInput" id="regName" placeholder="Introduce tu nombre">
-        <input type="submit" class="btn-first" id="btn-reg-form" value="Guardar">
+        <input type="submit" class="btn btn-first" id="btn-reg-form" value="Guardar">
         </div>
         `;
 
         const regForm = elemCreator('form', regFormContent, '#asmContainer', 'regForm');
-        setTimeout(() => {
-            scrollToBottom()
-        }, 100);
 
         const regFormSelect = document.querySelector("#regForm");
         const regName = document.querySelector("#regName");

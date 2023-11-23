@@ -291,6 +291,8 @@ section article h4 {
     display: flex;
     flex-direction: column;
     align-items: center;
+    border-bottom: solid 2px #cccccc30;
+    padding: 2rem auto;
 }
 
 .main_projects h4 {

@@ -7,14 +7,25 @@
 }
 
 body {
-    background: rgb(57, 58, 59);
+    background: url(../img/bg.webp) rgb(57, 58, 59) no-repeat fixed;
+    background-size: cover
+}
+
+main {
+    background-color: rgba(51, 68, 87, 0.9);
+    padding: 2rem 1rem;
+    margin: 7.5% 3% 0;
+    border: 5px double rgba(204, 204, 204, .3);
+    border-radius: 1px;
+    filter: drop-shadow(0 0.5rem 1.5rem rgba(33, 115, 209, 0.9));
+
 }
 
 h1 {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 2.75rem;
-    color: #d1bb9e;
-    margin-top: 2rem;
+    color: #e6e470;
+    margin: 2rem auto 1rem;
     text-align: center;
     text-transform: uppercase;
 }
@@ -31,24 +42,43 @@ h2 {
 h3 {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 2rem;
-    color: #ccc;
+    color: #f8f4b7;
     line-height: 1.75rem;
     text-align: center;
+    margin: 1rem 0 2rem;
+}
+
+
+p {
+    color: #f7f7f7;
+    width: 90%;
     margin: 1rem auto;
+    letter-spacing: .5px;
 }
 
 ul {
     display: flex;
     flex-flow: column;
     justify-content: center;
-    gap: 1rem
+    gap: 1rem;
+    margin-bottom: 2rem
 }
 
 li {
     width: 80%;
-    list-style: disc;
     color: #eee;
-    margin: auto
+    margin: auto;
+    list-style: circle;
+}
+
+.btn {
+    transition: .15s;
+    border-radius: 15px;
+}
+
+.btn:hover {
+    transition: .15s;
+    filter: brightness(110%) drop-shadow(0 .2rem .5rem #eeeeeeaa);
 }
 
 input,
@@ -58,7 +88,7 @@ input,
     margin: .5rem auto;
     background: #f0eebb;
     border: solid 2px #f8f4b7;
-    color: #222;
+    color: #333;
     font-weight: bolder;
     width: 80%;
     text-align: center;
@@ -76,14 +106,14 @@ input,
 }
 
 .btn-four {
-    background: #333;
+    background: #2b3b50;
     color: #ccc;
-    border-color: #777
+    border-color: #485c75;
 }
 
 .btn-history {
     width: 50%;
-    margin: auto
+    margin: 2rem auto 1rem
 }
 
 .btn-questions-retry {
@@ -102,34 +132,31 @@ input,
     display: inline-block;
 }
 
-input:hover,
-.questions:hover {
-    box-shadow: 0px 3px 15px #fdfdda;
-    filter: brightness(110%);
+.btn-disabled {
+    background: #2b3b50;
+    border: #2b3b50;
+    color: #aab0bb;
 }
 
-p {
-    color: #eee;
-    width: 90%;
-    margin: .5rem auto
+.btn-disabled:hover {
+    filter: unset;
+
 }
 
 .textContainer {
     font-size: 1.5rem;
     text-align: center;
-    margin-bottom: 1rem
+    margin-bottom: 4rem
 }
 
 .textOut {
     font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 2.5rem;
+    font-size: 2.1rem;
     letter-spacing: 1px;
     font-weight: bold;
     text-align: center;
-    background: rgb(90, 48, 40);
-    padding: 1rem 0;
     width: 100%;
-    margin: 2rem auto
+    margin: 3rem auto
 }
 
 .buttons {
@@ -137,7 +164,7 @@ p {
     justify-content: space-around;
     gap: 2rem;
     width: 90%;
-    margin: 2rem auto
+    margin: auto
 }
 
 .tutorial-toasty::first-line,
@@ -178,48 +205,136 @@ p {
 
 #questionSubContainer {
     transition: opacity 0.5s;
+    padding: 2rem 0;
+    border: #cccccc10 solid;
+    border-width: 2px 0;
+}
+
+#questionSubContainer:first-child {
+    border-top: 0
+}
+
+#questionSubContainer:nth-child(7) {
+    border-bottom: 0;
 }
 
 .hide {
     opacity: 0;
 }
 
-
-#questionSubContainer:nth-child(2n-1) {
-    background: #222;
-    padding: .5rem;
-}
-
-#questionSubContainer:nth-child(2n) {
-    background: #333;
-    padding: .5rem;
+.show {
+    transition: .05s;
 }
 
 #questionSubContainer h3 {
     color: #f7f7f7
 }
 
+.questions {
+    border-radius: 10px;
+    padding: .5rem;
+    transition: .1s;
+}
+
+.questions:hover {
+    transition: .1s;
+    filter: brightness(110%) drop-shadow(0 .2rem .5rem #eeeeeeaa);
+
+}
+
+#asmContainer {
+    text-align: center;
+}
+
 #asmContainer img {
-    margin: 2rem 10%;
-    filter: invert(150%);
+    margin: 1rem auto 3rem;
+    filter: invert(150%) drop-shadow(0 3px 3px #333);
+
 }
 
 .regInput {
-    background: #f7f7f7;
-    border-color: #eee;
-}
-
-#restartContainer {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    background: #344c66;
-    padding: 1rem
+    background: #f0eebb;
+    border-color: #f0eebb;
+    border-radius: 15px;
+    transition: .5s;
+    outline: 0;
 }
 
 #restartContainer p {
-    text-transform: uppercase;
-    font-size: 1.5rem;
+    font-size: 1.75rem;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 2.5rem;
+    padding-top: 2.5rem;
+    color: #f0eebb;
+    border-top: solid 1px #cccccc20
+}
+
+#retreat {
+    background: #36414dce;
+    color:#eee;
     font-weight: bolder;
     text-align: center;
+    text-transform: uppercase;
+    padding: 1px 0;
+    position: fixed;
+    bottom: 0;
+    right:0;
+    opacity:.7;
+    transition: .3s;
+}
+
+#retreat a {
+    text-decoration: none;
+    display: flex;
+}
+
+#retreat a p {
+    font-size: .9rem;
+    letter-spacing: 2px;
+
+}
+
+#retreat a img {
+    width:10%; 
+    margin-right:.5rem
+}
+
+#retreat:hover {
+    transition: .3s;
+    opacity:1;
+}
+
+@media screen and (max-width:800px) {
+    :root {
+        font-size: 14px
+    }
+
+    body {
+        background-repeat: repeat-y;
+        background-size: contain;
+    }
+}
+
+@media screen and (max-width:600px) {
+    :root {
+        font-size: 12px
+    }
+}
+
+@media screen and (max-width:420px) {
+    .buttons {
+        gap: .2rem;
+        flex-flow: column;
+    }
+    
+    #restartContainer {
+        display: flex;
+        flex-flow: column;
+    }
+
+    .btn-restart {
+width:80%;
+margin: 1rem auto    }
+
 }

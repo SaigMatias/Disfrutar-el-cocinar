@@ -3,9 +3,17 @@ import { startGame } from "../components/varsAndElements.js";
 // Creators
 
 export const elemCreator = (elem, content, attach, id) => {
+
 	const elemCreation = document.createElement(elem);
 	elemCreation.innerHTML = content;
 	elemCreation.id = id;
+	elemCreation.classList.add('hide')
+
+	setTimeout(() => {
+		elemCreation.classList.remove('hide')
+		elemCreation.classList.add('show')
+	}, 0);
+
 	document.querySelector(attach).append(elemCreation);
 	return elemCreation
 }
@@ -31,6 +39,11 @@ export const scrollToBottom = () => {
 	window.scrollTo(0, documentHeight, { behavior: "smooth" });
 }
 
+export const scrollToTop = () => {
+	const documentHeight = document.body.scrollHeight;
+	window.scrollTo(100, documentHeight, { behavior: "smooth" });
+}
+
 // Toast
 export const toast = (idSelector, content, time, classN, closeB) => {
 	Toastify({
@@ -54,7 +67,7 @@ export const ending = () => {
 export const restartGame = () => {
 	const restart = `
 		<p>¿Quieres volver a jugar?</p>
-		<input type="button" value="Reiniciar el juego" class="btn-restart btn-first" id="btn-restart">
+		<input type="button" value="Reiniciar el juego" class="btn btn-restart btn-first" id="btn-restart">
 		`;
 
 	const restartContainer = elemCreator('div', restart, '#root', 'restartContainer')
