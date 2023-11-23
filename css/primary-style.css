@@ -312,8 +312,6 @@ section article h4 {
 }
 
 .main_projects a {
-    color: #f7f7f7;
-    background: #334b83;
     font: small-caps 500 1.4rem var(--font-body-sp);
     letter-spacing: 2px;
     transition: .3s;
@@ -326,9 +324,18 @@ section article h4 {
 
 .main_projects a:hover {
     transition: .3s;
+    filter: drop-shadow(0 .5rem 1rem #cccccc50) brightness(110%);
+
+}
+
+.main_projects a:nth-last-child(2) {
+    color: #f7f7f7;
+    background: #334b83;
+}
+
+.main_projects a:last-child {
     color: #25252b;
     background: #ddd;
-    border-color: #ddd
 }
 
 .main_projects a i {
@@ -336,9 +343,6 @@ section article h4 {
     color: #aaa;
 }
 
-.main_projects a:hover i {
-    color: #266292;
-}
 
 .projects_thumbs {
     width: 80%;
