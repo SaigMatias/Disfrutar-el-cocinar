@@ -1,4 +1,4 @@
-# PORTAFOLIO DESARROLLADOR WEB
+# PORTAFOLIO DESARROLLADOR FRONTEND REACT
 
 <br>
 
@@ -20,7 +20,16 @@ Noviembre 2023
 
 > **Skills utilizadas**  
 > Principal: Javascript  
-> Secundario: HTMl, CSS
+> Secundario: HTML, CSS
+
+<br>
+
+### E-COMMERCE: MENTAPEPERINA
+Enero 2024
+
+> **Skills utilizadas**  
+> Principal: React JS, Firebase  
+> Secundario: TailwindCSS
 
 <br>
 
