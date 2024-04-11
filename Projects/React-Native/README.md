@@ -2,7 +2,7 @@
 *Simulador de billetera virtual* - *Proyecto coderhouse, de curso de desarrollador de app*
 
 Creado con 
-<img src="./assets/logo-wordmark-light.png" style="height:16px; margin-left:1rem" />
+<img src="./assets/logo-wordmark.png" style="height:16px; margin-left:1rem" />
 <br /><br />
 
 ## Skills
