@@ -3,15 +3,25 @@
 <br>
 
 ## PROYECTOS
+<br>
+
+
+### SIMULADOR DE BILLETERA VIRTUAL: POCKET CLASSIC
+Abril 2024
+
+> **Skills utilizadas**  
+> Principal: React Native, Firebase  
+> Secundario: Redux, SQLite
 
 <br>
 
-### Web: Disfrutar el cocinar
-Agosto 2023
+
+### E-COMMERCE: MENTAPEPERINA
+Enero 2024
 
 > **Skills utilizadas**  
-> Principales: HTML, CSS, SCSS    
-> Secundario: Bootstrap
+> Principal: React JS, Firebase  
+> Secundario: TailwindCSS
 
 <br>
 
@@ -24,14 +34,17 @@ Noviembre 2023
 
 <br>
 
-### E-COMMERCE: MENTAPEPERINA
-Enero 2024
+### Web: Disfrutar el cocinar
+Agosto 2023
 
 > **Skills utilizadas**  
-> Principal: React JS, Firebase  
-> Secundario: TailwindCSS
+> Principales: HTML, CSS, SCSS    
+> Secundario: Bootstrap
 
 <br>
+
+
+
 
 ## CONTACTO
 
