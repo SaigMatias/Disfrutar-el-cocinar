@@ -350,6 +350,7 @@ section article h4 {
     display: flex;
     justify-content: space-around;
     align-items: end;
+    gap:2%
 }
 
 .projects_thumbs li img {
