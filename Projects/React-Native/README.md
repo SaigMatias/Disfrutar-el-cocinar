@@ -93,4 +93,4 @@ Para obtener identificación del usuario
 <br /><br />
 
 # Wireframe
-<img src="/wirerame.jpg" style="margin: 10px auto " />
+<img src="./wirerame.jpg" style="margin: 10px auto " />
