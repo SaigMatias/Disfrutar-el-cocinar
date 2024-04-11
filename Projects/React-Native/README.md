@@ -1,7 +1,8 @@
 # Classic Pocket
 *Simulador de billetera virtual* - *Proyecto coderhouse, de curso de desarrollador de app*
 
-Creado con <img src="./assets/logo-wordmark.png" style="height:24px; background:rgba(255,255,255,0.5)" />
+Creado con 
+<img src="./assets/logo-wordmark-light.png" style="height:14px; margin-left:1rem" />
 <br /><br />
 
 ## Skills
