@@ -1,0 +1,50 @@
+#retreat {
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+  background: #222;
+  transition: 0.25s;
+  filter: drop-shadow(0 2px 3px #eee);
+  z-index: 9999;
+  opacity: 90%;
+  padding: 0.5rem 2rem;
+  border-radius: 10px;
+}
+
+#retreat:hover {
+  opacity: 1;
+  transition: 0.25s;
+  background: #318dca;
+  filter: drop-shadow(0 2px 3px #ccc);
+
+}
+
+#retreat:hover a p, #retreat:hover a p span {
+  color:#fff
+}
+
+#retreat a p {
+  font: bold 1.3rem "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  color: #fff;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+#retreat a p span {
+  color:#aaa
+}
+
+.mobile {
+  display: none;
+}
+
+#retreat a img {
+  width: 32px;
+}
+
+@media screen and (max-width: 525px) {
+  #retreat {
+    padding: 0 1rem;
+    opacity: 80%;
+  }
+}

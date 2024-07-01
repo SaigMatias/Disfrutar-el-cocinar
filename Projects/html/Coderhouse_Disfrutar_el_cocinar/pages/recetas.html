@@ -1,307 +1,507 @@
 <!DOCTYPE html>
 <html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Disfrutar el cocinar - Recetas</title>
+    <meta
+      name="description"
+      content="Explora la pasión culinaria en Disfrutar el Cocinar, donde chefs apasionados comparten recetas tradicionales e innovadoras, técnicas culinarias y la riqueza de la gastronomía global. Únete a nuestro viaje culinario y descubre la cocina como arte, expresión cultural y vínculo humano."
+    />
+    <meta
+      name="keywords"
+      content="Carnes, Aves, Pescado, Pastas, Pizzas, Sandwich, Vegetariano, Postres, Bebidas, Zumos, Disfrutar el cocinar, Cocina, Recetas, Sabores, Arte culinario, Exploración culinaria, Cocina tradicional, Creaciones innovadoras, Cultura culinaria, Chef, Alimentos, Inspiración, Técnicas culinarias, Pasión por la comida, Experiencia culinaria, Conexión humana, Platos increíbles, Consejos de cocina, Cocina internacional, Sabores globales, Recursos culinarios, Comentarios sobre recetas"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="icon" type="image/png" href="../img/logo_cocinero.png" />
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Disfrutar el cocinar - Recetas</title>
-  <meta name="description"
-    content="Explora la pasión culinaria en Disfrutar el Cocinar, donde chefs apasionados comparten recetas tradicionales e innovadoras, técnicas culinarias y la riqueza de la gastronomía global. Únete a nuestro viaje culinario y descubre la cocina como arte, expresión cultural y vínculo humano.">
-  <meta name="keywords"
-    content="Carnes, Aves, Pescado, Pastas, Pizzas, Sandwich, Vegetariano, Postres, Bebidas, Zumos, Disfrutar el cocinar, Cocina, Recetas, Sabores, Arte culinario, Exploración culinaria, Cocina tradicional, Creaciones innovadoras, Cultura culinaria, Chef, Alimentos, Inspiración, Técnicas culinarias, Pasión por la comida, Experiencia culinaria, Conexión humana, Platos increíbles, Consejos de cocina, Cocina internacional, Sabores globales, Recursos culinarios, Comentarios sobre recetas">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-  <link rel="stylesheet" href="../css/main.css">
-  <link rel="icon" type="image/png" href="../img/logo_cocinero.png">
+    <!-- Link portafolio -->
+    <script type="module" src="../../../Elements/retreat/retreatDark.js"></script>
+    <link rel="stylesheet" href="../../../Elements/retreat/retreat-style.css" />
+  </head>
 
-</head>
+  <body>
+    <header>
+      <div class="header_menu">
+        <div class="header_menu_izq">
+          <a href="../index.html"><img src="../img/logo_cocinero.png" alt="Logo" /></a>
+        </div>
 
-<body>
+        <div class="header_menu_dre">
+          <h1>
+            Disfrutar<br />
+            el cocinar
+          </h1>
+          <nav>
+            <button
+              class="btn-collapse"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#menu_collapse"
+              aria-expanded="false"
+              aria-controls="collapseExample"
+            >
+              <img src="../img/menu.png" alt="menu imagen" /><span>Menu</span>
+            </button>
 
-  <div id="retreat">
-    <a href="https://matias-saig.github.io/Portafolio/">
-      <p>regresar al portafolio</p>
-      <span>volver</span>
-      <img src="../../img/icons/portafolio-1.svg" alt="Portafolio">
-    </a>
-  </div>
-  
-  <header>
+            <div class="collapse" id="menu_collapse">
+              <ul class="menu_lista ps-0">
+                <li><a href="../index.html">INICIO</a></li>
+                <li><a class="menu_active" href="recetas.html">RECETAS</a></li>
+                <li><a href="recursos.html">RECURSOS</a></li>
+                <li><a href="tradicion.html">TRADICION</a></li>
+                <li><a href="contacto.html">CONTACTO</a></li>
+              </ul>
+              <ul class="redes_sociales">
+                <li>
+                  <a href="#"><img src="../img/rs_facebook.png" alt="Facebook" /></a>
+                </li>
+                <li>
+                  <a href="#"><img src="../img/rs_instagram.png" alt="Instagram" /></a>
+                </li>
+                <li>
+                  <a href="#"><img src="../img/rs_tik-tok.png" alt="TikTok" /></a>
+                </li>
+                <li>
+                  <a href="#"><img src="../img/rs_tweeter.png" alt="Tweeter" /></a>
+                </li>
+                <li>
+                  <a href="#"><img src="../img/rs_youtube.png" alt="YouTube" /></a>
+                </li>
+              </ul>
+            </div>
 
-    <div class="header_menu">
-
-      <div class="header_menu_izq">
-        <a href="../index.html"><img src="../img/logo_cocinero.png" alt="Logo"></a>
-      </div>
-
-      <div class="header_menu_dre">
-        <h1>Disfrutar<br /> el cocinar</h1>
-        <nav>
-
-          <button class="btn-collapse" type="button" data-bs-toggle="collapse" data-bs-target="#menu_collapse"
-            aria-expanded="false" aria-controls="collapseExample">
-            <img src="../img/menu.png" alt="menu imagen"><span>Menu</span>
-          </button>
-
-          <div class="collapse" id="menu_collapse">
-            <ul class="menu_lista ps-0">
+            <ul class="menu_lista_2">
               <li><a href="../index.html">INICIO</a></li>
               <li><a class="menu_active" href="recetas.html">RECETAS</a></li>
               <li><a href="recursos.html">RECURSOS</a></li>
               <li><a href="tradicion.html">TRADICION</a></li>
               <li><a href="contacto.html">CONTACTO</a></li>
             </ul>
-            <ul class="redes_sociales">
-              <li><a href="#"><img src="../img/rs_facebook.png" alt="Facebook"></a></li>
-              <li><a href="#"><img src="../img/rs_instagram.png" alt="Instagram"></a></li>
-              <li><a href="#"><img src="../img/rs_tik-tok.png" alt="TikTok"></a></li>
-              <li><a href="#"><img src="../img/rs_tweeter.png" alt="Tweeter"></a></li>
-              <li><a href="#"><img src="../img/rs_youtube.png" alt="YouTube"></a></li>
-            </ul>
-          </div>
-
-          <ul class="menu_lista_2">
-            <li><a href="../index.html">INICIO</a></li>
-            <li><a class="menu_active" href="recetas.html">RECETAS</a></li>
-            <li><a href="recursos.html">RECURSOS</a></li>
-            <li><a href="tradicion.html">TRADICION</a></li>
-            <li><a href="contacto.html">CONTACTO</a></li>
-          </ul>
-        </nav>
+          </nav>
+        </div>
       </div>
-    </div>
+    </header>
 
-  </header>
+    <main>
+      <aside class="redes_sociales_2">
+        <ul>
+          <li>
+            <a href="#" data-name="Facebook"
+              ><img src="../img/rs_facebook.png" alt="Facebook"
+            /></a>
+          </li>
+          <li>
+            <a href="#" data-name="Instagram"
+              ><img src="../img/rs_instagram.png" alt="Instagram"
+            /></a>
+          </li>
+          <li>
+            <a href="#" data-name="TikTok"
+              ><img src="../img/rs_tik-tok.png" alt="TikTok"
+            /></a>
+          </li>
+          <li>
+            <a href="#" data-name="Tweeter"
+              ><img src="../img/rs_tweeter.png" alt="Tweeter"
+            /></a>
+          </li>
+          <li>
+            <a href="#" data-name="YouTube"
+              ><img src="../img/rs_youtube.png" alt="YouTube"
+            /></a>
+          </li>
+        </ul>
+      </aside>
 
-  <main>
+      <div class="container-fluid bloque_mayor">
+        <section class="bloque_unico bloque_recetas">
+          <h2>Categorias</h2>
 
-    <aside class="redes_sociales_2">
-      <ul>
-        <li><a href="#" data-name="Facebook"><img src="../img/rs_facebook.png" alt="Facebook"></a></li>
-        <li><a href="#" data-name="Instagram"><img src="../img/rs_instagram.png" alt="Instagram"></a></li>
-        <li><a href="#" data-name="TikTok"><img src="../img/rs_tik-tok.png" alt="TikTok"></a></li>
-        <li><a href="#" data-name="Tweeter"><img src="../img/rs_tweeter.png" alt="Tweeter"></a></li>
-        <li><a href="#" data-name="YouTube"><img src="../img/rs_youtube.png" alt="YouTube"></a></li>
-      </ul>
-    </aside>
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col anima_1">
+                <div class="card d-flex">
+                  <img
+                    class="card-img-top align-self-center"
+                    src="../img/i-carne.webp"
+                    alt="Carnes"
+                  />
+                  <div
+                    class="card-body d-flex flex-column flex-wrap gap-0 row-gap-2 align-items-center"
+                  >
+                    <h4 class="card-title m-0 text-center text-uppercase fw-bold">
+                      Carnes
+                    </h4>
+                    <button
+                      type="button"
+                      class="btn fst-italic fs-6"
+                      data-bs-toggle="modal"
+                      data-bs-target="#recetas_carne"
+                    >
+                      Ver recetas<span class="badge bg-success fs-6 fw-bold pt-1">4</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
 
-    <div class="container-fluid bloque_mayor">
-      <section class="bloque_unico bloque_recetas">
-        <h2>Categorias</h2>
+              <div class="col anima_2">
+                <div class="card d-flex">
+                  <img
+                    class="card-img-top align-self-center"
+                    src="../img/i-pollo.jpg"
+                    alt="Aves"
+                  />
+                  <div
+                    class="card-body d-flex flex-column flex-wrap gap-0 row-gap-2 align-items-center"
+                  >
+                    <h4 class="card-title m-0 text-center text-uppercase fw-bold">
+                      Aves
+                    </h4>
+                    <button
+                      type="button"
+                      class="btn fst-italic fs-6"
+                      data-bs-toggle="modal"
+                      data-bs-target="#myModal"
+                    >
+                      Ver recetas<span
+                        class="badge bg-dark text-light opacity-50 fs-6 fw-bold pt-1"
+                        >0</span
+                      >
+                    </button>
+                  </div>
+                </div>
+              </div>
 
-        <div class="container-fluid">
-          <div class="row">
-
-            <div class="col anima_1">
-              <div class="card d-flex">
-                <img class="card-img-top align-self-center" src="../img/i-carne.webp" alt="Carnes">
-                <div class="card-body d-flex flex-column flex-wrap gap-0 row-gap-2 align-items-center">
-                  <h4 class="card-title m-0 text-center text-uppercase fw-bold">Carnes</h4>
-                  <button type="button" class="btn fst-italic fs-6" data-bs-toggle="modal"
-                    data-bs-target="#recetas_carne">
-                    Ver recetas<span class="badge bg-success fs-6 fw-bold pt-1">4</span>
-                  </button>
+              <div class="col anima_3">
+                <div class="card d-flex">
+                  <img
+                    class="card-img-top align-self-center"
+                    src="../img/i-pescado.webp"
+                    alt="Pescado"
+                  />
+                  <div
+                    class="card-body d-flex flex-column flex-wrap gap-0 row-gap-2 align-items-center"
+                  >
+                    <h4 class="card-title m-0 text-center text-uppercase fw-bold">
+                      Pescado
+                    </h4>
+                    <button
+                      type="button"
+                      class="btn fst-italic fs-6"
+                      data-bs-toggle="modal"
+                      data-bs-target="#myModal"
+                    >
+                      Ver recetas<span
+                        class="badge bg-dark text-light opacity-50 fs-6 fw-bold pt-1"
+                        >0</span
+                      >
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
+            <!-- fin row -->
 
-            <div class="col anima_2">
-              <div class="card d-flex">
-                <img class="card-img-top align-self-center" src="../img/i-pollo.jpg" alt="Aves">
-                <div class="card-body d-flex flex-column flex-wrap gap-0 row-gap-2 align-items-center">
-                  <h4 class="card-title m-0 text-center text-uppercase fw-bold">Aves</h4>
-                  <button type="button" class="btn fst-italic fs-6" data-bs-toggle="modal" data-bs-target="#myModal">
-                    Ver recetas<span class="badge bg-dark text-light opacity-50 fs-6 fw-bold pt-1">0</span>
-                  </button>
+            <div class="row">
+              <div class="col anima_4">
+                <div class="card d-flex">
+                  <img
+                    class="card-img-top align-self-center"
+                    src="../img/i-pastas.jpeg"
+                    alt="Pastas"
+                  />
+                  <div
+                    class="card-body d-flex flex-column flex-wrap gap-0 row-gap-2 align-items-center"
+                  >
+                    <h4 class="card-title m-0 text-center text-uppercase fw-bold">
+                      Pastas
+                    </h4>
+                    <button
+                      type="button"
+                      class="btn fst-italic fs-6"
+                      data-bs-toggle="modal"
+                      data-bs-target="#myModal"
+                    >
+                      Ver recetas<span
+                        class="badge bg-dark text-light opacity-50 fs-6 fw-bold pt-1"
+                        >0</span
+                      >
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col anima_5">
+                <div class="card d-flex">
+                  <img
+                    class="card-img-top align-self-center"
+                    src="../img/i-pizzas.jpg"
+                    alt="Pizzas"
+                  />
+                  <div
+                    class="card-body d-flex flex-column flex-wrap gap-0 row-gap-2 align-items-center"
+                  >
+                    <h4 class="card-title m-0 text-center text-uppercase fw-bold">
+                      Pizzas
+                    </h4>
+                    <button
+                      type="button"
+                      class="btn fst-italic fs-6"
+                      data-bs-toggle="modal"
+                      data-bs-target="#myModal"
+                    >
+                      Ver recetas<span
+                        class="badge bg-dark text-light opacity-50 fs-6 fw-bold pt-1"
+                        >0</span
+                      >
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col anima_6">
+                <div class="card d-flex">
+                  <img
+                    class="card-img-top align-self-center"
+                    src="../img/i-sandwich.webp"
+                    alt="sandwich"
+                  />
+                  <div
+                    class="card-body d-flex flex-column flex-wrap gap-0 row-gap-2 align-items-center"
+                  >
+                    <h4 class="card-title m-0 text-center text-uppercase fw-bold">
+                      Sandwich
+                    </h4>
+                    <button
+                      type="button"
+                      class="btn fst-italic fs-6"
+                      data-bs-toggle="modal"
+                      data-bs-target="#myModal"
+                    >
+                      Ver recetas<span
+                        class="badge bg-dark text-light opacity-50 fs-6 fw-bold pt-1"
+                        >0</span
+                      >
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
+            <!-- fin row -->
 
-            <div class="col anima_3">
-              <div class="card d-flex">
-                <img class="card-img-top align-self-center" src="../img/i-pescado.webp" alt="Pescado">
-                <div class="card-body d-flex flex-column flex-wrap gap-0 row-gap-2 align-items-center">
-                  <h4 class="card-title m-0 text-center text-uppercase fw-bold">Pescado</h4>
-                  <button type="button" class="btn fst-italic fs-6" data-bs-toggle="modal" data-bs-target="#myModal">
-                    Ver recetas<span class="badge bg-dark text-light opacity-50 fs-6 fw-bold pt-1">0</span>
-                  </button>
+            <div class="row">
+              <div class="col anima_7">
+                <div class="card d-flex">
+                  <img
+                    class="card-img-top align-self-center"
+                    src="../img/i-vegetales.jpg"
+                    alt="Vegetariano"
+                  />
+                  <div
+                    class="card-body d-flex flex-column flex-wrap gap-0 row-gap-2 align-items-center"
+                  >
+                    <h4 class="card-title m-0 text-center text-uppercase fw-bold">
+                      Vegetariano
+                    </h4>
+                    <button
+                      type="button"
+                      class="btn fst-italic fs-6"
+                      data-bs-toggle="modal"
+                      data-bs-target="#myModal"
+                    >
+                      Ver recetas<span
+                        class="badge bg-dark text-light opacity-50 fs-6 fw-bold pt-1"
+                        >0</span
+                      >
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col anima_8">
+                <div class="card d-flex">
+                  <img
+                    class="card-img-top align-self-center"
+                    src="../img/i-postres.jpg"
+                    alt="Postres"
+                  />
+                  <div
+                    class="card-body d-flex flex-column flex-wrap gap-0 row-gap-2 align-items-center"
+                  >
+                    <h4 class="card-title m-0 text-center text-uppercase fw-bold">
+                      Postres
+                    </h4>
+                    <button
+                      type="button"
+                      class="btn fst-italic fs-6"
+                      data-bs-toggle="modal"
+                      data-bs-target="#myModal"
+                    >
+                      Ver recetas<span
+                        class="badge bg-dark text-light opacity-50 fs-6 fw-bold pt-1"
+                        >0</span
+                      >
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col anima_9">
+                <div class="card d-flex">
+                  <img
+                    class="card-img-top align-self-center"
+                    src="../img/i-bebidas.webp"
+                    alt="Bebidas y zumos"
+                  />
+                  <div
+                    class="card-body d-flex flex-column flex-wrap gap-0 row-gap-2 align-items-center"
+                  >
+                    <h4 class="card-title m-0 text-center text-uppercase fw-bold">
+                      Bebidas
+                    </h4>
+                    <button
+                      type="button"
+                      class="btn fst-italic fs-6"
+                      data-bs-toggle="modal"
+                      data-bs-target="#myModal"
+                    >
+                      Ver recetas<span
+                        class="badge bg-dark text-light opacity-50 fs-6 fw-bold pt-1"
+                        >0</span
+                      >
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
-          </div> <!-- fin row -->
+            <!-- fin row -->
+          </div>
 
-          <div class="row">
+          <!-- modal -->
 
-            <div class="col anima_4">
-              <div class="card d-flex">
-                <img class="card-img-top align-self-center" src="../img/i-pastas.jpeg" alt="Pastas">
-                <div class="card-body d-flex flex-column flex-wrap gap-0 row-gap-2 align-items-center">
-                  <h4 class="card-title m-0 text-center text-uppercase fw-bold">Pastas</h4>
-                  <button type="button" class="btn fst-italic fs-6" data-bs-toggle="modal" data-bs-target="#myModal">
-                    Ver recetas<span class="badge bg-dark text-light opacity-50 fs-6 fw-bold pt-1">0</span>
+          <div class="modal fade" id="myModal">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content text-center bg-dark">
+                <div
+                  class="modal-body d-flex flex-wrap justify-content-center row-gap-3 text-secondary fs-5"
+                >
+                  <h4
+                    class="modal-title w-100 m-0 text-light text-center fs-1 text-uppercase fw-bold"
+                  >
+                    Estamos cocinando...
+                  </h4>
+                  <img class="w-50" src="../img/cocinero-2.png" alt="cocinando" />
+                  En breve agregaremos más recetas
+                  <button
+                    type="button"
+                    class="btn w-50 fs-5 opacity-75 text-light bg-primary text-uppercase fst-italic fw-bold"
+                    data-bs-dismiss="modal"
+                  >
+                    cerrar
                   </button>
                 </div>
-              </div>
-            </div>
-
-            <div class="col anima_5">
-              <div class="card d-flex">
-                <img class="card-img-top align-self-center" src="../img/i-pizzas.jpg" alt="Pizzas">
-                <div class="card-body d-flex flex-column flex-wrap gap-0 row-gap-2 align-items-center">
-                  <h4 class="card-title m-0 text-center text-uppercase fw-bold">Pizzas</h4>
-                  <button type="button" class="btn fst-italic fs-6" data-bs-toggle="modal" data-bs-target="#myModal">
-                    Ver recetas<span class="badge bg-dark text-light opacity-50 fs-6 fw-bold pt-1">0</span>
-                  </button>
-                </div>
-              </div>
-            </div>
-
-            <div class="col anima_6">
-              <div class="card d-flex">
-                <img class="card-img-top align-self-center" src="../img/i-sandwich.webp" alt="sandwich">
-                <div class="card-body d-flex flex-column flex-wrap gap-0 row-gap-2 align-items-center">
-                  <h4 class="card-title m-0 text-center text-uppercase fw-bold">Sandwich</h4>
-                  <button type="button" class="btn fst-italic fs-6" data-bs-toggle="modal" data-bs-target="#myModal">
-                    Ver recetas<span class="badge bg-dark text-light opacity-50 fs-6 fw-bold pt-1">0</span>
-                  </button>
-                </div>
-              </div>
-            </div>
-
-          </div> <!-- fin row -->
-
-          <div class="row">
-
-            <div class="col anima_7">
-              <div class="card d-flex">
-                <img class="card-img-top align-self-center" src="../img/i-vegetales.jpg" alt="Vegetariano">
-                <div class="card-body d-flex flex-column flex-wrap gap-0 row-gap-2 align-items-center">
-                  <h4 class="card-title m-0 text-center text-uppercase fw-bold">Vegetariano</h4>
-                  <button type="button" class="btn fst-italic fs-6" data-bs-toggle="modal" data-bs-target="#myModal">
-                    Ver recetas<span class="badge bg-dark text-light opacity-50 fs-6 fw-bold pt-1">0</span>
-                  </button>
-                </div>
-              </div>
-            </div>
-
-            <div class="col anima_8">
-              <div class="card d-flex">
-                <img class="card-img-top align-self-center" src="../img/i-postres.jpg" alt="Postres">
-                <div class="card-body d-flex flex-column flex-wrap gap-0 row-gap-2 align-items-center">
-                  <h4 class="card-title m-0 text-center text-uppercase fw-bold">Postres</h4>
-                  <button type="button" class="btn fst-italic fs-6" data-bs-toggle="modal" data-bs-target="#myModal">
-                    Ver recetas<span class="badge bg-dark text-light opacity-50 fs-6 fw-bold pt-1">0</span>
-                  </button>
-                </div>
-              </div>
-            </div>
-
-            <div class="col anima_9">
-              <div class="card d-flex">
-                <img class="card-img-top align-self-center" src="../img/i-bebidas.webp" alt="Bebidas y zumos">
-                <div class="card-body d-flex flex-column flex-wrap gap-0 row-gap-2 align-items-center">
-                  <h4 class="card-title m-0 text-center text-uppercase fw-bold">Bebidas</h4>
-                  <button type="button" class="btn fst-italic fs-6" data-bs-toggle="modal" data-bs-target="#myModal">
-                    Ver recetas<span class="badge bg-dark text-light opacity-50 fs-6 fw-bold pt-1">0</span>
-                  </button>
-                </div>
-              </div>
-            </div>
-
-          </div> <!-- fin row -->
-        </div>
-
-        <!-- modal -->
-
-        <div class="modal fade" id="myModal">
-          <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content text-center bg-dark">
-              <div class="modal-body d-flex flex-wrap justify-content-center row-gap-3 text-secondary fs-5">
-                <h4 class="modal-title w-100 m-0 text-light text-center fs-1 text-uppercase fw-bold">Estamos
-                  cocinando...</h4>
-                <img class="w-50" src="../img/cocinero-2.png" alt="cocinando">
-                En breve agregaremos más recetas
-                <button type="button"
-                  class="btn w-50 fs-5 opacity-75 text-light bg-primary text-uppercase fst-italic fw-bold"
-                  data-bs-dismiss="modal">cerrar</button>
               </div>
             </div>
           </div>
-        </div>
 
-        <!-- modal recetas_carne -->
+          <!-- modal recetas_carne -->
 
-        <div class="modal fade" id="recetas_carne">
-          <div class="modal-dialog modal-lg modal-dialog-centered">
-            <div class="modal-content">
+          <div class="modal fade" id="recetas_carne">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+              <div class="modal-content">
+                <div
+                  class="modal-body d-flex flex-wrap justify-content-center row-gap-3 text-secondary fs-5"
+                >
+                  <h4
+                    class="modal_title-h4 modal-title w-100 m-0 fs-2 rounded text-center fw-bold text-uppercase"
+                  >
+                    Carnes
+                  </h4>
 
-              <div class="modal-body d-flex flex-wrap justify-content-center row-gap-3 text-secondary fs-5">
-                <h4 class="modal_title-h4 modal-title w-100 m-0 fs-2 rounded text-center fw-bold text-uppercase">
-                  Carnes</h4>
+                  <ul class="modal_item">
+                    <li>
+                      <a href="#" data-bs-toggle="modal" data-bs-target="#construccion"
+                        >Filete de ternera a la parrilla con patatas asadas</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#" data-bs-toggle="modal" data-bs-target="#construccion"
+                        >Costillas de cerdo con salsa barbacoa y ensalada de col</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#" data-bs-toggle="modal" data-bs-target="#construccion"
+                        >Albóndigas de res con salsa de tomate y pasta</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#" data-bs-toggle="modal" data-bs-target="#construccion"
+                        >Chuletas de cordero con puré de patatas y vegetales asados</a
+                      >
+                    </li>
+                  </ul>
 
-                <ul class="modal_item">
-                  <li>
-                    <a href="#" data-bs-toggle="modal" data-bs-target="#construccion">Filete de ternera a la parrilla
-                      con patatas asadas</a>
-                  </li>
-                  <li>
-                    <a href="#" data-bs-toggle="modal" data-bs-target="#construccion">Costillas de cerdo con salsa
-                      barbacoa y ensalada de col</a>
-                  </li>
-                  <li>
-                    <a href="#" data-bs-toggle="modal" data-bs-target="#construccion">Albóndigas de res con salsa de
-                      tomate y pasta</a>
-                  </li>
-                  <li>
-                    <a href="#" data-bs-toggle="modal" data-bs-target="#construccion">Chuletas de cordero con puré de
-                      patatas y vegetales asados</a>
-                  </li>
-                </ul>
-
-                <button type="button"
-                  class="btn w-50 fs-5 opacity-75 text-light bg-success text-uppercase fst-italic fw-bold"
-                  data-bs-dismiss="modal">cerrar</button>
+                  <button
+                    type="button"
+                    class="btn w-50 fs-5 opacity-75 text-light bg-success text-uppercase fst-italic fw-bold"
+                    data-bs-dismiss="modal"
+                  >
+                    cerrar
+                  </button>
+                </div>
               </div>
             </div>
           </div>
-        </div>
 
-        <!-- modal construccion  -->
-        <div class="modal fade" id="construccion">
-          <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content text-center bg-dark">
-
-              <div class="modal-body d-flex flex-wrap justify-content-center row-gap-3 text-secondary fs-5">
-                <h4 class="modal-title w-100 m-0 text-light fs-1 text-center fw-bold text-uppercase">Sitio en
-                  construcción...</h4>
-                <img class="w-50" src="../img/construccion_2.png" alt="en construcción">Estamos haciendo nuestro mejor
-                esfuerzo en agregar contenido de calidad
-                <button type="button"
-                  class="btn w-50 fs-5 opacity-75 text-light bg-primary text-uppercase fst-italic fw-bold"
-                  data-bs-dismiss="modal">cerrar</button>
+          <!-- modal construccion  -->
+          <div class="modal fade" id="construccion">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content text-center bg-dark">
+                <div
+                  class="modal-body d-flex flex-wrap justify-content-center row-gap-3 text-secondary fs-5"
+                >
+                  <h4
+                    class="modal-title w-100 m-0 text-light fs-1 text-center fw-bold text-uppercase"
+                  >
+                    Sitio en construcción...
+                  </h4>
+                  <img
+                    class="w-50"
+                    src="../img/construccion_2.png"
+                    alt="en construcción"
+                  />Estamos haciendo nuestro mejor esfuerzo en agregar contenido de
+                  calidad
+                  <button
+                    type="button"
+                    class="btn w-50 fs-5 opacity-75 text-light bg-primary text-uppercase fst-italic fw-bold"
+                    data-bs-dismiss="modal"
+                  >
+                    cerrar
+                  </button>
+                </div>
               </div>
             </div>
           </div>
-        </div> <!-- fin modal -->
+          <!-- fin modal -->
+        </section>
+      </div>
+      <!-- fin container -->
+    </main>
 
-      </section>
-
-    </div> <!-- fin container -->
-
-
-
-
-
-
-  </main>
-
-  <footer>
-    <p>© Creado por Leandro Matias Saig</p>
-  </footer>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
-    crossorigin="anonymous"></script>
-
-</body>
-
+    <footer>
+      <p>© Creado por Leandro Matias Saig</p>
+    </footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
