@@ -59,7 +59,7 @@ header {
 }
 
 .title_text h2 {
-    font: 700 2.25rem var(--font-title);
+    font: 700 2rem var(--font-title);
     color: #ece9e5;
     letter-spacing: 3px;
     text-transform: uppercase;
