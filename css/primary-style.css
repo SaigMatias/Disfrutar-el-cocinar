@@ -66,7 +66,7 @@ header {
 }
 
 nav {
-    font: 600 1.15rem/1.35rem var(--font-title);
+    font: 600 1rem/1.35rem var(--font-title);
     letter-spacing: 1px;
     text-transform: uppercase;
     text-align: center;
@@ -250,7 +250,7 @@ section article h4 {
 }
 
 .about_sublist li img {
-    height: 3.5rem;
+    height: 2.5rem;
     opacity: .9;
     margin: auto
 }
@@ -268,7 +268,7 @@ section article h4 {
 }
 
 .about_list_software li img {
-    height: 3.5rem;
+    height: 2.5rem;
     opacity: .9;
     margin: 0 auto
 }
@@ -343,6 +343,12 @@ section article h4 {
     color: #aaa;
 }
 
+.colab_descr_add{
+    font-style: italic;
+    width: 70%;
+    margin:1rem 0;
+    text-align: center;
+}
 
 .projects_thumbs {
     width: 80%;
